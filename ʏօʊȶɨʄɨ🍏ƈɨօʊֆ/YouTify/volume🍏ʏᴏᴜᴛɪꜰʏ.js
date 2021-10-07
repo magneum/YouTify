@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args) => {
   try {
     const Channel = message.member.voice.channel;
@@ -27,6 +29,9 @@ module.exports.run = async (client, message, args) => {
         .catch(console.error);
       return;
     }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     const Queue = client.queue.get(message.guild.id);
     if (!Queue) {
       message.channel.send("📕: error+code RED message").catch(console.error);
@@ -53,31 +58,55 @@ module.exports.run = async (client, message, args) => {
       return;
     }
     let NewVolume = args[0];
-
-    const Embed = new MessageEmbed()
-      .setColor("#8DB600")
-      .setAuthor(
-        "Volume",
-        message.author.avatarURL({
-          dynamic: true,
-        })
-      )
-      .setDescription(`Current Volume - ${Queue.Volume}`)
-      .setTimestamp();
-
-    if (!NewVolume) return message.channel.send(Embed);
-    if (isNaN(NewVolume) || parseInt(NewVolume) < 1)
-      return message.channel.send("Error: Invalid Volume Provided!");
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    if (!NewVolume) {
+      message.channel.send(new MessageEmbed()
+        .setColor("#8DB600")
+        .setAuthor(
+          "Volume",
+          message.author.avatarURL({
+            dynamic: true,
+          })
+        )
+        .setDescription(`Current Volume - ${Queue.Volume}`)
+        .setTimestamp())
+      return;
+    }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    if (isNaN(NewVolume) || parseInt(NewVolume) < 1) {
+      message.channel.send("Error: Invalid Volume Provided!")
+      return;
+    }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     NewVolume = parseInt(NewVolume);
-    if (NewVolume > 150)
-      return message.channel.send("Error: Volume Limit Surpassed - 150");
-    if (NewVolume == Queue.Volume)
-      return message.channel.send(`Error: Already ${NewVolume}!`);
-
+    if (NewVolume > 150) {
+      message.channel.send("Error: Volume Limit Surpassed - 150")
+      return;
+    }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    if (NewVolume == Queue.Volume) {
+      message.channel.send(`Error: Already ${NewVolume}!`)
+      return;
+    }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     Queue.Volume = NewVolume;
     Queue.Connection.dispatcher.setVolumeLogarithmic(Queue.Volume / 100);
-
-    const Embeded = new MessageEmbed()
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    message.react("✅");
+    message.channel.send("📗: ok+code GREEN message").catch(console.error);
+    return message.channel.send(new MessageEmbed()
       .setColor("#8DB600")
       .setAuthor(
         "Volume",
@@ -86,10 +115,10 @@ module.exports.run = async (client, message, args) => {
         })
       )
       .setDescription("YouTify Volume Has Been Changed - " + Queue.Volume + "!")
-      .setTimestamp();
-    message.react("✅");
-    message.channel.send("📗: ok+code GREEN message").catch(console.error);
-    return message.channel.send(Embeded);
+      .setTimestamp());
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     message.client.channels.cache
       .get(`894958787792871475`)

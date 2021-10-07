@@ -313,7 +313,7 @@ async function _Youtify_(client, message, options = {}) {
     const End = new MessageEmbed()
       .setColor("#8DB600")
       .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
-      .setDescription("Queue Has Been Ended, Please Add More Songs")
+      .setDescription(`\`🍏YouTify™'s\` Queue is Empty!\nPlease Add More Songs (it is free lol...)`)
       .setTimestamp();
     message.channel.send(End);
     return;
