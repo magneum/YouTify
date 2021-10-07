@@ -4,15 +4,13 @@ const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 module.exports.run = (client, message) => {
   message.react("✅");
   message.channel.send("📗: ok+code GREEN message").catch(console.error);
-  message.channel.send("📕: error+code RED message").catch(console.error);
-  message.react(`❌`);
   message.channel
     .send(
       new MessageEmbed()
         .setTimestamp()
-        .setColor(`#b60000`)
+        .setColor("#8DB600")
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+        .setTitle(`\`\`\`Server Response Time\`\`\` `)
         .setURL(`https://github.com/Krakinz?tab=repositories`)
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setFooter(
@@ -20,9 +18,8 @@ module.exports.run = (client, message) => {
           message.author.avatarURL({
             dynamic: true,
           })
-        ).setDescription(`${message.author}
-\`Error\`
-**Not connected to any Voice Channel yet!  Please Join first**`)
+        )
+        .addField(`\`Pong\``, `🛸**Took ${client.ws.ping}ms**`, true)
     )
     .catch(console.error);
   return;
