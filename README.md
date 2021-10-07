@@ -21,6 +21,10 @@
 —••÷[🍏YouTify™]÷••—
 ```
 
+# 📂 CӨMMΛNDS
+
+<p align="centre"><img  width="100%" height="100%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Help.PNG" /></p>
+
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
 - [![Generic badge](https://img.shields.io/badge/🍏YouTify™_Priority_Speaker🍏-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
