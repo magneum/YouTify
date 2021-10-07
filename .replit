@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "npm install && npx nodemon"
+run = "yarn && npx nodemon"
