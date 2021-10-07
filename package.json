@@ -1,6 +1,6 @@
 {
   "name": "youtify",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Advanced Music Bot With Many Filters & Play Support (Youtube, Spotify, SoundCloud)",
   "main": "ʏօʊȶɨʄɨƈɨօʊֆ.js",
   "scripts": {
@@ -27,7 +27,6 @@
     "ffmpeg-static": "^4.2.7",
     "get-video-id": "*",
     "lyrics-finder": "^21.7.0",
-    "old-wio.db": "^4.0.10",
     "pretty-ms": "^7.0.1",
     "soundcloud-scraper": "^4.0.3",
     "spotify-url-info": "^2.2.0",
