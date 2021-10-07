@@ -98,7 +98,7 @@ try {
             })
             .then((parent) => {
                 guild.channels
-                    .create(`🍏youtify™`, {
+                    .create(`🍏ʏᴏᴜᴛɪꜰʏ™`, {
                         type: `text`,
                         parent,
                         permissionOverwrites: [
@@ -203,7 +203,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         }
         if (
             message.content.startsWith(ʏᴏᴜꜰɪx) &&
-            message.channel.name !== `🍏youtify™`
+            message.channel.name !== `🍏ʏᴏᴜᴛɪꜰʏ™`
         ) {
             message.react(`❌`);
             message.channel.send("📕: error+code RED message").catch(console.error);
