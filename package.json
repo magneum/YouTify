@@ -2,9 +2,9 @@
   "name": "youtify",
   "version": "2.0.0",
   "description": "Advanced Music Bot With Many Filters & Play Support (Youtube, Spotify, SoundCloud)",
-  "main": "ʏօʊȶɨʄɨƈɨօʊֆ/ʏօʊȶɨʄɨƈɨօʊֆ.js",
+  "main": "ʏօʊȶɨʄɨƈɨօʊֆ.js",
   "scripts": {
-    "start": "node ʏօʊȶɨʄɨƈɨօʊֆ/ʏօʊȶɨʄɨƈɨօʊֆ.js"
+    "start": "node ʏօʊȶɨʄɨƈɨօʊֆ.js"
   },
   "keywords": [
     "discordjs",
@@ -18,7 +18,7 @@
     "url": "https://github.com/Krakinz/youtify/issues"
   },
   "dependencies": {
-    "@discordjs/opus": "^0.4.0",
+    "@discordjs/opus": "^0.5.3",
     "@distube/ytdl": "^1.0.7",
     "chalk": "^4.1.2",
     "discord.js": "^12.5.1",
