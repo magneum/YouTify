@@ -154,7 +154,7 @@ module.exports.run = async (client, message, args) => {
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-        .setDescription(`**\`Please report to either\`**
+        .setDescription(`**\`Please repo🍏YouTify™ - v5 - ʏօʊȶɨʄɨ🍏ƈɨօʊֆrt to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
