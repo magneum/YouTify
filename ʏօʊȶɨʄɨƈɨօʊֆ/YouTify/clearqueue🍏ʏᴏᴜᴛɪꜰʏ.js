@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args) => {
   try {
     const Channel = message.member.voice.channel,
@@ -28,6 +30,9 @@ module.exports.run = async (client, message, args) => {
         .catch(console.error);
       return;
     }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     const Queue = client.queue.get(message.guild.id);
     if (!Queue) {
       message.channel.send("📕: error+code RED message").catch(console.error);
@@ -53,25 +58,59 @@ module.exports.run = async (client, message, args) => {
         .catch(console.error);
       return;
     }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (
       !message.member.hasPermission("MANAGE_MESSAGES") &&
       Bot.members.length > 2
-    )
-      return message.channel.send("Error: Request Cancelled Due To 2+ Members");
-
+    ) {
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.react(`❌`);
+      message.channel
+        .send(
+          new MessageEmbed()
+            .setTimestamp()
+            .setColor(`#b60000`)
+            .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+            .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+            .setURL(`https://github.com/Krakinz?tab=repositories`)
+            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setFooter(
+              "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+              message.author.avatarURL({
+                dynamic: true,
+              })
+            )
+            .addField(
+              `\`Cancelled\``,
+              `**\`ClearQueue Command\` was cancelled due To 2+ active members in the connected VoiceChannel**`,
+              true
+            )
+        )
+        .catch(console.error);
+      return;
+    }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     Queue.Songs = [];
     await Queue.Connection.dispatcher.end();
-
     try {
       await message.react("✅");
       await message.channel
         .send("📗: ok+code GREEN message")
         .catch(console.error);
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
-      return message.channel
+      message.react(`❌`);
+      message.channel
         .send("Error: Unknown")
         .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
+      return;
     }
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     message.client.channels.cache
       .get(`894958787792871475`)
