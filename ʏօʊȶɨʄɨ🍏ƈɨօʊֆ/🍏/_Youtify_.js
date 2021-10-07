@@ -1,7 +1,7 @@
 const ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
 const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-const ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("../ɖɨֆȶʊɮɛ/ʏȶɖʟ");
+const ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
 const getVideoId = require("get-video-id");
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
