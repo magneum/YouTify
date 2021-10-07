@@ -1,3 +1,3 @@
 require("dotenv").config();
-exports.Prefix = process.env.Prefix;
-exports.ʏᴏᴜᴛᴏᴋᴇɴ = process.env.ʏᴏᴜᴛᴏᴋᴇɴ;
+exports.ʏᴏᴜꜰɪx = process.env.YOUFIX;
+exports.ʏᴏᴜᴛᴏᴋᴇɴ = process.env.YOUTOKEN;

@@ -53,12 +53,12 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setDescription(
-          `•\`Prefix\` 
-*${client.Prefix}*
+          `**•\`ʏᴏᴜꜰɪx\`** 
+${client.ʏᴏᴜꜰɪx}
 
-•\`For More Command Information\`
-*${client.Prefix}help loop*
-*${client.Prefix}help play*
+**•\`For More Command Information\`**
+${client.ʏᴏᴜꜰɪx}help loop
+${client.ʏᴏᴜꜰɪx}help play
 ${YouTifyCommanders.join("") + ""}`
         )
     );
@@ -117,13 +117,13 @@ ${YouTifyCommanders.join("") + ""}`
             dynamic: true,
           })
         )
-        .addField("Usage", Cmd.usage ? client.Prefix + Cmd.usage : "None", true)
+        .addField("Usage", Cmd.usage ? client.ʏᴏᴜꜰɪx + Cmd.usage : "None", true)
         .addField(
           "Examples",
           Cmd.examples
             ? Cmd.examples.join("\n").length === 0
               ? "None"
-              : Cmd.examples.map((C) => client.Prefix + C).join("\n")
+              : Cmd.examples.map((C) => client.ʏᴏᴜꜰɪx + C).join("\n")
             : "None"
         )
         .setTimestamp()

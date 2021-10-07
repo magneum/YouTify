@@ -6,7 +6,7 @@ const Discord = require(`discord.js`);
 const CoolDowns = new Discord.Collection();
 const { MessageEmbed } = require("discord.js");
 const ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = require(`soundcloud-scraper`);
-const { Prefix, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʟᴏᴀᴅᴇʀ.js`);
+const { ʏᴏᴜꜰɪx, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʟᴏᴀᴅᴇʀ.js`);
 const Client = new Discord.Client({ restTimeOffset: 10 });
 (Client.commands = new Discord.Collection()),
   (Client.aliases = new Discord.Collection()),
@@ -36,7 +36,7 @@ Client.on(`ready`, async () => {
 YouTify Is Ready- ${Client.user.username}
 
 🍏YouTify™ by🔱KrakinzLab™️ -----------`);
-  Client.user.setActivity(`${Prefix}help🍏${Prefix}play`, {
+  Client.user.setActivity(`${ʏᴏᴜꜰɪx}help🍏${ʏᴏᴜꜰɪx}play`, {
     type: `WATCHING`,
   });
   const Key = await ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.keygen();
@@ -71,7 +71,7 @@ try {
 ---------------:🍏:---------------
 
 :candy:\`ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅ\`
-**${Prefix}play | ${Prefix}help to know more.**
+**${ʏᴏᴜꜰɪx}play | ${ʏᴏᴜꜰɪx}help to know more.**
 ---------------:🍏:----------------
 
 **:star:\`ɴᴏᴛᴇ to @everyone\`**
@@ -139,28 +139,14 @@ Client.on(`message`, async (message) => {
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (message.content.startsWith(Prefix + "test")) {
-      message.channel
-        .send(
-          new MessageEmbed()
-            .setTimestamp()
-            .setColor(`#8DB600`)
-            .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-            .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
-            .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-            .setDescription(`**\`Please report to either\`**
-🔰[In Discord channel](https://discord.gg/y2PtYAJgpy)
-🔰[In telegram group](https://t.me/Krakns)
-`)
-        )
-        .catch(console.error);
+    if (message.content.startsWith(ʏᴏᴜꜰɪx + "test")) {
+      message.channel.send(ʏᴏᴜꜰɪx).catch(console.error);
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (!message.content.startsWith(Prefix)) {
+    if (!message.content.startsWith(ʏᴏᴜꜰɪx)) {
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -196,7 +182,7 @@ Client.on(`message`, async (message) => {
       return;
     }
     if (
-      message.content.startsWith(Prefix) &&
+      message.content.startsWith(ʏᴏᴜꜰɪx) &&
       message.channel.name !== `🍏youtify™`
     ) {
       message.channel.send("📕: error+code RED message").catch(console.error);
@@ -227,7 +213,7 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     let Arguments = await message.content
-        .slice(Prefix.length)
+        .slice(ʏᴏᴜꜰɪx.length)
         .trim()
         .split(/ +/g),
       Command = await Arguments.shift().toLowerCase();
@@ -270,7 +256,7 @@ For any \`🍏YouTify™\` commands.`
                   verbose: true,
                   secondsDecimalDigits: 0,
                 })}*  **Before Using** *${
-                  Prefix +
+                  ʏᴏᴜꜰɪx +
                   Command.help.name.charAt(0).toLowerCase() +
                   Command.help.name.slice(1)
                 }* **Command Again**`
@@ -279,7 +265,7 @@ For any \`🍏YouTify™\` commands.`
         }
       }
       Timestamps.set(message.author.id, Now);
-      Client.Prefix = Prefix;
+      Client.ʏᴏᴜꜰɪx = ʏᴏᴜꜰɪx;
       await Command.run(Client, message, Arguments, Discord);
       await setTimeout(() => Timestamps.delete(message.author.id), CoolDown);
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
