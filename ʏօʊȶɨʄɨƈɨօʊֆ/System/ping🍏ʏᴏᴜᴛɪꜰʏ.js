@@ -29,7 +29,7 @@ module.exports.help = {
   name: "ping",
   aliases: ["p"],
   cooldown: 7000,
-  category: "Home",
+  category: "System",
   description: "Get Bot Ping!",
   usage: "Ping",
   examples: ["ping"],

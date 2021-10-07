@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/typings");
 
 module.exports.run = async (client, message) => {
   let Days = Math.floor(client.uptime / 86400000),
@@ -45,7 +45,7 @@ module.exports.help = {
   name: "uptime",
   aliases: ["ut"],
   cooldown: 7000,
-  category: "Home",
+  category: "System",
   description: "Get Bot Uptime!",
   usage: "Uptime",
   examples: ["uptime"],

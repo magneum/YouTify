@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 module.exports.run = async (client, message, args) => {
-  let Categories = ["YouTify", "Home", "Filters"],
+  let Categories = ["YouTify", "System", "Filters"],
     YouTifyCommanders = [];
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
   const Emotes = {
     YouTify: `🍏\`YouTify\``,
     Filters: `🎶\`Filters\``,
-    Home: `🤖\`Home\``,
+    System: `🤖\`System\``,
   };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -172,7 +172,7 @@ module.exports.help = {
   name: "help",
   aliases: ["h"],
   cooldown: 5000,
-  category: "Home",
+  category: "System",
   description: "Get Bot Commands!",
   usage: "Help | <Command Name>",
   examples: ["help", "help setprefix", "help play"],

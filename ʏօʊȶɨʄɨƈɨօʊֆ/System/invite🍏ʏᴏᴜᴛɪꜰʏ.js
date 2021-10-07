@@ -37,8 +37,8 @@ module.exports.help = {
   name: "invite",
   aliases: ["iv", "info"],
   cooldown: 7000,
-  category: "Home",
-  description: "Get Bot Invite Link & Home Info!",
+  category: "System",
+  description: "Get Bot Invite Link",
   usage: "Invite",
   examples: ["invite"],
 };

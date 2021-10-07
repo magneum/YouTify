@@ -231,9 +231,9 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     let Arguments = await message.content
-      .slice(ʏᴏᴜꜰɪx.length)
-      .trim()
-      .split(/ +/g),
+        .slice(ʏᴏᴜꜰɪx.length)
+        .trim()
+        .split(/ +/g),
       Command = await Arguments.shift().toLowerCase();
     Command =
       (await Client.commands.get(Command)) ||
@@ -273,9 +273,10 @@ For any \`🍏YouTify™\` commands.`
 **Slow Down and Wait** *${ᴘʀᴇᴛᴛʏ(ExpireTime - Now, {
                   verbose: true,
                   secondsDecimalDigits: 0,
-                })}*  **Before Using** *${ʏᴏᴜꜰɪx +
-                Command.help.name.charAt(0).toLowerCase() +
-                Command.help.name.slice(1)
+                })}*  **Before Using** *${
+                  ʏᴏᴜꜰɪx +
+                  Command.help.name.charAt(0).toLowerCase() +
+                  Command.help.name.slice(1)
                 }* **Command Again**`
               )
           );
@@ -338,9 +339,7 @@ For any \`🍏YouTify™\` commands.`
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    message.channel
-      .send("📙: sorry+code ORANGE message")
-      .catch(console.error);
+    message.channel.send("📙: sorry+code ORANGE message").catch(console.error);
     message.react(`😔`);
     message.channel.send(
       new MessageEmbed()
@@ -363,7 +362,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-const YouTify_Catelog = [`Home`, `YouTify`, `Filters`];
+const YouTify_Catelog = [`System`, `YouTify`, `Filters`];
 YouTify_Catelog.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {
   Fs.readdir(
     `./ʏօʊȶɨʄɨƈɨօʊֆ/${ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ}`,
@@ -377,16 +376,17 @@ YouTify_Catelog.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {
         if (!ʏօʊȶɨʄʏƈօʍʍֆ.help.name) {
           console.log(`---------------------`);
           console.log(
-            ᴄʜᴀʟᴋ.red`>❌ | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
-              }`
+            ᴄʜᴀʟᴋ.red`>❌ | ${
+              ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
+            }`
           );
           return;
         }
         Client.commands.set(ʏօʊȶɨʄʏƈօʍʍֆ.help.name, ʏօʊȶɨʄʏƈօʍʍֆ);
         ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases
           ? ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases.forEach((Alias) =>
-            Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
-          )
+              Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
+            )
           : (ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases = null);
         console.log(`---------------------`);
         console.log(ᴄʜᴀʟᴋ.green`>🟢 | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name.toUpperCase()}`);
