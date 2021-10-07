@@ -62,15 +62,22 @@ module.exports.run = async (client, message, args) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!NewVolume) {
+      message.react("✅");
+      message.channel.send("📗: ok+code GREEN message").catch(console.error);
       message.channel.send(new MessageEmbed()
+        .setTimestamp()
         .setColor("#8DB600")
-        .setAuthor(
-          "Volume",
+        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setTitle(`\`\`\`🔊Volume\`\`\` `)
+        .setURL(`https://github.com/Krakinz`)
+        .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+        .setFooter(
+          "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({
             dynamic: true,
           })
         )
-        .setDescription(`Current Volume - ${Queue.Volume}`)
+        .addField(`\`Queue Volume\``, `⚡**Current Volume is set to ${Queue.Volume}**`, true)
         .setTimestamp())
       return;
     }
