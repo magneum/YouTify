@@ -87,7 +87,7 @@ module.exports.run = async (client, message, args) => {
     .setDescription("YouTify Volume Has Been Changed - " + Queue.Volume + "!")
     .setTimestamp();
   message.react("✅");
-  message.channel.send("📗: ok status message").catch(console.error);
+  message.channel.send("📗: ok+code GREEN message").catch(console.error);
   return message.channel.send(Embeded);
 };
 

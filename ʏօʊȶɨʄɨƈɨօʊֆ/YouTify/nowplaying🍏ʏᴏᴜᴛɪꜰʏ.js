@@ -73,7 +73,7 @@ Added By - ${Song.Req}`
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
   message.react("✅");
-  message.channel.send("📗: ok status message").catch(console.error);
+  message.channel.send("📗: ok+code GREEN message").catch(console.error);
   return message.channel.send(Embed);
 };
 

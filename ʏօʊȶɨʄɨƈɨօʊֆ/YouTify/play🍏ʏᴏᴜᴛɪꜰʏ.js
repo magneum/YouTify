@@ -64,7 +64,7 @@ module.exports.run = async (client, message, args) => {
       ? Queue.Songs.push(...Songs)
       : Queue.Songs.push(Song));
     message.react("✅");
-    message.channel.send("📗: ok status message").catch(console.error);
+    message.channel.send("📗: ok+code GREEN message").catch(console.error);
     message.channel.send(
       new MessageEmbed()
         .setColor("#8DB600")

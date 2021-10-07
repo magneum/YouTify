@@ -63,7 +63,7 @@ module.exports.run = async (client, message, args) => {
 
   try {
     await message.react("✅");
-    await message.channel.send("📗: ok status message").catch(console.error);
+    await message.channel.send("📗: ok+code GREEN message").catch(console.error);
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     return message.channel
       .send("Error: Unknown")
