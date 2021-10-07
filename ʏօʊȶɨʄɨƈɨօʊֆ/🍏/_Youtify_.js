@@ -1,9 +1,8 @@
 const YouTify_YtSr = require("youtube-sr").default;
 const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
+const { MessageEmbed } = require("discord.js");
 const YouTify_YtDL = require("@distube/ytdl");
 const getVideoId = require("get-video-id");
-const { MessageEmbed } = require("discord.js");
-const Discord = require(`discord.js`);
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
