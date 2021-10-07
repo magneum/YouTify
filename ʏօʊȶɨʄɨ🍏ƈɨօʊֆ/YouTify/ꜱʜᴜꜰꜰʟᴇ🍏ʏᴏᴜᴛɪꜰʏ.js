@@ -60,17 +60,14 @@ module.exports.run = async (client, message, args) => {
         // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
         // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-        const Current = await Queue.Songs.shift();
-        Queue.Songs = Queue.Songs.sort(() => Math.random() - 0.5);
-        await Queue.Songs.unshift(Current);
-        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         try {
             await message.react("✅");
             await message.channel
                 .send("📗: ok+code GREEN message")
                 .catch(console.error);
+            const Current = await Queue.Songs.shift();
+            Queue.Songs = Queue.Songs.sort(() => Math.random() - 0.5);
+            await Queue.Songs.unshift(Current);
         } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
             return message.channel
                 .send("Error: Unknown")
