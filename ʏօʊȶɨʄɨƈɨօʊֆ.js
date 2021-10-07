@@ -61,7 +61,7 @@ try {
           .setTimestamp()
           .setColor(`#8DB600`)
           .setTitle(`\`\`\`🍏YouTify™\`\`\``)
-          .setURL(`https://github.com/Krakinz?tab=repositories`)
+          .setURL(`https://github.com/Krakinz`)
           .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setDescription(`❤️‍🔥 **\`\`\`\`Hey there MUSIC lovers !\`\`\`\`**
@@ -179,7 +179,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setColor(`#b60000`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setURL(`https://github.com/Krakinz?tab=repositories`)
+          .setURL(`https://github.com/Krakinz`)
           .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -212,7 +212,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             .setColor(`#b60000`)
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-            .setURL(`https://github.com/Krakinz?tab=repositories`)
+            .setURL(`https://github.com/Krakinz`)
             .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -260,7 +260,7 @@ For any \`🍏YouTify™\` commands.`
               .setColor(`#b60000`)
               .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
               .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-              .setURL(`https://github.com/Krakinz?tab=repositories`)
+              .setURL(`https://github.com/Krakinz`)
               .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
               .setFooter(
                 "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",

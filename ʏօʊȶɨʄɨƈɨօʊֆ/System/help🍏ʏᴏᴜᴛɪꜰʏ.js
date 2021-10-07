@@ -43,7 +43,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp()
         .setColor("#8DB600")
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setURL(`https://github.com/Krakinz?tab=repositories`)
+        .setURL(`https://github.com/Krakinz`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({
@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp()
         .setColor("#8DB600")
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setURL(`https://github.com/Krakinz?tab=repositories`)
+        .setURL(`https://github.com/Krakinz`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({

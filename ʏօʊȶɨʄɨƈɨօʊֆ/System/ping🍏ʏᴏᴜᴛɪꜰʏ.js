@@ -13,7 +13,7 @@ module.exports.run = (client, message) => {
           .setColor("#8DB600")
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setTitle(`\`\`\`🤖Server Response Time\`\`\` `)
-          .setURL(`https://github.com/Krakinz?tab=repositories`)
+          .setURL(`https://github.com/Krakinz`)
           .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
