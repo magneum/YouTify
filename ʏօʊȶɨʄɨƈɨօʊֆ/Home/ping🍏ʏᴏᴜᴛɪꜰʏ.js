@@ -10,7 +10,7 @@ module.exports.run = (client, message) => {
         .setTimestamp()
         .setColor("#8DB600")
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setTitle(`\`\`\`Server Response Time\`\`\` `)
+        .setTitle(`\`\`\`🤖Server Response Time\`\`\` `)
         .setURL(`https://github.com/Krakinz?tab=repositories`)
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setFooter(
