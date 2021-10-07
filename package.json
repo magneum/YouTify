@@ -1,0 +1,45 @@
+{
+  "name": "youtify",
+  "version": "1.0.0",
+  "description": "Advanced Music Bot With Many Filters & Play Support (Youtube, Spotify, Etc)",
+  "main": "ʏօʊȶɨʄɨƈɨօʊֆ.js",
+  "scripts": {
+    "start": "node ʏօʊȶɨʄɨƈɨօʊֆ.js"
+  },
+  "keywords": [
+    "discordjs",
+    "youtify",
+    "filters"
+  ],
+  "author": "Legendary Emoji#1742",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.4.0",
+    "@distube/ytdl": "^1.0.7",
+    "chalk": "^4.1.2",
+    "discord.js": "^12.5.1",
+    "dotenv": "*",
+    "fbdl-core": "^1.0.2",
+    "ffmpeg-static": "^4.2.7",
+    "get-video-id": "*",
+    "lyrics-finder": "^21.7.0",
+    "node-fetch": "^2.6.1",
+    "old-wio.db": "^4.0.10",
+    "pretty-ms": "^7.0.1",
+    "soundcloud-scraper": "^4.0.3",
+    "spotify-url-info": "^2.2.0",
+    "youtube-sr": "^3.0.0",
+    "ytdl-core": "^4.4.5"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "bugs": {
+    "url": "https://github.com/LegendaryEmoji/youtify/issues"
+  },
+  "homepage": "https://github.com/LegendaryEmoji/youtify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LegendaryEmoji/youtify.git"
+  }
+}
