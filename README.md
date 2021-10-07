@@ -4,7 +4,7 @@
 
 ## Will be stable by version v6.
 
-# 🍏『 ᴅɪꜱᴄᴏʀᴅ ᴍᴜꜱɪᴄ ʙᴏᴛ: 🍏YouTify™] 』🍏
+# 『 Discord Music Bot: 🍏YouTify™] 』
 
 <p align="centre"><img  width="100%" height="100%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify.jpeg" /></p>
 
