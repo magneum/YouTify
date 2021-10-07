@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
   const Emotes = {
     YouTify: `🍏\`YouTify\``,
     Filters: `🎶\`Filters\``,
-    Home: `❔\`Home\``,
+    Home: `🤖\`Home\``,
   };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
