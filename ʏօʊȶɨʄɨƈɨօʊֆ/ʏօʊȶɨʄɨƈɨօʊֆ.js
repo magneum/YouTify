@@ -170,7 +170,7 @@ Client.on(`message`, async (message) => {
             })
           ).setDescription(`\`User\`🍏${message.author}\n
 **🍏\`YouTify™ by🔱KrakinzLab™️\`**
-🔆- Discord Spotify+YouTube+Scoundcloud Music bot built with Discord.js.
+🔆- Discord \`Spotify+YouTube+Soundcloud\` Music bot built with Discord.js.
 
 ⚠️**\`Error\`**
 • You are currently in a \`DMChannel\` and so you have been \`restricted\` using any \`🍏YouTify™ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\`
