@@ -1,6 +1,6 @@
 const { _Youtify_, YouTify_Song_Feeder } = require("../🍏/_Youtify_.js"),
   ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default,
-  ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
+  ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("../ʏȶɖʟ");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 module.exports.run = async (client, message, args) => {
@@ -50,11 +50,10 @@ module.exports.run = async (client, message, args) => {
           return message.channel.send("Error: No Song Found!");
         Data.length > 10 ? (Data.length = 10) : null;
         const Mapped = await Data.map(
-            (S, I) =>
-              `${I + 1} | [${
-                S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
-              }](https://youtube.com/watch?v=${S.id})`
-          ),
+          (S, I) =>
+            `${I + 1} | [${S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
+            }](https://youtube.com/watch?v=${S.id})`
+        ),
           Filter = (m) => m.author.id === message.author.id;
 
         const Embed = new MessageEmbed()
