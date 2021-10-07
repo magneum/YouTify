@@ -353,9 +353,9 @@ module.exports.help = {
     "Play YouTify From Youtube (Video ID, Video Link, Playlist ID, Playlist Link), Soundcloud (Song Link, Playlist Link), Spotify (Song Link, Playlist Link), Facebook (Song Link)!",
   usage: "Play <Song | Playlist>",
   examples: [
-    "play attention",
+    "play emptiness",
     "play nfs8NYg7yQM",
-    "play ncs playlist",
+    "play chilledcow playlist",
     "play https://www.youtube.com/watch?v=nfs8NYg7yQM",
   ],
 };
