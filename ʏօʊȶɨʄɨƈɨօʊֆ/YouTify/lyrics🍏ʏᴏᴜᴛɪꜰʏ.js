@@ -47,7 +47,7 @@ module.exports.run = async (client, message, args) => {
       return message.channel.send(
         `No Lyrics Found - ${NoSong ? args.join(" ") : Thing}`
       );
-  } catch (YouTify_Error) {
+  } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     return message.channel.send(`No Lyrics Found - ${Thing}`);
   }
 

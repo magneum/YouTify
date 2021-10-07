@@ -16,26 +16,25 @@ const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
   Client.login(ʏᴏᴜᴛᴏᴋᴇɴ);
-} catch (ErrorApril) {
+} catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
   console.log(`Invalid YouTify Token Provided!`);
-  console.error(ErrorApril);
+  console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   exit(1);
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 Client.on(`ready`, async () => {
-  console.log(`\n🍏YouTify™ by🔱KrakinzLab™️ -----------\n`);
+  console.log(`\n🍏YouTify™ by🔱KrakinzLab™️\n-----------`);
   console.log(ᴄʜᴀʟᴋ.red(`📕: error+code RED message`));
-  console.log(ᴄʜᴀʟᴋ.yellow(`📙: warning message`));
+  console.log(ᴄʜᴀʟᴋ.yellow(`📙: sorry+code ORANGE message`));
   console.log(ᴄʜᴀʟᴋ.green(`📗: ok status message`));
   console.log(ᴄʜᴀʟᴋ.blue(`📘: canceled status message`));
   console.log(`
 🔱Bot-Name:~~> ${Client.user.username}
 🔱Bot-Os:~~> ${Os.platform().toUpperCase()}
 YouTify Is Ready- ${Client.user.username}
-
-🍏YouTify™ by🔱KrakinzLab™️ -----------`);
+-----------\n🍏YouTify™ by🔱KrakinzLab™️`);
   Client.user.setActivity(`${ʏᴏᴜꜰɪx}help🍏${ʏᴏᴜꜰɪx}play`, {
     type: `WATCHING`,
   });
@@ -125,8 +124,8 @@ try {
         return;
       });
   });
-} catch (ErrorApril) {
-  console.error(ErrorApril);
+} catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
+  console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -140,7 +139,26 @@ Client.on(`message`, async (message) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (message.content.startsWith(ʏᴏᴜꜰɪx + "test")) {
-      message.channel.send(ʏᴏᴜꜰɪx).catch(console.error);
+      message.channel
+        .send("📙: sorry+code ORANGE message")
+        .catch(console.error);
+      message.react(`😔`);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b66c00`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
+          .setDescription(`**\`Please report to either\`**
+🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
+🔰[In telegram group](https://t.me/Krakns)
+
+**\`Error🔻Caught\`**
+${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+      );
+      console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -291,12 +309,12 @@ For any \`🍏YouTify™\` commands.`
         .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
       return;
     }
-  } catch (ErrorApril) {
+  } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     //     message.Client.channel.cache
     //       .get(`894958787792871475`)
     //       .send(
     //         new MessageEmbed()
-    //           .setColor(`#8DB600`)
+    //           .setColor(`#b66c00`)
     //           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
     //           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
     //           .setImage(
@@ -314,16 +332,20 @@ For any \`🍏YouTify™\` commands.`
     // **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
 
     // **Error report:**
-    // *${ErrorApril}*`)
+    // *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
     //       )
     //       .catch(console.error);
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    message.channel
+      .send("📙: sorry+code ORANGE message")
+      .catch(console.error);
+    message.react(`😔`);
     message.channel.send(
       new MessageEmbed()
         .setTimestamp()
-        .setColor(`#8DB600`)
+        .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
@@ -333,9 +355,9 @@ For any \`🍏YouTify™\` commands.`
 🔰[In telegram group](https://t.me/Krakns)
 
 **\`Error🔻Caught\`**
-${ErrorApril}`)
+${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     );
-    console.error(ErrorApril);
+    console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   }
 });
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================

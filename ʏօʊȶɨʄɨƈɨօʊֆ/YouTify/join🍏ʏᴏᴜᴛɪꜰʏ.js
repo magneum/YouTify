@@ -42,10 +42,10 @@ module.exports.run = async (client, message, args) => {
       message.react("✅");
       message.channel.send("📗: ok status message").catch(console.error);
     });
-  } catch (YouTify_Error) {
+  } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     return message.channel
       .send("Error: Unknown")
-      .then(() => console.log(YouTify_Error));
+      .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
   }
 };
 
