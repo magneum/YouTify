@@ -28,7 +28,7 @@ Client.on(`ready`, async () => {
   console.log(`\n🍏YouTify™ by🔱KrakinzLab™️\n-----------`);
   console.log(ᴄʜᴀʟᴋ.red(`📕: error+code RED message`));
   console.log(ᴄʜᴀʟᴋ.yellow(`📙: sorry+code ORANGE message`));
-  console.log(ᴄʜᴀʟᴋ.green(`📗: ok status message`));
+  console.log(ᴄʜᴀʟᴋ.green(`📗: ok+code GREEN message`));
   console.log(ᴄʜᴀʟᴋ.blue(`📘: canceled status message`));
   console.log(`
 🔱Bot-Name:~~> ${Client.user.username}

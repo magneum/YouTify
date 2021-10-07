@@ -84,10 +84,10 @@ module.exports.run = async (client, message, args) => {
               `https://youtube.com/watch?v=${Data[Content - 1].id}`
             );
             Song = await YouTify_Song_Feeder(Song.videoDetails, message, Song);
-          } catch (YouTify_Error) {
+          } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
             return message.channel
               .send("Error: Unknown")
-              .then(() => console.log(YouTify_Error));
+              .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
           }
           if (Queue) {
             await Queue.Songs.push(Song);
@@ -110,8 +110,8 @@ module.exports.run = async (client, message, args) => {
           try {
             Connection = await Channel.join();
             await Connection.voice.setSelfDeaf(true);
-          } catch (YouTify_Error) {
-            console.log(YouTify_Error);
+          } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
+            console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
             return message.channel.send("Error: Unable To Join Voice Channel!");
           }
 
@@ -134,25 +134,25 @@ module.exports.run = async (client, message, args) => {
             await _Youtify_(client, message, {
               Song: Song,
             });
-          } catch (YouTify_Error) {
+          } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
             await Channel.leave(),
               await client.queue.delete(message.guild.id),
-              await console.log(YouTify_Error);
+              await console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
             return message.channel.send(
               "Error: Something Went Wrong, Try Again Later!"
             );
           }
         })
-        .catch((YouTify_Error) => {
+        .catch((ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) => {
           return message.channel
             .send("Error: Time Limit Surpassed - Cancelled")
-            .then(() => console.log(YouTify_Error));
+            .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
         });
     })
-    .catch((YouTify_Error) => {
+    .catch((ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) => {
       return message.channel
         .send("Error: Something Went Wrong, Try Again Later!")
-        .then(() => console.log(YouTify_Error));
+        .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
     });
 };
 

@@ -94,8 +94,8 @@ module.exports.run = async (client, message, args) => {
   try {
     Connection = await Channel.join();
     await Connection.voice.setSelfDeaf(true);
-  } catch (YouTify_Error) {
-    console.log(YouTify_Error);
+  } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
+    console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     message.channel.send("Error: Unable To Join Voice Channel!");
     return;
   }
@@ -119,10 +119,10 @@ module.exports.run = async (client, message, args) => {
     await _Youtify_(client, message, {
       Song: Song,
     });
-  } catch (YouTify_Error) {
+  } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     await Channel.leave(),
       await client.queue.delete(message.guild.id),
-      await console.log(YouTify_Error);
+      await console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     message.channel.send("Error: Something Went Wrong, Try Again Later!");
     return;
   }
