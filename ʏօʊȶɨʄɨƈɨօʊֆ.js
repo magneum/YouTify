@@ -326,10 +326,10 @@ For any \`🍏YouTify™\` commands.`
               dynamic: true,
             })
           ).setDescription(`
-    **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
+**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
 
-    **Error report:**
-    *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
+**Error report:**
+*${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       )
       .catch(console.error);
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
