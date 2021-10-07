@@ -28,7 +28,7 @@
     "lyrics-finder": "^21.7.0",
     "ffmpeg-static": "^4.2.7",
     "setimmediate": "^1.0.5",
-    "prism-media": "^1.2.9",
+    "prism-media": "^1.2.3",
     "youtube-sr": "^3.0.0",
     "node-fetch": "^2.6.1",
     "fbdl-core": "^1.0.2",

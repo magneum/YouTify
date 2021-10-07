@@ -1,3 +1,6 @@
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+//                          GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -201,3 +204,6 @@ StreamDownloader.arbitraryStream = arbitraryStream;
 const DiscordYTDLCore = Object.assign(StreamDownloader, ytdl_core_1.default);
 StreamDownloader.downloadFromInfo = downloadFromInfo;
 module.exports = DiscordYTDLCore;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+//                          GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
