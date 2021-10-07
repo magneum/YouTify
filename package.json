@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
-    "@distube/ytdl": "^1.0.7",
     "chalk": "^4.1.2",
     "dotenv": "*",
     "express": "*",

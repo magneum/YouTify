@@ -1,6 +1,6 @@
 const { _Youtify_, YouTify_Song_Feeder } = require("../🍏/_Youtify_.js"),
   ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default,
-  ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
+  ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("../ɖɨֆȶʊɮɛ/ʏȶɖʟ");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 module.exports.run = async (client, message, args) => {
