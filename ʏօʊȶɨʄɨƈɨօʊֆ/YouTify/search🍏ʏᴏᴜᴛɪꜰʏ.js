@@ -1,6 +1,6 @@
 const { _Youtify_, YouTify_Song_Feeder } = require("../🍏/_Youtify_.js"),
-  YouTify_YtSr = require("youtube-sr").default,
-  YouTify_YtDL = require("@distube/ytdl");
+  ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default,
+  ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
 const { MessageEmbed } = require("discord.js");
 const Discord = require(`discord.js`);
 module.exports.run = async (client, message, args) => {
@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
       .get("help")
       .run(client, message, ["play", client.token], Discord);
 
-  await YouTify_YtSr.search(Value, {
+  await ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ.search(Value, {
     limit: 10,
   })
     .then(async (Data) => {
@@ -80,7 +80,7 @@ module.exports.run = async (client, message, args) => {
           if (Content - 1 > Data.length || !Data[Content - 1])
             return message.channel.send("Error: Unknown Index!");
           try {
-            Song = await YouTify_YtDL.getInfo(
+            Song = await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.getInfo(
               `https://youtube.com/watch?v=${Data[Content - 1].id}`
             );
             Song = await YouTify_Song_Feeder(Song.videoDetails, message, Song);

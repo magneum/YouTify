@@ -1,5 +1,5 @@
 const { YouTify_Find_Infos, _Youtify_ } = require("../🍏/_Youtify_.js"),
-  YouTify_YtSr = require("youtube-sr").default;
+  ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
 const { MessageEmbed } = require("discord.js");
 const Discord = require(`discord.js`);
 

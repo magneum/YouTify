@@ -1,7 +1,7 @@
-const YouTify_YtSr = require("youtube-sr").default;
+const ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
 const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
 const { MessageEmbed } = require("discord.js");
-const YouTify_YtDL = require("@distube/ytdl");
+const ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
 const getVideoId = require("get-video-id");
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -52,7 +52,7 @@ async function Type(Value) {
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  const Data = await YouTify_YtSr.searchOne(Value);
+  const Data = await ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ.searchOne(Value);
   if (!Data) return undefined;
   return {
     ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
@@ -67,7 +67,7 @@ async function YouTify_Find_Infos(Query, message) {
   let ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ, Info;
   if (!ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ) return undefined;
   if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "YT") {
-    Info = await YouTify_YtDL.getInfo(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
+    Info = await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.getInfo(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
     if (!Info) return undefined;
     (Info = await YouTify_Song_Feeder(Info.videoDetails, message, Info)),
       (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
@@ -108,7 +108,7 @@ async function YouTify_Find_Infos(Query, message) {
   ) {
     Info =
       ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
-        ? await YouTify_YtSr.getPlaylist(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ)
+        ? await ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ.getPlaylist(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ)
         : await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getPlaylist(
           ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
         );
@@ -350,7 +350,7 @@ async function _Youtify_(client, message, options = {}) {
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   if (options.Song.Type == "SR" || options.Song.Type == "YT") {
     options.Song.Type == "SR"
-      ? (options.Song.Other = await YouTify_YtDL.getInfo(options.Song.Link))
+      ? (options.Song.Other = await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.getInfo(options.Song.Link))
       : null;
     (Link = options.Song.Other),
       (Type = "SR"),
@@ -377,9 +377,9 @@ async function _Youtify_(client, message, options = {}) {
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   Steam =
     Type == "SR"
-      ? await YouTify_YtDL.downloadFromInfo(Link, option)
+      ? await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.downloadFromInfo(Link, option)
       : Type == "AR"
-        ? await YouTify_YtDL.arbitraryStream(Link, option)
+        ? await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.arbitraryStream(Link, option)
         : undefined;
   if (!Steam) {
     message.channel.send("Error: Something Went Wrong, Try Again Later!");
