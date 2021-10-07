@@ -1,4 +1,5 @@
-const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/typings");
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
+const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = async (client, message) => {
   let Days = Math.floor(client.uptime / 86400000),
