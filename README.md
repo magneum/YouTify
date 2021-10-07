@@ -9,6 +9,8 @@
 
 <p align="centre"><img  width="100%" height="100%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify.jpeg" /></p>
 
+**🍏YouTify™ Discord 𝗦𝗽𝗼𝘁𝗶𝗳𝘆+𝗬𝗼𝘂𝗧𝘂𝗯𝗲+𝗦𝗼𝘂𝗻𝗱𝗰𝗹𝗼𝘂𝗱 Music bot built with Discord.js and has 𝟮𝟵 𝗮𝘂𝗱𝗶𝗼 𝗙𝗶𝗹𝘁𝗲𝗿𝘀.**
+
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
 - [![Generic badge](https://img.shields.io/badge/🍏YouTify™_Priority_Speaker🍏-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
