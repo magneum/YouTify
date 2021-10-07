@@ -104,7 +104,7 @@ module.exports.run = async (client, message, args) => {
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       message.react(`❌`);
       message.channel
-        .send("Error: Unknown")
+        .send(`Error: ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
       return;
     }
