@@ -3,26 +3,26 @@ const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = async (client, message, args) => {
   let Categories = ["YouTify", "System", "Filters"],
-    YouTifyCommanders = [];
+    ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ = [];
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Emotes = {
     YouTify: `🍏\`YouTify\``,
-    Filters: `🎶\`Filters\``,
+    Filters: `🎶\`Filters\`\n(remember to disable any applied filter just re-send that filter name)`,
     System: `🤖\`System\``,
   };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   for (let i = 0; i < Categories.length; i++) {
-    const Cmds = await client.commands
+    const ʏᴏᴜᴛɪꜰʏᴄᴍᴅꜱ = await client.commands
       .filter((C) => C.help.category === Categories[i])
       .array()
       .map((C) => C.help.name)
       .sort((a, b) => (a < b ? -1 : 1))
       .join(", ");
-    YouTifyCommanders.push(`\n\n**•${Emotes[Categories[i]]}**\n${Cmds}`);
+    ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.push(`\n\n**•${Emotes[Categories[i]]}**\n${ʏᴏᴜᴛɪꜰʏᴄᴍᴅꜱ}`);
   }
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -54,12 +54,7 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setDescription(
-          `**•\`Prefix\` = **${client.ʏᴏᴜꜰɪx}
-
-**•\`For More Command Information\`**
-${client.ʏᴏᴜꜰɪx}help loop
-${client.ʏᴏᴜꜰɪx}help play
-${YouTifyCommanders.join("") + ""}`
+          `**•\`Prefix\` = **${client.ʏᴏᴜꜰɪx}${ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.join("") + ""}`
         )
     );
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -81,6 +76,7 @@ ${YouTifyCommanders.join("") + ""}`
         .setDescription(
           `\`User\`🍏${message.author}\n\nCheck your \`direct messages\` for a list of **🍏YouTify™** Commands!`
         )
+        .addField(`\`Categories\``, `YouTify **|** System **|** Filters`, true)
     );
     return;
   }

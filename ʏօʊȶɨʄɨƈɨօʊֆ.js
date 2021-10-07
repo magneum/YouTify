@@ -153,7 +153,7 @@ Client.on(`message`, async (message) => {
           .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setDescription(`**\`Please report to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
-🔰[In telegram group](https://t.me/Krakns)
+🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 **\`Error🔻Caught\`**
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
@@ -311,31 +311,27 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
-    //     message.Client.channel.cache
-    //       .get(`894958787792871475`)
-    //       .send(
-    //         new MessageEmbed()
-    //           .setColor(`#b66c00`)
-    //           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-    //           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-    //           .setImage(
-    //             `https://i.postimg.cc/zvkxwMth/YouTify.jpg`
-    //           )
-    //           .setThumbnail(
-    //             `https://i.postimg.cc/zvkxwMth/YouTify.jpg`
-    //           )
-    //           .setFooter(
-    //             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-    //             message.author.avatarURL({
-    //               dynamic: true,
-    //             })
-    //           ).setDescription(`
-    // **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
+    message.client.channels.cache
+      .get(`894958787792871475`)
+      .send(
+        new MessageEmbed()
+          .setColor(`#b66c00`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          ).setDescription(`
+    **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
 
-    // **Error report:**
-    // *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
-    //       )
-    //       .catch(console.error);
+    **Error report:**
+    *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
+      )
+      .catch(console.error);
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -351,7 +347,7 @@ For any \`🍏YouTify™\` commands.`
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setDescription(`**\`Please report to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
-🔰[In telegram group](https://t.me/Krakns)
+🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 **\`Error🔻Caught\`**
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
@@ -362,8 +358,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-const YouTify_Catelog = [`System`, `YouTify`, `Filters`];
-YouTify_Catelog.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {
+const ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ = [`System`, `YouTify`, `Filters`];
+ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {
   Fs.readdir(
     `./ʏօʊȶɨʄɨƈɨօʊֆ/${ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ}`,
     (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ, ʏᴏᴜᴛɪꜰʏꜰɪʟᴇꜱ) => {
