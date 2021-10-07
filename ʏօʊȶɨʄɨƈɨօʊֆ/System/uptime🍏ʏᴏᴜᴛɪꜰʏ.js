@@ -2,20 +2,20 @@ const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = async (client, message) => {
-  let Days = Math.floor(client.uptime / 86400000),
-    Hours = Math.floor(client.uptime / 3600000) % 24,
-    Minutes = Math.floor(client.uptime / 60000) % 60,
-    Seconds = Math.floor(client.uptime / 1000) % 60;
-  const RemoveUseless = (Duration) => {
+  let ᴅᴀʏꜱ = Math.floor(client.uptime / 86400000),
+    ʜᴏᴜʀꜱ = Math.floor(client.uptime / 3600000) % 24,
+    ᴍɪɴᴜᴛᴇꜱ = Math.floor(client.uptime / 60000) % 60,
+    ꜱᴇᴄᴏɴᴅꜱ = Math.floor(client.uptime / 1000) % 60;
+  const ʀᴍ = (Duration) => {
     return Duration.replace("0 Day\n", "")
       .replace("0 Hour\n", "")
       .replace("0 Minute\n", "");
   };
-  let Total = await RemoveUseless(
-    `${Days} ${Days > 1 ? "Days" : "Day"}\n${Hours} ${
-      Hours > 1 ? "Hours" : "Hour"
-    }\n${Minutes} ${Minutes > 1 ? "Minutes" : "Minute"}\n${Seconds} ${
-      Seconds > 1 ? "Seconds" : "Second"
+  let ʏᴏᴜᴛɪꜰʏᴜᴘᴛɪᴍᴇ = await ʀᴍ(
+    `${ᴅᴀʏꜱ} ${ᴅᴀʏꜱ > 1 ? "ᴅᴀʏꜱ" : "Day"}\n${ʜᴏᴜʀꜱ} ${
+      ʜᴏᴜʀꜱ > 1 ? "ʜᴏᴜʀꜱ" : "Hour"
+    }\n${ᴍɪɴᴜᴛᴇꜱ} ${ᴍɪɴᴜᴛᴇꜱ > 1 ? "ᴍɪɴᴜᴛᴇꜱ" : "Minute"}\n${ꜱᴇᴄᴏɴᴅꜱ} ${
+      ꜱᴇᴄᴏɴᴅꜱ > 1 ? "ꜱᴇᴄᴏɴᴅꜱ" : "Second"
     }`
   );
 
@@ -36,7 +36,11 @@ module.exports.run = async (client, message) => {
             dynamic: true,
           })
         )
-        .addField(`\`Time\``, `🕐**Server Refreshed ${Total} ago!**`, true)
+        .addField(
+          `\`Time\``,
+          `🕐**Server Refreshed ${ʏᴏᴜᴛɪꜰʏᴜᴘᴛɪᴍᴇ} ago!**`,
+          true
+        )
     )
     .catch(console.error);
   return;

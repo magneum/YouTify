@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = (client, message) => {
   message.react("✅");
