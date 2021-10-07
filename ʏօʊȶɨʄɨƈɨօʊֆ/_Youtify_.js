@@ -1,5 +1,5 @@
 const YouTify_YtSr = require("youtube-sr").default;
-const YouTify_SpotDL = require("spotify-url-info");
+const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
 const YouTify_YtDL = require("@distube/ytdl");
 const getVideoId = require("get-video-id");
 const { MessageEmbed } = require("discord.js");
@@ -8,96 +8,87 @@ const Discord = require(`discord.js`);
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 const Regex = {
-  YouTify_Video_ID: /^[a-zA-Z0-9-_]{11}$/,
-  YouTify_Video_URL:
+  ʏᴏᴜᴛɪꜰʏᴠɪᴅ: /^[a-zA-Z0-9-_]{11}$/,
+  ʏᴏᴜᴛɪꜰʏᴠᴜʀʟ:
     /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/,
-  YouTify_Playlist_ID: /(PL|UU|LL|RD)[a-zA-Z0-9-_]{16,41}/,
-  YouTify_Playlist_URL:
+  ʏᴏᴜᴛɪꜰʏᴘɪᴅ: /(PL|UU|LL|RD)[a-zA-Z0-9-_]{16,41}/,
+  ʏᴏᴜᴛɪꜰʏᴘᴜʀʟ:
     /https?:\/\/(www.)?youtube.com\/playlist\?list=((PL|UU|LL|RD)[a-zA-Z0-9-_]{16,41})/,
-  YouTify_SoundCloud_Single:
+  ʏᴏᴜᴛɪꜰʏꜱᴄꜱ:
     /^https?:\/\/(soundcloud\.com|snd\.sc)\/([A-Za-z0-9_-]+)\/([A-Za-z0-9_-]+)\/?$/,
-  YouTify_SoundCloud_Playlist:
+  ʏᴏᴜᴛɪꜰʏꜱᴄᴘ:
     /^https?:\/\/(soundcloud\.com|snd\.sc)\/([A-Za-z0-9_-]+)\/sets\/([A-Za-z0-9_-]+)\/?$/,
-  YouTify_Spotify: /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/,
+  ʏᴏᴜᴛɪꜰʏꜱᴘ: /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/,
 };
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function Type(Value) {
-  if (Regex.YouTify_Video_ID.test(Value))
+  if (Regex.ʏᴏᴜᴛɪꜰʏᴠɪᴅ.test(Value))
     return {
-      YouTify_Thirst: "YT",
-      YouTify_Load: `https://www.youtube.com/watch?v=${
-        Regex.YouTify_Video_ID.exec(Value)[0]
+      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
+      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${
+        Regex.ʏᴏᴜᴛɪꜰʏᴠɪᴅ.exec(Value)[0]
       }`,
     };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  if (
-    Regex.YouTify_Video_URL.test(Value) &&
-    !Value.toLowerCase().includes("list")
-  )
-    return { YouTify_Thirst: "YT", YouTify_Load: Value };
-  if (Regex.YouTify_Playlist_ID.test(Value) && !Value.startsWith("http"))
+  if (Regex.ʏᴏᴜᴛɪꜰʏᴠᴜʀʟ.test(Value) && !Value.toLowerCase().includes("list"))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏᴘɪᴅ.test(Value) && !Value.startsWith("http"))
     return {
-      YouTify_Thirst: "YOUTUBEPLAYLIST",
-      YouTify_Load: `https://www.youtube.com/playlist?list=${Value}`,
+      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ",
+      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/playlist?list=${Value}`,
     };
-  if (Regex.YouTify_Playlist_URL.test(Value))
-    return { YouTify_Thirst: "YOUTUBEPLAYLIST", YouTify_Load: Value };
-  if (Regex.YouTify_SoundCloud_Single.test(Value))
-    return { YouTify_Thirst: "SCOUNDCLOUD", YouTify_Load: Value };
-  if (Regex.YouTify_SoundCloud_Playlist.test(Value))
-    return { YouTify_Thirst: "SCOUNDCLOUDPLAYLIST", YouTify_Load: Value };
-  if (
-    Regex.YouTify_Spotify.test(Value) &&
-    Value.toLowerCase().includes("track")
-  )
-    return { YouTify_Thirst: "YouTify_SpotDL", YouTify_Load: Value };
-  if (
-    Regex.YouTify_Spotify.test(Value) &&
-    Value.toLowerCase().includes("playlist")
-  )
-    return { YouTify_Thirst: "SPOTIFYPLAYLIST", YouTify_Load: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏᴘᴜʀʟ.test(Value))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏꜱᴄꜱ.test(Value))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏꜱᴄᴘ.test(Value))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏꜱᴘ.test(Value) && Value.toLowerCase().includes("track"))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+  if (Regex.ʏᴏᴜᴛɪꜰʏꜱᴘ.test(Value) && Value.toLowerCase().includes("playlist"))
+    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Data = await YouTify_YtSr.searchOne(Value);
   if (!Data) return undefined;
   return {
-    YouTify_Thirst: "YT",
-    YouTify_Load: `https://www.youtube.com/watch?v=${Data.id}`,
+    ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
+    ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${Data.id}`,
   };
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function YouTify_Find_Infos(Query, message) {
-  const YouTify_Thirst = await Type(Query);
-  let YouTify_Final, Info;
-  if (!YouTify_Thirst) return undefined;
-  if (YouTify_Thirst.YouTify_Thirst == "YT") {
-    Info = await YouTify_YtDL.getInfo(YouTify_Thirst.YouTify_Load);
+  const ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ = await Type(Query);
+  let ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ, Info;
+  if (!ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ) return undefined;
+  if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "YT") {
+    Info = await YouTify_YtDL.getInfo(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
     if (!Info) return undefined;
     (Info = await YouTify_Song_Feeder(Info.videoDetails, message, Info)),
-      (Info.YouTify_Point = false);
+      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
     return Info;
-  } else if (YouTify_Thirst.YouTify_Thirst == "SCOUNDCLOUD") {
-    Info = await message.client.SCOUNDCLOUD.getSongInfo(
-      YouTify_Thirst.YouTify_Load
+  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ") {
+    Info = await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getSongInfo(
+      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
     );
     if (!Info) return undefined;
     (Info = await YouTify_Song_Feeder(Info, message, Info, {
-      Type: "SCOUNDCLOUD",
+      Type: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ",
     })),
-      (Info.YouTify_Point = false);
+      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
     return Info;
-  } else if (YouTify_Thirst.YouTify_Thirst == "YouTify_SpotDL") {
-    Info = await YouTify_SpotDL.getData(YouTify_Thirst.YouTify_Load);
+  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ") {
+    Info = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getData(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
     if (!Info) return undefined;
     Info = {
-      Type: "YouTify_SpotDL",
+      Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ",
       ID: Info.id,
       Title: Info.name,
       Audio: Info.preview_url,
@@ -109,19 +100,19 @@ async function YouTify_Find_Infos(Query, message) {
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    await YouTify_Song_Feeder(Info, message, Info, { Type: "YouTify_SpotDL" }),
-      (Info.YouTify_Point = false);
+    await YouTify_Song_Feeder(Info, message, Info, { Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ" }),
+      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
     return Info;
   } else if (
-    ["YOUTUBEPLAYLIST", "SCOUNDCLOUDPLAYLIST"].includes(
-      YouTify_Thirst.YouTify_Thirst
+    ["ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ", "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ"].includes(
+      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ
     )
   ) {
     Info =
-      YouTify_Thirst.YouTify_Thirst == "YOUTUBEPLAYLIST"
-        ? await YouTify_YtSr.getPlaylist(YouTify_Thirst.YouTify_Load)
-        : await message.client.SCOUNDCLOUD.getPlaylist(
-            YouTify_Thirst.YouTify_Load
+      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
+        ? await YouTify_YtSr.getPlaylist(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ)
+        : await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getPlaylist(
+            ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
           );
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -129,31 +120,31 @@ async function YouTify_Find_Infos(Query, message) {
     if (!Info) return undefined;
     const Songs = [],
       Type = {
-        YOUTUBEPLAYLIST: "videos",
-        SCOUNDCLOUDPLAYLIST: "tracks",
+        ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ: "videos",
+        ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ: "tracks",
       };
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    for (let Element of Info[Type[YouTify_Thirst.YouTify_Thirst]]) {
+    for (let Element of Info[Type[ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ]]) {
       const SInfo = await YouTify_Song_Feeder(Element, message, Element, {
         Type:
-          YouTify_Thirst.YouTify_Thirst == "YOUTUBEPLAYLIST"
+          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
             ? "SR"
-            : "SCOUNDCLOUD",
+            : "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ",
       });
       if (typeof SInfo != "undefined") Songs.push(SInfo);
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    YouTify_Final = {
-      YouTify_Point: true,
+    ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ = {
+      ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ: true,
       Name: Info.title,
       Thumbnail: Info.thumbnail,
       Count:
         Info[
-          YouTify_Thirst.YouTify_Thirst == "YOUTUBEPLAYLIST"
+          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
             ? "videoCount"
             : "trackCount"
         ],
@@ -162,10 +153,10 @@ async function YouTify_Find_Infos(Query, message) {
       Videos: Songs,
       Other: Info,
     };
-    return YouTify_Final;
-  } else if (YouTify_Thirst.YouTify_Thirst == "SPOTIFYPLAYLIST") {
+    return ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ;
+  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ") {
     try {
-      Info = await YouTify_SpotDL.getData(YouTify_Thirst.YouTify_Load);
+      Info = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getData(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
     } catch (YouTify_Error) {
       return undefined;
     }
@@ -177,7 +168,7 @@ async function YouTify_Find_Infos(Query, message) {
     for (let Element of Info.tracks.items) {
       const Data = Element.track;
       Songs.push({
-        Type: "SPOTIFYPLAYLIST",
+        Type: "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ",
         ID: Data.id,
         Title: Data.name,
         Audio: Data.preview_url,
@@ -190,8 +181,8 @@ async function YouTify_Find_Infos(Query, message) {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!Songs) return undefined;
-    YouTify_Final = {
-      YouTify_Point: true,
+    ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ = {
+      ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ: true,
       Name: Info.name,
       Thumbnail: Info.images[0].url,
       Link: Info.external_urls.spotify,
@@ -200,7 +191,7 @@ async function YouTify_Find_Infos(Query, message) {
       Videos: Songs,
       Other: Info,
     };
-    return YouTify_Final;
+    return ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ;
   }
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -368,18 +359,18 @@ async function _Youtify_(client, message, options = {}) {
       (option["filter"] = options.Song.Other.videoDetails.isLiveContent
         ? "audioandvideo"
         : "audioonly");
-  } else if (options.Song.Type == "SCOUNDCLOUD") {
+  } else if (options.Song.Type == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ") {
     (Link = await options.Song.Other.downloadProgressive()), (Type = "AR");
-  } else if (options.Song.Type == "YouTify_SpotDL") {
+  } else if (options.Song.Type == "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ") {
     (Link = options.Song.Audio), (Type = "AR");
-  } else if (options.Song.Type == "SPOTIFYPLAYLIST") {
-    const Data = await YouTify_SpotDL.getPreview(options.Song.Link);
+  } else if (options.Song.Type == "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ") {
+    const Data = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getPreview(options.Song.Link);
     if (!Data) {
       message.channel.send("Error: No Playlist Found!");
       return;
     }
     options.Song = await YouTify_Song_Feeder(Data, message, Data, {
-      Type: "YouTify_SpotDL",
+      Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ",
     });
     (Link = options.Song.Audio), (Type = "AR");
   }

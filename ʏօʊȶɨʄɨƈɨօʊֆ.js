@@ -5,8 +5,8 @@ const Pretty = require(`pretty-ms`);
 const Discord = require(`discord.js`);
 const CoolDowns = new Discord.Collection();
 const { MessageEmbed } = require("discord.js");
-const SCOUNDCLOUD = require(`soundcloud-scraper`);
-const { Prefix, YouToken } = require(`./ʟᴏᴀᴅᴇʀ.js`);
+const ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = require(`soundcloud-scraper`);
+const { Prefix, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʟᴏᴀᴅᴇʀ.js`);
 const Client = new Discord.Client({ restTimeOffset: 10 });
 (Client.commands = new Discord.Collection()),
   (Client.aliases = new Discord.Collection()),
@@ -15,7 +15,7 @@ const Client = new Discord.Client({ restTimeOffset: 10 });
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
-  Client.login(YouToken);
+  Client.login(ʏᴏᴜᴛᴏᴋᴇɴ);
 } catch (ErrorApril) {
   console.log(`Invalid YouTify Token Provided!`);
   console.error(ErrorApril);
@@ -39,8 +39,8 @@ YouTify Is Ready- ${Client.user.username}
   Client.user.setActivity(`${Prefix}help🍏${Prefix}play`, {
     type: `WATCHING`,
   });
-  const Key = await SCOUNDCLOUD.keygen();
-  Client.SCOUNDCLOUD = new SCOUNDCLOUD.Client(Key);
+  const Key = await ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.keygen();
+  Client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = new ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.Client(Key);
 });
 Client.on(`error`, (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) => {
   console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
@@ -246,7 +246,9 @@ For any \`🍏YouTify™\` commands.`
       if (Timestamps.has(message.author.id)) {
         const ExpireTime = Timestamps.get(message.author.id) + CoolDown;
         if (Now < ExpireTime) {
-          message.channel.send("📕: error+code RED message").catch(console.error);
+          message.channel
+            .send("📕: error+code RED message")
+            .catch(console.error);
           message.react(`❌`);
           return message.channel.send(
             new MessageEmbed()

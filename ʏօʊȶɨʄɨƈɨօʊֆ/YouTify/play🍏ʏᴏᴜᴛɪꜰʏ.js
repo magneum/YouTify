@@ -46,21 +46,21 @@ module.exports.run = async (client, message, args) => {
     Song,
     Songs,
     Connection,
-    YouTify_Thirst = {};
+    ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ = {};
 
   if (!YouTify) {
     message.channel.send("Error: No Song Found!");
     return;
   }
-  if (YouTify.YouTify_Point) {
+  if (YouTify.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ) {
     Songs = YouTify.Videos;
     Song = YouTify.Videos[0];
-    YouTify_Thirst = YouTify;
+    ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ = YouTify;
   } else {
     Song = YouTify;
   }
   if (Queue) {
-    await (YouTify_Thirst.YouTify_Point
+    await (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ
       ? Queue.Songs.push(...Songs)
       : Queue.Songs.push(Song));
     message.react("✅");
@@ -70,9 +70,9 @@ module.exports.run = async (client, message, args) => {
         .setColor("#8DB600")
         .setThumbnail(
           Songs
-            ? YouTify_Thirst.Other.thumbnail
-              ? YouTify_Thirst.Other.thumbnail
-              : YouTify_Thirst.Thumbnail
+            ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail
+              ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail
+              : ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Thumbnail
             : Song.Thumbnail
         )
         .setAuthor(
@@ -83,7 +83,7 @@ module.exports.run = async (client, message, args) => {
         )
         .setDescription(
           (Songs
-            ? `[${YouTify_Thirst.Name}](${YouTify_Thirst.Link})`
+            ? `[${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Name}](${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Link})`
             : `[${Song.Title}](${Song.Link})`) + " Has Been Added To Queue!"
         )
         .setTimestamp()

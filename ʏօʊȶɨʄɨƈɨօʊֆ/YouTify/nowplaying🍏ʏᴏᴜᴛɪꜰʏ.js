@@ -55,9 +55,9 @@ module.exports.run = async (client, message, args) => {
   const Song = Queue.Songs[0],
     Type = ["YT", "SR"].includes(Song.Type)
       ? "Youtube"
-      : Song.Type == "SCOUNDCLOUD"
+      : Song.Type == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ"
       ? "SoundCloud"
-      : ["YouTify_SpotDL", "SPOTIFYPLAYLIST"].includes(Song.Type)
+      : ["ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ", "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ"].includes(Song.Type)
       ? "Spotify"
       : undefined;
 
