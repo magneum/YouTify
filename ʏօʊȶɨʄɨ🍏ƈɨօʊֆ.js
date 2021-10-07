@@ -6,6 +6,7 @@ const ᴅɪꜱᴄᴏʀᴅ = require(`./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/ӄʀǟӄɨռ
 const ᴄᴀʟᴍᴅᴏᴡɴ = new ᴅɪꜱᴄᴏʀᴅ.Collection();
 const { MessageEmbed } = require("./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/ӄʀǟӄɨռʐʟǟɮ");
 const ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = require(`soundcloud-scraper`);
+const ʏᴏᴜᴛɪꜰʏserver = require(`./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/host`);
 const { ʏᴏᴜꜰɪx, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/ʟᴏᴀᴅᴇʀ.js`);
 const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
 (Client.commands = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
@@ -15,6 +16,7 @@ const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
+  ʏᴏᴜᴛɪꜰʏserver();
   Client.login(ʏᴏᴜᴛᴏᴋᴇɴ);
 } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
   console.log(`Invalid YouTify Token Provided!`);
@@ -231,9 +233,9 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     let Arguments = await message.content
-        .slice(ʏᴏᴜꜰɪx.length)
-        .trim()
-        .split(/ +/g),
+      .slice(ʏᴏᴜꜰɪx.length)
+      .trim()
+      .split(/ +/g),
       Command = await Arguments.shift().toLowerCase();
     Command =
       (await Client.commands.get(Command)) ||
@@ -273,10 +275,9 @@ For any \`🍏YouTify™\` commands.`
 **Slow Down and Wait** *${ᴘʀᴇᴛᴛʏ(ExpireTime - Now, {
                   verbose: true,
                   secondsDecimalDigits: 0,
-                })}*  **Before Using** *${
-                  ʏᴏᴜꜰɪx +
-                  Command.help.name.charAt(0).toLowerCase() +
-                  Command.help.name.slice(1)
+                })}*  **Before Using** *${ʏᴏᴜꜰɪx +
+                Command.help.name.charAt(0).toLowerCase() +
+                Command.help.name.slice(1)
                 }* **Command Again**`
               )
           );
@@ -372,17 +373,16 @@ const ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ = [`System`, `YouTify`, `Filters`];
         if (!ʏօʊȶɨʄʏƈօʍʍֆ.help.name) {
           console.log(`---------------------`);
           console.log(
-            ᴄʜᴀʟᴋ.red`>❌ | ${
-              ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
-            }`
+            ᴄʜᴀʟᴋ.red`>❌ | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
+              }`
           );
           return;
         }
         Client.commands.set(ʏօʊȶɨʄʏƈօʍʍֆ.help.name, ʏօʊȶɨʄʏƈօʍʍֆ);
         ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases
           ? ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases.forEach((Alias) =>
-              Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
-            )
+            Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
+          )
           : (ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases = null);
         console.log(`---------------------`);
         console.log(ᴄʜᴀʟᴋ.green`>🟢 | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name.toUpperCase()}`);
