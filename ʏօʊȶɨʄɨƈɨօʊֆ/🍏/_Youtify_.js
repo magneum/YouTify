@@ -398,22 +398,20 @@ async function _Youtify_(client, message, options = {}) {
     await queue.Text.send(
       new MessageEmbed()
         .setColor("#8DB600")
+        .setTitle(`\`\`\`₦ðw🍏þlå¥ïñg\`\`\``)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setURL(`https://github.com/Krakinz?tab=repositories`)
-        .setAuthor(`\`\`\`Now🍏Playing\`\`\``)
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setImage(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({ dynamic: true })
-        ).setDescription(`**𝘋𝘪𝘳𝘦𝘤𝘵 𝘚𝘵𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘶𝘴𝘪𝘯𝘨:** \`ʏօʊȶɨʄɨƈɨօʊֆ.js\`
-
-\`𝐓𝐢𝐭𝐥𝐞\`
-**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**
-\`𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧\`
-**🏷${queue.Songs[0].Duration}**
-\`𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲\`
-**🏷${message.author} aka ${message.author.username}**`)
+        ).addField(`\`Title\``, `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`, true)
+        .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
+        .addField(`\`Requested By\``, `**💬${message.author}**`, true)
+        .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
+        .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
+        .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
     );
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;

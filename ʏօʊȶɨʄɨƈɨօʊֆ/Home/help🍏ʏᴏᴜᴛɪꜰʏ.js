@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setDescription(
-          `**•\`Prefix\`**${client.ʏᴏᴜꜰɪx}
+          `**•\`Prefix\` = **${client.ʏᴏᴜꜰɪx}
 
 **•\`For More Command Information\`**
 ${client.ʏᴏᴜꜰɪx}help loop
