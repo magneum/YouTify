@@ -127,24 +127,15 @@ module.exports.run = async (client, message, args) => {
         new MessageEmbed()
           .setColor("#8DB600")
           .setTimestamp()
-          .setThumbnail(
-            Songs
-              ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail
-                ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail
-                : ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Thumbnail
-              : Song.Thumbnail
-          )
-          .setAuthor(
-            (Songs ? "Playlist" : "Song") + " Added",
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({
               dynamic: true,
-            })
-          )
-          .setDescription(
-            (Songs
-              ? `[${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Name}](${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Link})`
-              : `[${Song.Title}](${Song.Link})`) + " Has Been Added To Queue!"
-          )
+            }))
+          .setThumbnail(Songs ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail ? ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Other.thumbnail : ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Thumbnail : Song.Thumbnail)
+          .setTitle((Songs ? "Playlist" : "Song") + " Added", message.author.avatarURL({ dynamic: true, }))
+          .setDescription((Songs ? `[${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Name}](${ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.Link})` : `[${Song.Title}](${Song.Link})`) + " Has Been Added To Queue!")
       );
       return;
     }
@@ -204,6 +195,31 @@ module.exports.run = async (client, message, args) => {
       try {
         message.react("✅");
         message.channel.send("📗: ok+code GREEN message").catch(console.error);
+        message.channel
+          .send(
+            new MessageEmbed()
+              .setColor("#8DB600")
+              .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+              .addField(`🔍Searching`, `** \`${args.join(" ")}\`, and Adding in 3sec🍏**`, true)
+              .setFooter(
+                "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+                message.author.avatarURL({
+                  dynamic: true,
+                })
+              ))
+          .catch(console.error)
+          .then((message) => {
+            try {
+              message.delete({
+                timeout: 8000,
+              });
+            } catch (err) {
+              console.log(err);
+            }
+          });
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         message.author
           .send(
             new MessageEmbed()
@@ -232,6 +248,9 @@ module.exports.run = async (client, message, args) => {
               console.log(err);
             }
           });
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         message.channel
           .send(
             new MessageEmbed()
