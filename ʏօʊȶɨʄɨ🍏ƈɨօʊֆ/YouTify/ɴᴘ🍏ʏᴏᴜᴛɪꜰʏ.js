@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
-const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ/src`);
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args) => {
     try {
         const Channel = message.member.voice.channel;
@@ -27,6 +29,9 @@ module.exports.run = async (client, message, args) => {
                 .catch(console.error);
             return;
         }
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         const Queue = client.queue.get(message.guild.id);
         if (!Queue || !Queue.Songs) {
             message.react(`❌`);
@@ -52,7 +57,9 @@ module.exports.run = async (client, message, args) => {
                 .catch(console.error);
             return;
         }
-
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         const Song = Queue.Songs[0],
             Type = ["YT", "SR"].includes(Song.Type)
                 ? "Youtube"
@@ -62,7 +69,9 @@ module.exports.run = async (client, message, args) => {
                         ? "Spotify"
                         : undefined;
 
-        const Embed = new MessageEmbed()
+        message.react("✅");
+        message.channel.send("📗: ok+code GREEN message").catch(console.error);
+        return message.channel.send(new MessageEmbed()
             .setColor("#8DB600")
             .setAuthor("Now Playing")
             .setThumbnail(Song.Thumbnail)
@@ -72,10 +81,10 @@ Duration - ${Song.Duration}
 Added By - ${Song.Req}`
             )
             .setFooter(`Requested By ${message.author.username}`)
-            .setTimestamp();
-        message.react("✅");
-        message.channel.send("📗: ok+code GREEN message").catch(console.error);
-        return message.channel.send(Embed);
+            .setTimestamp());
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
         message.client.channels.cache
             .get(`894958787792871475`)
@@ -121,7 +130,9 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
 };
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
     name: "nowplaying",
     aliases: ["np"],

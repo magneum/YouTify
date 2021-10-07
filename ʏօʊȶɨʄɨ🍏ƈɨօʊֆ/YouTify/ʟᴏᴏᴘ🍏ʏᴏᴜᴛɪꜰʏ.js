@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
-const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ/src`);
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args) => {
     try {
         const Channel = message.member.voice.channel;
@@ -27,6 +29,9 @@ module.exports.run = async (client, message, args) => {
                 .catch(console.error);
             return;
         }
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         const Queue = client.queue.get(message.guild.id);
         if (!Queue) {
             message.react(`❌`);
@@ -52,10 +57,13 @@ module.exports.run = async (client, message, args) => {
                 .catch(console.error);
             return;
         }
-
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         Queue.Loop = Queue.Loop ? false : true;
-
-        const Embed = new MessageEmbed()
+        message.react("✅");
+        message.channel.send("📗: ok+code GREEN message").catch(console.error);
+        return message.channel.send(new MessageEmbed()
             .setColor("#8DB600")
             .setAuthor(
                 `${Queue.Loop ? "On" : "Off"}`,
@@ -64,10 +72,10 @@ module.exports.run = async (client, message, args) => {
                 })
             )
             .setDescription(`Loop Has Been ${Queue.Loop ? "Enabled" : "Disabled"}!`)
-            .setTimestamp();
-        message.react("✅");
-        message.channel.send("📗: ok+code GREEN message").catch(console.error);
-        return message.channel.send(Embed);
+            .setTimestamp());
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
         message.client.channels.cache
             .get(`894958787792871475`)
