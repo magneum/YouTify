@@ -1,5 +1,5 @@
-const { MessageEmbed } = require("discord.js");
-const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
+const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = (client, message, args) => {
   message.react("✅");

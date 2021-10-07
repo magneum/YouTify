@@ -1,6 +1,6 @@
 const ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
 const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 const ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
 const getVideoId = require("get-video-id");
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================

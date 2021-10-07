@@ -1,5 +1,5 @@
 const { _Youtify_ } = require("../🍏/_Youtify_.js");
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
 
 
 module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {

@@ -1,8 +1,8 @@
 const { _Youtify_, YouTify_Song_Feeder } = require("../🍏/_Youtify_.js"),
   ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default,
   ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("@distube/ytdl");
-const { MessageEmbed } = require("discord.js");
-const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
+const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 module.exports.run = async (client, message, args) => {
   let Value = args.join(" "),
     Channel = message.member.voice.channel,
