@@ -27,9 +27,8 @@ async function Type(Value) {
   if (Regex.ʏᴏᴜᴛɪꜰʏᴠɪᴅ.test(Value))
     return {
       ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
-      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${
-        Regex.ʏᴏᴜᴛɪꜰʏᴠɪᴅ.exec(Value)[0]
-      }`,
+      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${Regex.ʏᴏᴜᴛɪꜰʏᴠɪᴅ.exec(Value)[0]
+        }`,
     };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -112,8 +111,8 @@ async function YouTify_Find_Infos(Query, message) {
       ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
         ? await YouTify_YtSr.getPlaylist(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ)
         : await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getPlaylist(
-            ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
-          );
+          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
+        );
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -144,9 +143,9 @@ async function YouTify_Find_Infos(Query, message) {
       Thumbnail: Info.thumbnail,
       Count:
         Info[
-          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
-            ? "videoCount"
-            : "trackCount"
+        ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
+          ? "videoCount"
+          : "trackCount"
         ],
       Views: Info.views || 0,
       Link: Info.url,
@@ -201,20 +200,20 @@ async function YouTify_Song_Feeder(Song, message, all, options = {}) {
   const Link = Song.video_url
     ? Song.video_url
     : Song.id && !isNaN(Song.id)
-    ? Song.url
-    : Song.url
-    ? Song.url
-    : `https://www.youtube.com/watch?v=${Song.id}`;
+      ? Song.url
+      : Song.url
+        ? Song.url
+        : `https://www.youtube.com/watch?v=${Song.id}`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Thumbnail = Song.thumbnails
     ? Song.thumbnails[0].url
     : Song.thumbnail
-    ? Song.thumbnail.url
       ? Song.thumbnail.url
-      : Song.thumbnail
-    : Song.image;
+        ? Song.thumbnail.url
+        : Song.thumbnail
+      : Song.image;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -327,10 +326,10 @@ async function _Youtify_(client, message, options = {}) {
     client.ws.ping <= 20
       ? 513000
       : client.ws.ping <= 40
-      ? 128000
-      : client.ws.ping <= 60
-      ? 96000
-      : 64000;
+        ? 128000
+        : client.ws.ping <= 60
+          ? 96000
+          : 64000;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -381,8 +380,8 @@ async function _Youtify_(client, message, options = {}) {
     Type == "SR"
       ? await YouTify_YtDL.downloadFromInfo(Link, option)
       : Type == "AR"
-      ? await YouTify_YtDL.arbitraryStream(Link, option)
-      : undefined;
+        ? await YouTify_YtDL.arbitraryStream(Link, option)
+        : undefined;
   if (!Steam) {
     message.channel.send("Error: Something Went Wrong, Try Again Later!");
     return;
