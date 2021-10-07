@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   if (!args[0]) {
     message.react("✅");
-    message.channel.send("📗: ok status message").catch(console.error);
+    message.channel.send("📗: ok+code GREEN message").catch(console.error);
     message.author.send(
       new MessageEmbed()
         .setColor("#8DB600")
@@ -131,7 +131,7 @@ ${YouTifyCommanders.join("") + ""}`
     return;
   } else {
     message.react("✅");
-    message.channel.send("📗: ok status message").catch(console.error);
+    message.channel.send("📗: ok+code GREEN message").catch(console.error);
     message.channel.send(
       new MessageEmbed()
         .setColor("#8DB600")

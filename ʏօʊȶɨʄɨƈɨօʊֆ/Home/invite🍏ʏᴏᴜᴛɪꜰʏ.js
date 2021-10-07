@@ -3,7 +3,7 @@ const ᴅɪꜱᴄᴏʀᴅ = require(`../ӄʀǟӄɨռʐʟǟɮ`);
 
 module.exports.run = (client, message, args) => {
   message.react("✅");
-  message.channel.send("📗: ok status message").catch(console.error);
+  message.channel.send("📗: ok+code GREEN message").catch(console.error);
   message.channel.send(
     new MessageEmbed()
       .setColor("#8DB600")
