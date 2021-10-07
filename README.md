@@ -7,7 +7,7 @@
 
 # 🍏『 ᴅɪꜱᴄᴏʀᴅ ᴍᴜꜱɪᴄ ʙᴏᴛ: 🍏YouTify™] 』🍏
 
-<p align="centre"><img  width="100%" height="100%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%C6%88%C9%A8%D6%85%CA%8A%D6%86/YouTify.jpeg" /></p>
+<p align="centre"><img  width="100%" height="100%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/YouTify.jpeg" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
