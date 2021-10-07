@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
-const Discord = require(`discord.js`);
+const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
+
 module.exports.run = (client, message, args) => {
   message.react("✅");
   message.channel.send("📗: ok status message").catch(console.error);

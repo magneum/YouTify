@@ -1,6 +1,6 @@
 const { _Youtify_, Filters } = require("../🍏/_Youtify_.js");
 
-module.exports.run = async (client, message, args, Discord) => {
+module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
   const Channel = message.member.voice.channel;
   if (!Channel) {
     message.channel.send("📕: error+code RED message").catch(console.error);
@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args, Discord) => {
 
   Filter = Filter.toLowerCase();
 
-  const Embed = new Discord.MessageEmbed()
+  const Embed = new ᴅɪꜱᴄᴏʀᴅ.MessageEmbed()
     .setColor("#8DB600")
     .setAuthor(
       Filter[0].toUpperCase() + Filter.slice(1),

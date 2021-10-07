@@ -1,7 +1,7 @@
 const { YouTify_Find_Infos, _Youtify_ } = require("../🍏/_Youtify_.js"),
   ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
 const { MessageEmbed } = require("discord.js");
-const Discord = require(`discord.js`);
+const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
 
 module.exports.run = async (client, message, args) => {
   let Value = args.join(" "),
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
   if (!Value) {
     client.commands
       .get("help")
-      .run(client, message, ["play", client.token], Discord);
+      .run(client, message, ["play", client.token], ᴅɪꜱᴄᴏʀᴅ);
     return;
   }
   let YouTify = await YouTify_Find_Infos(Value, message),

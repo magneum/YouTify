@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
-const Discord = require(`discord.js`);
+const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
+
 module.exports.run = async (client, message, args) => {
   let Days = Math.floor(client.uptime / 86400000),
     Hours = Math.floor(client.uptime / 3600000) % 24,

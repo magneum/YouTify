@@ -1,6 +1,6 @@
 const Finder = require("lyrics-finder");
 const { MessageEmbed } = require("discord.js");
-const Discord = require(`discord.js`);
+const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
 
 module.exports.run = async (client, message, args) => {
   const Queue = client.queue.get(message.guild.id);

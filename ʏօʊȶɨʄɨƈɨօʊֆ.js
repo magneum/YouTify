@@ -1,15 +1,15 @@
 const Os = require(`os`);
 const Fs = require(`fs`);
-const chalk = require(`chalk`);
-const Pretty = require(`pretty-ms`);
-const Discord = require(`discord.js`);
-const CoolDowns = new Discord.Collection();
+const ᴄʜᴀʟᴋ = require(`chalk`);
+const ᴘʀᴇᴛᴛʏ = require(`pretty-ms`);
+const ᴅɪꜱᴄᴏʀᴅ = require(`discord.js`);
+const ᴄᴀʟᴍᴅᴏᴡɴ = new ᴅɪꜱᴄᴏʀᴅ.Collection();
 const { MessageEmbed } = require("discord.js");
 const ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = require(`soundcloud-scraper`);
 const { ʏᴏᴜꜰɪx, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʏօʊȶɨʄɨƈɨօʊֆ/ʟᴏᴀᴅᴇʀ.js`);
-const Client = new Discord.Client({ restTimeOffset: 10 });
-(Client.commands = new Discord.Collection()),
-  (Client.aliases = new Discord.Collection()),
+const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
+(Client.commands = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
+  (Client.aliases = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
   (Client.queue = new Map());
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -25,11 +25,11 @@ try {
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 Client.on(`ready`, async () => {
-  console.log(`🍏YouTify™ by🔱KrakinzLab™️ -----------\n`);
-  console.log(chalk.red(`📕: error+code RED message`));
-  console.log(chalk.yellow(`📙: warning message`));
-  console.log(chalk.green(`📗: ok status message`));
-  console.log(chalk.blue(`📘: canceled status message`));
+  console.log(`\n🍏YouTify™ by🔱KrakinzLab™️ -----------\n`);
+  console.log(ᴄʜᴀʟᴋ.red(`📕: error+code RED message`));
+  console.log(ᴄʜᴀʟᴋ.yellow(`📙: warning message`));
+  console.log(ᴄʜᴀʟᴋ.green(`📗: ok status message`));
+  console.log(ᴄʜᴀʟᴋ.blue(`📘: canceled status message`));
   console.log(`
 🔱Bot-Name:~~> ${Client.user.username}
 🔱Bot-Os:~~> ${Os.platform().toUpperCase()}
@@ -170,7 +170,7 @@ Client.on(`message`, async (message) => {
             })
           ).setDescription(`\`User\`🍏${message.author}\n
 **🍏\`YouTify™ by🔱KrakinzLab™️\`**
-🔆- Discord \`Spotify+YouTube+Soundcloud\` Music bot built with Discord.js.
+🔆- ᴅɪꜱᴄᴏʀᴅ \`Spotify+YouTube+Soundcloud\` Music bot built with ᴅɪꜱᴄᴏʀᴅ.js.
 
 ⚠️**\`Error\`**
 • You are currently in a \`DMChannel\` and so you have been \`restricted\` using any \`🍏YouTify™ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\`
@@ -213,9 +213,9 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     let Arguments = await message.content
-        .slice(ʏᴏᴜꜰɪx.length)
-        .trim()
-        .split(/ +/g),
+      .slice(ʏᴏᴜꜰɪx.length)
+      .trim()
+      .split(/ +/g),
       Command = await Arguments.shift().toLowerCase();
     Command =
       (await Client.commands.get(Command)) ||
@@ -224,9 +224,9 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     try {
-      if (!CoolDowns.has(Command.help.name))
-        await CoolDowns.set(Command.help.name, new Discord.Collection());
-      const Timestamps = CoolDowns.get(Command.help.name),
+      if (!ᴄᴀʟᴍᴅᴏᴡɴ.has(Command.help.name))
+        await ᴄᴀʟᴍᴅᴏᴡɴ.set(Command.help.name, new ᴅɪꜱᴄᴏʀᴅ.Collection());
+      const Timestamps = ᴄᴀʟᴍᴅᴏᴡɴ.get(Command.help.name),
         CoolDown = parseInt(Command.help.cooldown || 1000),
         Now = Date.now();
       if (Timestamps.has(message.author.id)) {
@@ -252,13 +252,12 @@ For any \`🍏YouTify™\` commands.`
               )
               .setDescription(
                 `
-**Slow Down and Wait** *${Pretty(ExpireTime - Now, {
+**Slow Down and Wait** *${ᴘʀᴇᴛᴛʏ(ExpireTime - Now, {
                   verbose: true,
                   secondsDecimalDigits: 0,
-                })}*  **Before Using** *${
-                  ʏᴏᴜꜰɪx +
-                  Command.help.name.charAt(0).toLowerCase() +
-                  Command.help.name.slice(1)
+                })}*  **Before Using** *${ʏᴏᴜꜰɪx +
+                Command.help.name.charAt(0).toLowerCase() +
+                Command.help.name.slice(1)
                 }* **Command Again**`
               )
           );
@@ -266,7 +265,7 @@ For any \`🍏YouTify™\` commands.`
       }
       Timestamps.set(message.author.id, Now);
       Client.ʏᴏᴜꜰɪx = ʏᴏᴜꜰɪx;
-      await Command.run(Client, message, Arguments, Discord);
+      await Command.run(Client, message, Arguments, ᴅɪꜱᴄᴏʀᴅ);
       await setTimeout(() => Timestamps.delete(message.author.id), CoolDown);
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       message.channel
@@ -330,7 +329,7 @@ For any \`🍏YouTify™\` commands.`
         .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setDescription(`**\`Please report to either\`**
-🔰[In Discord channel](https://discord.gg/y2PtYAJgpy)
+🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In telegram group](https://t.me/Krakns)
 
 **\`Error🔻Caught\`**
@@ -356,20 +355,19 @@ YouTify_Catelog.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {
         if (!ʏօʊȶɨʄʏƈօʍʍֆ.help.name) {
           console.log(`---------------------`);
           console.log(
-            chalk.red`>❌ | ${
-              ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
-            }`
+            ᴄʜᴀʟᴋ.red`>❌ | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
+              }`
           );
           return;
         }
         Client.commands.set(ʏօʊȶɨʄʏƈօʍʍֆ.help.name, ʏօʊȶɨʄʏƈօʍʍֆ);
         ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases
           ? ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases.forEach((Alias) =>
-              Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
-            )
+            Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
+          )
           : (ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases = null);
         console.log(`---------------------`);
-        console.log(chalk.green`>🟢 | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name.toUpperCase()}`);
+        console.log(ᴄʜᴀʟᴋ.green`>🟢 | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name.toUpperCase()}`);
       });
     }
   );
