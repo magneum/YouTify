@@ -19,385 +19,364 @@ const Regex = {
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function Type(Value) {
-    if (Regex.VideoID.test(Value))
-      return {
-        T: "YT",
-        L: `https://www.youtube.com/watch?v=${Regex.VideoID.exec(Value)[0]}`,
-      };
-    if (Regex.VideoURL.test(Value) && !Value.toLowerCase().includes("list"))
-      return { T: "YT", L: Value };
-    if (Regex.PlaylistID.test(Value) && !Value.startsWith("http"))
-      return { T: "YTPL", L: `https://www.youtube.com/playlist?list=${Value}` };
-    if (Regex.PlaylistURL.test(Value)) return { T: "YTPL", L: Value };
-    if (Regex.SCTrack.test(Value)) return { T: "SC", L: Value };
-    if (Regex.SCPlaylist.test(Value)) return { T: "SCPL", L: Value };
-    if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("track"))
-      return { T: "SP", L: Value };
-    if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("playlist"))
-      return { T: "SPPL", L: Value };
-    const Data = await Sr.searchOne(Value);
-    if (!Data) return undefined;
-    return { T: "YT", L: `https://www.youtube.com/watch?v=${Data.id}` };
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
-}
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function YouTify_Find_Infos(Query, message) {
-    const T = await Type(Query);
-    let Final, Info;
-    if (!T) return undefined;
-    if (T.T == "YT") {
-      Info = await Dl.getInfo(T.L);
-      if (!Info) return undefined;
-      (Info = await YouTify_Song_Feeder(Info.videoDetails, message, Info)),
-        (Info.P = false);
-      return Info;
-    } else if (T.T == "SC") {
-      Info = await message.client.SC.getSongInfo(T.L);
-      if (!Info) return undefined;
-      (Info = await YouTify_Song_Feeder(Info, message, Info, { Type: "SC" })),
-        (Info.P = false);
-      return Info;
-    } else if (T.T == "SP") {
-      Info = await SP.getData(T.L);
-      if (!Info) return undefined;
-      Info = {
-        Type: "SP",
-        ID: Info.id,
-        Title: Info.name,
-        Audio: Info.preview_url,
-        Req: message.author.username,
-        Other: Info,
-        Link: Info.external_urls.spotify,
-        Duration: await FD(Info.duration_ms, "ms"),
-      };
-      await YouTify_Song_Feeder(Info, message, Info, { Type: "SP" }),
-        (Info.P = false);
-      return Info;
-    } else if (["YTPL", "SCPL"].includes(T.T)) {
-      Info =
-        T.T == "YTPL"
-          ? await Sr.getPlaylist(T.L)
-          : await message.client.SC.getPlaylist(T.L);
-      if (!Info) return undefined;
-      const Songs = [],
-        Type = {
-          YTPL: "videos",
-          SCPL: "tracks",
-        };
-      for (let Element of Info[Type[T.T]]) {
-        const SInfo = await YouTify_Song_Feeder(Element, message, Element, {
-          Type: T.T == "YTPL" ? "SR" : "SC",
-        });
-        if (typeof SInfo != "undefined") Songs.push(SInfo);
-      }
-      Final = {
-        P: true,
-        Name: Info.title,
-        Thumbnail: Info.thumbnail,
-        Count: Info[T.T == "YTPL" ? "videoCount" : "trackCount"],
-        Views: Info.views || 0,
-        Link: Info.url,
-        Videos: Songs,
-        Other: Info,
-      };
-      return Final;
-    } else if (T.T == "SPPL") {
-      try {
-        Info = await SP.getData(T.L);
-      } catch (e) {
-        return undefined;
-      }
-      if (!Info) return undefined;
-      const Songs = [];
-      for (let Element of Info.tracks.items) {
-        const Data = Element.track;
-        Songs.push({
-          Type: "SPPL",
-          ID: Data.id,
-          Title: Data.name,
-          Audio: Data.preview_url,
-          Link: Data.external_urls.spotify,
-          Req: message.author.username,
-          Other: Data,
-        });
-      }
-      if (!Songs) return undefined;
-      Final = {
-        P: true,
-        Name: Info.name,
-        Thumbnail: Info.images[0].url,
-        Link: Info.external_urls.spotify,
-        Count: Info.tracks.items.length,
-        Views: Info.followers.total,
-        Videos: Songs,
-        Other: Info,
-      };
-      return Final;
-    }
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
-}
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function YouTify_Song_Feeder(Song, message, all, options = {}) {
-    const Link = Song.video_url
-      ? Song.video_url
-      : Song.id && !isNaN(Song.id)
-        ? Song.url
-        : Song.url
-          ? Song.url
-          : `https://www.youtube.com/watch?v=${Song.id}`;
-    const Thumbnail = Song.thumbnails
-      ? Song.thumbnails[0].url
-      : Song.thumbnail
-        ? Song.thumbnail.url
-          ? Song.thumbnail.url
-          : Song.thumbnail
-        : Song.image;
-    let Duration;
-    if (Song.lengthSeconds || !String(Song.duration).includes(":")) {
-      Duration = await FD(
-        Song.lengthSeconds || Song.duration,
-        Song.duration ? "ms" : " "
-      );
-    } else {
-      Duration = Song.duration;
-    }
+async function Type(Value) {
+  if (Regex.VideoID.test(Value))
     return {
-      Type: options.Type || "YT",
-      ID: Song.videoId || Song.id,
-      Title: Song.title,
-      Audio: Song.audio,
-      Req: message.author.username,
-      Other: all,
-      Thumbnail,
-      Duration,
-      Link,
+      T: "YT",
+      L: `https://www.youtube.com/watch?v=${Regex.VideoID.exec(Value)[0]}`,
     };
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
+  if (Regex.VideoURL.test(Value) && !Value.toLowerCase().includes("list"))
+    return { T: "YT", L: Value };
+  if (Regex.PlaylistID.test(Value) && !Value.startsWith("http"))
+    return { T: "YTPL", L: `https://www.youtube.com/playlist?list=${Value}` };
+  if (Regex.PlaylistURL.test(Value)) return { T: "YTPL", L: Value };
+  if (Regex.SCTrack.test(Value)) return { T: "SC", L: Value };
+  if (Regex.SCPlaylist.test(Value)) return { T: "SCPL", L: Value };
+  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("track"))
+    return { T: "SP", L: Value };
+  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("playlist"))
+    return { T: "SPPL", L: Value };
+  const Data = await Sr.searchOne(Value);
+  if (!Data) return undefined;
+  return { T: "YT", L: `https://www.youtube.com/watch?v=${Data.id}` };
 }
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function FD(duration, type = " ") {
-    if (type == "ms") duration = duration / 1000;
-    let minutes = Math.floor(duration / 60);
-    let hours = "";
-    if (minutes > 59) {
-      hours = Math.floor(minutes / 60);
-      hours = hours >= 10 ? hours : "0" + hours;
-      minutes = minutes - hours * 60;
-      minutes = minutes >= 10 ? minutes : "0" + minutes;
-    }
-    duration = Math.floor(duration % 60);
-    duration = duration >= 10 ? duration : "0" + duration;
-    if (hours != "") {
-      return hours + ":" + minutes + ":" + duration;
-    }
-    return minutes + ":" + duration;
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
-}
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function AllFilters(Queue) {
-    let EncodeFilters = [],
-      Encoder = [];
-    for (let Filter of Object.keys(Queue.Filters)) {
-      if (Queue.Filters[Filter]) {
-        EncodeFilters.push((await Filters())[Filter]);
-      }
-    }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (EncodeFilters.length < 1) {
-      Ecoder = [];
-    } else {
-      Encoder = ["-af", EncodeFilters.join(",")];
-    }
 
-    return Encoder;
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
-}
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function YouTify_Manager(message, client) {
-    const Queue = await client.queue.get(message.guild.id);
-
-    await Queue.Connection.on("disconnect", () => {
-      client.queue.delete(message.guild.id);
-    });
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    await Queue.Connection.dispatcher.on("finish", async () => {
-      const Shift = await Queue.Songs.shift();
-      if (Queue.Loop == true) await Queue.Songs.push(Shift);
-      await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message,
-        {
-          Song: Queue.Songs[0]
-        });
-    })
-    await Queue.Connection.dispatcher.on("error", async (error) => {
-      console.log(error);
-      Queue.Text.send("Something Went Wrong, Try Again Later!")
-      return;
-    });
-  }
-} catch (e) {
-  console.error("Error: " + e.message);
-}
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-try {
-  async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
-    const queue = await client.queue.get(message.guild.id),
-      Encoder = await AllFilters(queue);
-    const Seek = options.Filter
-      ? queue.ExtraTime
-        ? queue.Connection.dispatcher.streamTime + queue.ExtraTime
-        : queue.Connection.dispatcher.streamTime
-      : undefined;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (queue.Steam) queue.Steam.destroy();
-    if (!options.Song) {
-      (await queue.Voice.leave()) &&
-        (await client.queue.delete(message.guild.id));
-      const End = new Discord.MessageEmbed()
-        .setColor(client.Color)
-        .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
-        .setDescription("Queue Has Been Ended, Please Add More Songs")
-        .setTimestamp();
-      return message.channel.send(End);
-    }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    const Bitrates =
-      client.ws.ping <= 20
-        ? 513000
-        : client.ws.ping <= 40
-          ? 128000
-          : client.ws.ping <= 60
-            ? 96000
-            : 64000;
-    let Steam,
-      Dispatcher,
-      Link,
-      Type,
-      option = {
-        opusEncoded: true,
-        filter: "audioonly",
-        dlChunkSize: 0,
-        quality: "highestaudio",
-        seek: Seek / 1000,
-        encoderArgs: Encoder,
-        highWaterMark: 1 << 25,
+async function YouTify_Find_Infos(Query, message) {
+  const T = await Type(Query);
+  let Final, Info;
+  if (!T) return undefined;
+  if (T.T == "YT") {
+    Info = await Dl.getInfo(T.L);
+    if (!Info) return undefined;
+    (Info = await YouTify_Song_Feeder(Info.videoDetails, message, Info)),
+      (Info.P = false);
+    return Info;
+  } else if (T.T == "SC") {
+    Info = await message.client.SC.getSongInfo(T.L);
+    if (!Info) return undefined;
+    (Info = await YouTify_Song_Feeder(Info, message, Info, { Type: "SC" })),
+      (Info.P = false);
+    return Info;
+  } else if (T.T == "SP") {
+    Info = await SP.getData(T.L);
+    if (!Info) return undefined;
+    Info = {
+      Type: "SP",
+      ID: Info.id,
+      Title: Info.name,
+      Audio: Info.preview_url,
+      Req: message.author.username,
+      Other: Info,
+      Link: Info.external_urls.spotify,
+      Duration: await FD(Info.duration_ms, "ms"),
+    };
+    await YouTify_Song_Feeder(Info, message, Info, { Type: "SP" }),
+      (Info.P = false);
+    return Info;
+  } else if (["YTPL", "SCPL"].includes(T.T)) {
+    Info =
+      T.T == "YTPL"
+        ? await Sr.getPlaylist(T.L)
+        : await message.client.SC.getPlaylist(T.L);
+    if (!Info) return undefined;
+    const Songs = [],
+      Type = {
+        YTPL: "videos",
+        SCPL: "tracks",
       };
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (options.Song.Type == "SR" || options.Song.Type == "YT") {
-      options.Song.Type == "SR"
-        ? (options.Song.Other = await Dl.getInfo(options.Song.Link))
-        : null;
-      (Link = options.Song.Other),
-        (Type = "SR"),
-        (option["filter"] = options.Song.Other.videoDetails.isLiveContent
-          ? "audioandvideo"
-          : "audioonly");
-    } else if (options.Song.Type == "SC") {
-      (Link = await options.Song.Other.downloadProgressive()), (Type = "AR");
-    } else if (options.Song.Type == "SP") {
-      (Link = options.Song.Audio), (Type = "AR");
-    } else if (options.Song.Type == "SPPL") {
-      const Data = await SP.getPreview(options.Song.Link);
-      if (!Data) return message.channel.send("Error: No Playlist Found!");
-      options.Song = await YouTify_Song_Feeder(Data, message, Data, {
-        Type: "SP",
+    for (let Element of Info[Type[T.T]]) {
+      const SInfo = await YouTify_Song_Feeder(Element, message, Element, {
+        Type: T.T == "YTPL" ? "SR" : "SC",
       });
-      (Link = options.Song.Audio), (Type = "AR");
+      if (typeof SInfo != "undefined") Songs.push(SInfo);
     }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    Steam =
-      Type == "SR"
-        ? await Dl.downloadFromInfo(Link, option)
-        : Type == "AR"
-          ? await Dl.arbitraryStream(Link, option)
-          : undefined;
-    if (!Steam)
-      return message.channel.send(
-        "Error: Something Went Wrong, Try Again Later!"
-      );
-    Dispatcher = await queue.Connection.play(Steam, {
-      volume: queue.Volume / 100,
-      type: "opus",
-      bitrate: Bitrates,
-    });
-
-    queue.Steam = Steam;
-
-    if (Seek) {
-      queue.ExtraTime = 0;
-    } else {
-      const { id } = getVideoId(`${queue.Songs[0].Link}`);
-      await queue.Text.send(
-        new MessageEmbed()
-          .setColor("#8DB600")
-          .setTitle(`\`\`\`₦ðw🍏þlå¥ïñg\`\`\``)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setURL(`https://github.com/Krakinz`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setImage(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)
-          .setFooter(
-            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-            message.author.avatarURL({ dynamic: true })
-          )
-          .addField(
-            `\`Title\``,
-            `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`,
-            true
-          )
-          .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
-          .addField(`\`Requested By\``, `**💬${message.author}**`, true)
-          .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
-          .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
-          .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
-      );
-      Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
-      queue.ExtraTime = 0;
+    Final = {
+      P: true,
+      Name: Info.title,
+      Thumbnail: Info.thumbnail,
+      Count: Info[T.T == "YTPL" ? "videoCount" : "trackCount"],
+      Views: Info.views || 0,
+      Link: Info.url,
+      Videos: Songs,
+      Other: Info,
+    };
+    return Final;
+  } else if (T.T == "SPPL") {
+    try {
+      Info = await SP.getData(T.L);
+    } catch (e) {
+      return undefined;
     }
-    return YouTify_Manager(message, client);
+    if (!Info) return undefined;
+    const Songs = [];
+    for (let Element of Info.tracks.items) {
+      const Data = Element.track;
+      Songs.push({
+        Type: "SPPL",
+        ID: Data.id,
+        Title: Data.name,
+        Audio: Data.preview_url,
+        Link: Data.external_urls.spotify,
+        Req: message.author.username,
+        Other: Data,
+      });
+    }
+    if (!Songs) return undefined;
+    Final = {
+      P: true,
+      Name: Info.name,
+      Thumbnail: Info.images[0].url,
+      Link: Info.external_urls.spotify,
+      Count: Info.tracks.items.length,
+      Views: Info.followers.total,
+      Videos: Songs,
+      Other: Info,
+    };
+    return Final;
   }
-} catch (e) {
-  console.error("Error: " + e.message);
 }
+
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+async function YouTify_Song_Feeder(Song, message, all, options = {}) {
+  const Link = Song.video_url
+    ? Song.video_url
+    : Song.id && !isNaN(Song.id)
+      ? Song.url
+      : Song.url
+        ? Song.url
+        : `https://www.youtube.com/watch?v=${Song.id}`;
+  const Thumbnail = Song.thumbnails
+    ? Song.thumbnails[0].url
+    : Song.thumbnail
+      ? Song.thumbnail.url
+        ? Song.thumbnail.url
+        : Song.thumbnail
+      : Song.image;
+  let Duration;
+  if (Song.lengthSeconds || !String(Song.duration).includes(":")) {
+    Duration = await FD(
+      Song.lengthSeconds || Song.duration,
+      Song.duration ? "ms" : " "
+    );
+  } else {
+    Duration = Song.duration;
+  }
+  return {
+    Type: options.Type || "YT",
+    ID: Song.videoId || Song.id,
+    Title: Song.title,
+    Audio: Song.audio,
+    Req: message.author.username,
+    Other: all,
+    Thumbnail,
+    Duration,
+    Link,
+  };
+}
+
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+async function FD(duration, type = " ") {
+  if (type == "ms") duration = duration / 1000;
+  let minutes = Math.floor(duration / 60);
+  let hours = "";
+  if (minutes > 59) {
+    hours = Math.floor(minutes / 60);
+    hours = hours >= 10 ? hours : "0" + hours;
+    minutes = minutes - hours * 60;
+    minutes = minutes >= 10 ? minutes : "0" + minutes;
+  }
+  duration = Math.floor(duration % 60);
+  duration = duration >= 10 ? duration : "0" + duration;
+  if (hours != "") {
+    return hours + ":" + minutes + ":" + duration;
+  }
+  return minutes + ":" + duration;
+}
+
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+async function AllFilters(Queue) {
+  let EncodeFilters = [],
+    Encoder = [];
+  for (let Filter of Object.keys(Queue.Filters)) {
+    if (Queue.Filters[Filter]) {
+      EncodeFilters.push((await Filters())[Filter]);
+    }
+  }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  if (EncodeFilters.length < 1) {
+    Ecoder = [];
+  } else {
+    Encoder = ["-af", EncodeFilters.join(",")];
+  }
+
+  return Encoder;
+}
+
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+
+async function YouTify_Manager(message, client) {
+  const Queue = await client.queue.get(message.guild.id);
+  await Queue.Connection.on("disconnect", () => {
+    client.queue.delete(message.guild.id);
+  });
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  await Queue.Connection.dispatcher.on("finish", async () => {
+    const Shift = await Queue.Songs.shift();
+    if (Queue.Loop == true) await Queue.Songs.push(Shift);
+    await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message,
+      {
+        Song: Queue.Songs[0]
+      });
+  })
+  await Queue.Connection.dispatcher.on("error", async (error) => {
+    console.log(error);
+    Queue.Text.send("Something Went Wrong, Try Again Later!")
+    return;
+  });
+}
+
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
+  const queue = await client.queue.get(message.guild.id),
+    Encoder = await AllFilters(queue);
+  const Seek = options.Filter
+    ? queue.ExtraTime
+      ? queue.Connection.dispatcher.streamTime + queue.ExtraTime
+      : queue.Connection.dispatcher.streamTime
+    : undefined;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  if (queue.Steam) queue.Steam.destroy();
+  if (!options.Song) {
+    (await queue.Voice.leave()) &&
+      (await client.queue.delete(message.guild.id));
+    const End = new Discord.MessageEmbed()
+      .setColor(client.Color)
+      .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
+      .setDescription("Queue Has Been Ended, Please Add More Songs")
+      .setTimestamp();
+    return message.channel.send(End);
+  }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  const Bitrates =
+    client.ws.ping <= 20
+      ? 513000
+      : client.ws.ping <= 40
+        ? 128000
+        : client.ws.ping <= 60
+          ? 96000
+          : 64000;
+  let Steam,
+    Dispatcher,
+    Link,
+    Type,
+    option = {
+      opusEncoded: true,
+      filter: "audioonly",
+      dlChunkSize: 0,
+      quality: "highestaudio",
+      seek: Seek / 1000,
+      encoderArgs: Encoder,
+      highWaterMark: 1 << 25,
+    };
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  if (options.Song.Type == "SR" || options.Song.Type == "YT") {
+    options.Song.Type == "SR"
+      ? (options.Song.Other = await Dl.getInfo(options.Song.Link))
+      : null;
+    (Link = options.Song.Other),
+      (Type = "SR"),
+      (option["filter"] = options.Song.Other.videoDetails.isLiveContent
+        ? "audioandvideo"
+        : "audioonly");
+  } else if (options.Song.Type == "SC") {
+    (Link = await options.Song.Other.downloadProgressive()), (Type = "AR");
+  } else if (options.Song.Type == "SP") {
+    (Link = options.Song.Audio), (Type = "AR");
+  } else if (options.Song.Type == "SPPL") {
+    const Data = await SP.getPreview(options.Song.Link);
+    if (!Data) return message.channel.send("Error: No Playlist Found!");
+    options.Song = await YouTify_Song_Feeder(Data, message, Data, {
+      Type: "SP",
+    });
+    (Link = options.Song.Audio), (Type = "AR");
+  }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+  Steam =
+    Type == "SR"
+      ? await Dl.downloadFromInfo(Link, option)
+      : Type == "AR"
+        ? await Dl.arbitraryStream(Link, option)
+        : undefined;
+  if (!Steam)
+    return message.channel.send(
+      "Error: Something Went Wrong, Try Again Later!"
+    );
+  Dispatcher = await queue.Connection.play(Steam, {
+    volume: queue.Volume / 100,
+    type: "opus",
+    bitrate: Bitrates,
+  });
+
+  queue.Steam = Steam;
+
+  if (Seek) {
+    queue.ExtraTime = 0;
+  } else {
+    const { id } = getVideoId(`${queue.Songs[0].Link}`);
+    await queue.Text.send(
+      new MessageEmbed()
+        .setColor("#8DB600")
+        .setTitle(`\`\`\`₦ðw🍏þlå¥ïñg\`\`\``)
+        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setURL(`https://github.com/Krakinz`)
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setImage(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)
+        .setFooter(
+          "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+          message.author.avatarURL({ dynamic: true })
+        )
+        .addField(
+          `\`Title\``,
+          `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`,
+          true
+        )
+        .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
+        .addField(`\`Requested By\``, `**💬${message.author}**`, true)
+        .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
+        .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
+        .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
+    );
+    Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
+    queue.ExtraTime = 0;
+  }
+  return YouTify_Manager(message, client);
+}
+
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
