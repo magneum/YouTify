@@ -401,7 +401,7 @@ async function _Youtify_(client, message, options = {}) {
         .setTitle(`\`\`\`₦ðw🍏þlå¥ïñg\`\`\``)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setURL(`https://github.com/Krakinz`)
-        .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setImage(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
