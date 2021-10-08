@@ -46,5 +46,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Krakinz/youtify.git"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^3.0.3"
   }
 }

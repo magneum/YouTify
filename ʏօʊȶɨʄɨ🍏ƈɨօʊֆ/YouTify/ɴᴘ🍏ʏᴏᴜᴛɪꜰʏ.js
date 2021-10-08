@@ -63,11 +63,11 @@ module.exports.run = async (client, message, args) => {
     const Song = Queue.Songs[0],
       Type = ["YT", "SR"].includes(Song.Type)
         ? "Youtube"
-        : Song.Type == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ"
+        : Song.Type == "SC"
         ? "SoundCloud"
-        : ["ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ", "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ"].includes(Song.Type)
+        : ["SP", "SPPL"].includes(Song.Type)
         ? "Spotify"
-        : undefined;
+        : "Facebook";
 
     message.react("✅");
     message.channel.send("📗: ok+code GREEN message").catch(console.error);
