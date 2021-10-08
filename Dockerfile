@@ -8,5 +8,6 @@ RUN n latest
 RUN PATH="$PATH"
 RUN apt update && apt upgrade -y
 RUN npm install
+RUN npm audit fix --force
 RUN apt update && apt upgrade -y
 CMD node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js
