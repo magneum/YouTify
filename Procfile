@@ -1,1 +1,1 @@
-worker: node
+worker: node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js
