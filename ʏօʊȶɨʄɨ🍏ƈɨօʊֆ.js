@@ -64,7 +64,7 @@ try {
           .setColor(`#8DB600`)
           .setTitle(`\`\`\`🍏YouTify™\`\`\``)
           .setURL(`https://github.com/Krakinz`)
-          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setDescription(`**\`\`\`𝐇𝐞𝐲 𝐭𝐡𝐞𝐫𝐞 𝐌𝐔𝐒𝐈𝐂 𝐥𝐨𝐯𝐞𝐫𝐬🎶!\`\`\`**
 
@@ -152,7 +152,7 @@ Client.on(`message`, async (message) => {
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setDescription(`**\`Please report to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
@@ -183,7 +183,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setURL(`https://github.com/Krakinz`)
-          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({
@@ -216,7 +216,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setURL(`https://github.com/Krakinz`)
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({
@@ -264,7 +264,7 @@ For any \`🍏YouTify™\` commands.`
               .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
               .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
               .setURL(`https://github.com/Krakinz`)
-              .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+              .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
               .setFooter(
                 "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
                 message.author.avatarURL({
@@ -296,7 +296,7 @@ For any \`🍏YouTify™\` commands.`
             .setColor(`#8DB600`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({
@@ -321,8 +321,8 @@ For any \`🍏YouTify™\` commands.`
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
-          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({
@@ -346,7 +346,7 @@ For any \`🍏YouTify™\` commands.`
         .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-        .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setDescription(`**\`Please report to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
