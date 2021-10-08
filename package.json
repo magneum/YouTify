@@ -36,6 +36,7 @@
     "prism-media": "^1.2.3",
     "setimmediate": "^1.0.5",
     "soundcloud-scraper": "^4.0.3",
+    "spotify-to-yt": "^1.0.5",
     "spotify-url-info": "^2.2.0",
     "tweetnacl": "^1.0.3",
     "ws": "^7.4.4",
