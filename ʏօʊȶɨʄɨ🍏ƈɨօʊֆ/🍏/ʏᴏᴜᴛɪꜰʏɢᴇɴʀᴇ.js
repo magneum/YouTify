@@ -333,7 +333,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
         .addField(`\`Requested By\``, `**💬${message.author}**`, true)
         .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
         .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
-        .addField(`\`Filter\`` `*\`${queue.filter || "Off"}\`**`, true)
         .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
         .addField(`\`Volume\`` `\`${queue.volume}%\``, true)
     );
