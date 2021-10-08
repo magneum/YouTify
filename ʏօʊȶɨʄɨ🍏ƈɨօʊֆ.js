@@ -66,21 +66,24 @@ try {
           .setURL(`https://github.com/Krakinz`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setDescription(`**\`\`\`𝐇𝐞𝐲 𝐭𝐡𝐞𝐫𝐞 𝐌𝐔𝐒𝐈𝐂 𝐥𝐨𝐯𝐞𝐫𝐬🎶!\`\`\`**
+          .setDescription(`
+\`\`\`🍏𝐇𝐞𝐲 𝐭𝐡𝐞𝐫𝐞 𝐌𝐔𝐒𝐈𝐂 𝐥𝐨𝐯𝐞𝐫𝐬🎶!\`\`\`
+---------------::---------------
+❤️ɪ ɢᴏᴛ ʏᴏᴜ ᴀʟʟ ᴄᴏᴠᴇʀᴇᴅ ᴡɪᴛʜ ᴅɪʀᴇᴄᴛ ᴍᴜꜱɪᴄ ꜱᴛʀᴇᴀᴍɪɴɢ ᴛᴏ ᴅɪꜱᴄᴏʀᴅ ᴠᴏɪᴄᴇ ᴄʜᴀɴɴᴇʟ.🔥
+**🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™** 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 **𝐘𝐎𝐔𝐓𝐔𝐁𝐄** 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 **𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬.**
+**❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓❓**
+---------------::---------------
 
-          ❤️‍🔥**I got you all covered with direct music streaming to discord voice channel.**
-\`🍏YouTify™ Discord 𝗦𝗽𝗼𝘁𝗶𝗳𝘆+𝗬𝗼𝘂𝗧𝘂𝗯𝗲+𝗦𝗼𝘂𝗻𝗱𝗰𝗹𝗼𝘂𝗱 Music bot built with Discord.js and has 𝟮𝟵 𝗮𝘂𝗱𝗶𝗼 𝗙𝗶𝗹𝘁𝗲𝗿𝘀.\`
----------------:🍏:---------------
+---------------::---------------
+:candy:\`YouTify Basic Commands\`
+**${ʏᴏᴜꜰɪx}play | ${ʏᴏᴜꜰɪx}help to know more...**
+---------------::---------------
 
-:candy:\`ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅ\`
-**${ʏᴏᴜꜰɪx}play | ${ʏᴏᴜꜰɪx}help to know more.**
----------------:🍏:----------------
-
-**:star:\`ɴᴏᴛᴇ to @everyone\`**
-**ᴀ channel ɴᴀᴍᴇ \`🍏YouTify™\` inside \`🔱Krakinz\` has been successfully created.**
-**Please use 
-**\`\`\`\` Channel: 🍏YouTify™ \`\`\`**
-**For any \`🍏YouTify™\` commands.**`)
+---------------::----------------
+**:star:\`Note to @everyone\`**
+ᴀ channel ɴᴀᴍᴇ \`🍏YouTify™\` inside \`🔱Krakinz\` has been successfully created.
+Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.
+---------------::---------------`)
       )
       .catch(console.error);
     guild.channels
@@ -189,9 +192,13 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             message.author.avatarURL({
               dynamic: true,
             })
-          ).setDescription(`\`User\`🍏${message.author}\n
-**🍏\`YouTify™ by🔱KrakinzLab™️\`**
-🔆- ᴅɪꜱᴄᴏʀᴅ \`Spotify+YouTube+Soundcloud\` Music bot built with ᴅɪꜱᴄᴏʀᴅ.js.
+          )
+          .setDescription(`\`User\`🍏${message.author}\n
+---------------::---------------
+❤️ɪ ɢᴏᴛ ʏᴏᴜ ᴄᴏᴠᴇʀᴇᴅ ᴡɪᴛʜ ᴅɪʀᴇᴄᴛ ᴍᴜꜱɪᴄ ꜱᴛʀᴇᴀᴍɪɴɢ ᴛᴏ ᴅɪꜱᴄᴏʀᴅ ᴠᴏɪᴄᴇ ᴄʜᴀɴɴᴇʟ.🔥
+**🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™** 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 **𝐘𝐎𝐔𝐓𝐔𝐁𝐄** 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 **𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬.**
+**❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓❓**
+---------------::---------------
 
 ⚠️**\`Error\`**
 • You are currently in a \`DMChannel\` and so you have been \`restricted\` using any \`🍏YouTify™ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\`
@@ -234,9 +241,9 @@ For any \`🍏YouTify™\` commands.`
       return;
     }
     let Arguments = await message.content
-        .slice(ʏᴏᴜꜰɪx.length)
-        .trim()
-        .split(/ +/g),
+      .slice(ʏᴏᴜꜰɪx.length)
+      .trim()
+      .split(/ +/g),
       Command = await Arguments.shift().toLowerCase();
     Command =
       (await Client.commands.get(Command)) ||
@@ -276,10 +283,9 @@ For any \`🍏YouTify™\` commands.`
 **Slow Down and Wait** *${ᴘʀᴇᴛᴛʏ(ExpireTime - Now, {
                   verbose: true,
                   secondsDecimalDigits: 0,
-                })}*  **Before Using** *${
-                  ʏᴏᴜꜰɪx +
-                  Command.help.name.charAt(0).toLowerCase() +
-                  Command.help.name.slice(1)
+                })}*  **Before Using** *${ʏᴏᴜꜰɪx +
+                Command.help.name.charAt(0).toLowerCase() +
+                Command.help.name.slice(1)
                 }* **Command Again**`
               )
           );
@@ -375,17 +381,16 @@ const ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ = [`System`, `YouTify`, `Filters`];
         if (!ʏօʊȶɨʄʏƈօʍʍֆ.help.name) {
           console.log(`---------------------`);
           console.log(
-            ᴄʜᴀʟᴋ.red`>❌ | ${
-              ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
-            }`
+            ᴄʜᴀʟᴋ.red`>❌ | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name ? ʏօʊȶɨʄʏƈօʍʍֆ.help.name : `?`
+              }`
           );
           return;
         }
         Client.commands.set(ʏօʊȶɨʄʏƈօʍʍֆ.help.name, ʏօʊȶɨʄʏƈօʍʍֆ);
         ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases
           ? ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases.forEach((Alias) =>
-              Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
-            )
+            Client.aliases.set(Alias, ʏօʊȶɨʄʏƈօʍʍֆ.help.name)
+          )
           : (ʏօʊȶɨʄʏƈօʍʍֆ.help.aliases = null);
         console.log(`---------------------`);
         console.log(ᴄʜᴀʟᴋ.green`>🟢 | ${ʏօʊȶɨʄʏƈօʍʍֆ.help.name.toUpperCase()}`);
