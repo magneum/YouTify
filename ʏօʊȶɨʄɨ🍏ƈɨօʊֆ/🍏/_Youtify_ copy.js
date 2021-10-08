@@ -1,10 +1,11 @@
-const ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default;
-const ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ = require("spotify-url-info");
-const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-const ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("../ʏօʊȶɨʄʏ_ʏȶɖʟ");
+const Sr = require("youtube-sr").default,
+  Dl = require("../ʏօʊȶɨʄʏ_ʏȶɖʟ"),
+  SP = require("spotify-url-info"),
+  Discord = require("../ӄʀǟӄɨռʐʟǟɮ"),
+  Fetch = require("node-fetch").default;
 const getVideoId = require("get-video-id");
-const Fetch = require("node-fetch").default;
-
+const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
+``;
 const Regex = {
   VideoID: /^[a-zA-Z0-9-_]{11}$/,
   VideoURL:
@@ -22,63 +23,46 @@ const Regex = {
 async function Type(Value) {
   if (Regex.VideoID.test(Value))
     return {
-      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
-      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${
-        Regex.VideoID.exec(Value)[0]
-      }`,
+      T: "YT",
+      L: `https://www.youtube.com/watch?v=${Regex.VideoID.exec(Value)[0]}`,
     };
-
   if (Regex.VideoURL.test(Value) && !Value.toLowerCase().includes("list"))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+    return { T: "YT", L: Value };
   if (Regex.PlaylistID.test(Value) && !Value.startsWith("http"))
-    return {
-      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ",
-      ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/playlist?list=${Value}`,
-    };
-  if (Regex.PlaylistURL.test(Value))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
-  if (Regex.SCTrack.test(Value))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
-  if (Regex.SCPlaylist.test(Value))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+    return { T: "YTPL", L: `https://www.youtube.com/playlist?list=${Value}` };
+  if (Regex.PlaylistURL.test(Value)) return { T: "YTPL", L: Value };
+  if (Regex.SCTrack.test(Value)) return { T: "SC", L: Value };
+  if (Regex.SCPlaylist.test(Value)) return { T: "SCPL", L: Value };
   if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("track"))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
+    return { T: "SP", L: Value };
   if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("playlist"))
-    return { ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ", ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: Value };
-
-  const Data = await ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ.searchOne(Value);
+    return { T: "SPPL", L: Value };
+  const Data = await Sr.searchOne(Value);
   if (!Data) return undefined;
-  return {
-    ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ: "YT",
-    ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ: `https://www.youtube.com/watch?v=${Data.id}`,
-  };
+  return { T: "YT", L: `https://www.youtube.com/watch?v=${Data.id}` };
 }
 
 async function YouTify_Find_Infos(Query, message) {
-  const ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ = await Type(Query);
-  let ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ, Info;
-  if (!ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ) return undefined;
-  if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "YT") {
-    Info = await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.getInfo(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
+  const T = await Type(Query);
+  let Final, Info;
+  if (!T) return undefined;
+  if (T.T == "YT") {
+    Info = await Dl.getInfo(T.L);
     if (!Info) return undefined;
     (Info = await YouTify_Song_Feeder(Info.videoDetails, message, Info)),
-      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
+      (Info.P = false);
     return Info;
-  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ") {
-    Info = await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getSongInfo(
-      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
-    );
+  } else if (T.T == "SC") {
+    Info = await message.client.SC.getSongInfo(T.L);
     if (!Info) return undefined;
-    (Info = await YouTify_Song_Feeder(Info, message, Info, {
-      Type: "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ",
-    })),
-      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
+    (Info = await YouTify_Song_Feeder(Info, message, Info, { Type: "SC" })),
+      (Info.P = false);
     return Info;
-  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ") {
-    Info = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getData(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
+  } else if (T.T == "SP") {
+    Info = await SP.getData(T.L);
     if (!Info) return undefined;
     Info = {
-      Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ",
+      Type: "SP",
       ID: Info.id,
       Title: Info.name,
       Audio: Info.preview_url,
@@ -87,68 +71,50 @@ async function YouTify_Find_Infos(Query, message) {
       Link: Info.external_urls.spotify,
       Duration: await FD(Info.duration_ms, "ms"),
     };
-
-    await YouTify_Song_Feeder(Info, message, Info, { Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ" }),
-      (Info.ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ = false);
+    await YouTify_Song_Feeder(Info, message, Info, { Type: "SP" }),
+      (Info.P = false);
     return Info;
-  } else if (
-    ["ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ", "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ"].includes(
-      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ
-    )
-  ) {
+  } else if (["YTPL", "SCPL"].includes(T.T)) {
     Info =
-      ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
-        ? await ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ.getPlaylist(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ)
-        : await message.client.ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.getPlaylist(
-            ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ
-          );
-
+      T.T == "YTPL"
+        ? await Sr.getPlaylist(T.L)
+        : await message.client.SC.getPlaylist(T.L);
     if (!Info) return undefined;
     const Songs = [],
       Type = {
-        ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ: "videos",
-        ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅᴘʟᴀʏʟɪꜱᴛ: "tracks",
+        YTPL: "videos",
+        SCPL: "tracks",
       };
-
-    for (let Element of Info[Type[ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ]]) {
+    for (let Element of Info[Type[T.T]]) {
       const SInfo = await YouTify_Song_Feeder(Element, message, Element, {
-        Type:
-          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
-            ? "SR"
-            : "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ",
+        Type: T.T == "YTPL" ? "SR" : "SC",
       });
       if (typeof SInfo != "undefined") Songs.push(SInfo);
     }
-
-    ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ = {
-      ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ: true,
+    Final = {
+      P: true,
       Name: Info.title,
       Thumbnail: Info.thumbnail,
-      Count:
-        Info[
-          ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ʏᴏᴜᴛᴜʙᴇᴘʟᴀʏʟɪꜱᴛ"
-            ? "videoCount"
-            : "trackCount"
-        ],
+      Count: Info[T.T == "YTPL" ? "videoCount" : "trackCount"],
       Views: Info.views || 0,
       Link: Info.url,
       Videos: Songs,
       Other: Info,
     };
-    return ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ;
-  } else if (ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ == "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ") {
+
+    return Final;
+  } else if (T.T == "SPPL") {
     try {
-      Info = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getData(ʏᴏᴜᴛɪꜰʏᴛʜɪʀꜱᴛ.ʏᴏᴜᴛɪꜰʏʟᴏᴀᴅ);
-    } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
+      Info = await SP.getData(T.L);
+    } catch (e) {
       return undefined;
     }
-
     if (!Info) return undefined;
     const Songs = [];
     for (let Element of Info.tracks.items) {
       const Data = Element.track;
       Songs.push({
-        Type: "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ",
+        Type: "SPPL",
         ID: Data.id,
         Title: Data.name,
         Audio: Data.preview_url,
@@ -157,10 +123,9 @@ async function YouTify_Find_Infos(Query, message) {
         Other: Data,
       });
     }
-
     if (!Songs) return undefined;
-    ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ = {
-      ʏᴏᴜᴛɪꜰʏᴘᴏɪɴᴛ: true,
+    Final = {
+      P: true,
       Name: Info.name,
       Thumbnail: Info.images[0].url,
       Link: Info.external_urls.spotify,
@@ -169,7 +134,7 @@ async function YouTify_Find_Infos(Query, message) {
       Videos: Songs,
       Other: Info,
     };
-    return ʏᴏᴜᴛɪꜰʏꜰɪɴᴀʟ;
+    return Final;
   }
 }
 
@@ -181,7 +146,6 @@ async function YouTify_Song_Feeder(Song, message, all, options = {}) {
     : Song.url
     ? Song.url
     : `https://www.youtube.com/watch?v=${Song.id}`;
-
   const Thumbnail = Song.thumbnails
     ? Song.thumbnails[0].url
     : Song.thumbnail
@@ -189,7 +153,6 @@ async function YouTify_Song_Feeder(Song, message, all, options = {}) {
       ? Song.thumbnail.url
       : Song.thumbnail
     : Song.image;
-
   let Duration;
   if (Song.lengthSeconds || !String(Song.duration).includes(":")) {
     Duration = await FD(
@@ -233,24 +196,29 @@ async function FD(duration, type = " ") {
 async function AllFilters(Queue) {
   let EncodeFilters = [],
     Encoder = [];
+
   for (let Filter of Object.keys(Queue.Filters)) {
     if (Queue.Filters[Filter]) {
       EncodeFilters.push((await Filters())[Filter]);
     }
   }
+
   if (EncodeFilters.length < 1) {
     Ecoder = [];
   } else {
     Encoder = ["-af", EncodeFilters.join(",")];
   }
+
   return Encoder;
 }
 
 async function YouTify_Manager(message, client) {
   const Queue = await client.queue.get(message.guild.id);
+
   await Queue.Connection.on("disconnect", () => {
     client.queue.delete(message.guild.id);
   });
+
   await Queue.Connection.dispatcher
     .on("finish", async () => {
       const Shift = await Queue.Songs.shift();
@@ -271,19 +239,17 @@ async function _Youtify_(client, message, options = {}) {
       ? queue.Connection.dispatcher.streamTime + queue.ExtraTime
       : queue.Connection.dispatcher.streamTime
     : undefined;
+
   if (queue.Steam) queue.Steam.destroy();
   if (!options.Song) {
     (await queue.Voice.leave()) &&
       (await client.queue.delete(message.guild.id));
-    const End = new MessageEmbed()
-      .setColor("#8DB600")
+    const End = new Discord.MessageEmbed()
+      .setColor(client.Color)
       .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
-      .setDescription(
-        `\`🍏YouTify™'s\` Queue is Empty!\nPlease Add More Songs (it is free lol...)`
-      )
+      .setDescription("Queue Has Been Ended, Please Add More Songs")
       .setTimestamp();
-    message.channel.send(End);
-    return;
+    return message.channel.send(End);
   }
 
   const Bitrates =
@@ -294,7 +260,6 @@ async function _Youtify_(client, message, options = {}) {
       : client.ws.ping <= 60
       ? 96000
       : 64000;
-
   let Steam,
     Dispatcher,
     Link,
@@ -311,45 +276,44 @@ async function _Youtify_(client, message, options = {}) {
 
   if (options.Song.Type == "SR" || options.Song.Type == "YT") {
     options.Song.Type == "SR"
-      ? (options.Song.Other = await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.getInfo(options.Song.Link))
+      ? (options.Song.Other = await Dl.getInfo(options.Song.Link))
       : null;
     (Link = options.Song.Other),
       (Type = "SR"),
       (option["filter"] = options.Song.Other.videoDetails.isLiveContent
         ? "audioandvideo"
         : "audioonly");
-  } else if (options.Song.Type == "ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ") {
+  } else if (options.Song.Type == "SC") {
     (Link = await options.Song.Other.downloadProgressive()), (Type = "AR");
-  } else if (options.Song.Type == "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ") {
+  } else if (options.Song.Type == "SP") {
     (Link = options.Song.Audio), (Type = "AR");
-  } else if (options.Song.Type == "ꜱᴘᴏᴛɪꜰʏᴘʟᴀʏʟɪꜱᴛ") {
-    const Data = await ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ.getPreview(options.Song.Link);
-    if (!Data) {
-      message.channel.send("Error: No Playlist Found!");
-      return;
-    }
+  } else if (options.Song.Type == "SPPL") {
+    const Data = await SP.getPreview(options.Song.Link);
+    if (!Data) return message.channel.send("Error: No Playlist Found!");
     options.Song = await YouTify_Song_Feeder(Data, message, Data, {
-      Type: "ʏᴏᴜᴛɪꜰʏꜱᴘᴏᴛᴅʟ",
+      Type: "SP",
     });
     (Link = options.Song.Audio), (Type = "AR");
   }
 
   Steam =
     Type == "SR"
-      ? await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.downloadFromInfo(Link, option)
+      ? await Dl.downloadFromInfo(Link, option)
       : Type == "AR"
-      ? await ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ.arbitraryStream(Link, option)
+      ? await Dl.arbitraryStream(Link, option)
       : undefined;
-  if (!Steam) {
-    message.channel.send("Error: Something Went Wrong, Try Again Later!");
-    return;
-  }
+  if (!Steam)
+    return message.channel.send(
+      "Error: Something Went Wrong, Try Again Later!"
+    );
   Dispatcher = await queue.Connection.play(Steam, {
-    volume: queue.Volume / 100, // no 200 volume please
+    volume: queue.Volume / 100,
     type: "opus",
     bitrate: Bitrates,
   });
+
   queue.Steam = Steam;
+
   if (Seek) {
     queue.ExtraTime = 0;
   } else {
@@ -383,37 +347,53 @@ async function _Youtify_(client, message, options = {}) {
   return YouTify_Manager(message, client);
 }
 
+//     const Embed = new Discord.MessageEmbed()
+//       .setColor(client.Color)
+//       .setAuthor("Playing", message.author.avatarURL({ dynamic: true }))
+//       .setThumbnail(queue.Songs[0].Thumbnail)
+//       .setDescription(
+//         `Now Playing - [${queue.Songs[0].Title}](${queue.Songs[0].Link})`
+//       )
+//       .setFooter(`Requested By ${message.author.username}`);
+//     queue.Text.send(Embed);
+//     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
+//     queue.ExtraTime = 0;
+//   }
+
+//   return YouTify_Manager(message, client);
+// }
+
 async function Filters() {
   return {
-    haas: "haas",
-    gate: "agate",
-    earwax: "earwax",
-    speed: "atempo=2",
-    flanger: "flanger",
-    aphaser: "aphaser",
-    slow: "atempo=0.8",
-    tremolo: "tremolo",
-    reverse: "areverse",
-    mcompand: "mcompand",
-    surround: "surround",
-    treble: "treble=g=5",
-    asetrate: "asetrate",
-    subboost: "asubboost",
-    superspeed: "atempo=3",
-    deesser: "deesser=i=1",
-    apulsator: "apulsator",
-    sofalizer: "sofalizer",
-    superslow: "atempo=0.5",
-    vibrato: "vibrato=f=6.5",
-    pulsator: "apulsator=hz=1",
-    phaser: "aphaser=in_gain=0.4",
-    normalizer: "dynaudnorm=f=200",
-    echo: "aecho=0.8:0.9:1000:0.3",
-    karaoke: "stereotools=mlev=0.1",
-    mono: "pan=mono|c0=.5*c0+.5*c1",
     bassboost: "bass=g=10,dynaudnorm=f=150",
     vaporwave: "aresample=48000,asetrate=48000*0.8",
     nightcore: "aresample=48000,asetrate=48000*1.25",
+    aphaser: "aphaser",
+    apulsator: "apulsator",
+    asetrate: "asetrate",
+    speed: "atempo=2",
+    superspeed: "atempo=3",
+    slow: "atempo=0.8",
+    superslow: "atempo=0.5",
+    deesser: "deesser=i=1",
+    phaser: "aphaser=in_gain=0.4",
+    subboost: "asubboost",
+    treble: "treble=g=5",
+    tremolo: "tremolo",
+    normalizer: "dynaudnorm=f=200",
+    pulsator: "apulsator=hz=1",
+    flanger: "flanger",
+    vibrato: "vibrato=f=6.5",
+    karaoke: "stereotools=mlev=0.1",
+    reverse: "areverse",
+    gate: "agate",
+    mcompand: "mcompand",
+    echo: "aecho=0.8:0.9:1000:0.3",
+    earwax: "earwax",
+    surround: "surround",
+    haas: "haas",
+    mono: "pan=mono|c0=.5*c0+.5*c1",
+    sofalizer: "sofalizer",
   };
 }
 
