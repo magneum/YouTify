@@ -72,6 +72,12 @@ module.exports.run = async (client, message, args) => {
             dynamic: true,
           })
         )
+        .setFooter(
+          "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+          message.author.avatarURL({
+            dynamic: true,
+          })
+        )
         .setDescription(`Loop Has Been ${Queue.Loop ? "Enabled" : "Disabled"}!`)
         .setTimestamp()
     );
@@ -123,7 +129,9 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   }
 };
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
+`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
   name: "loop",
   aliases: ["lp", "l"],
