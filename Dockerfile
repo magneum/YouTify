@@ -3,8 +3,6 @@ RUN apt update && apt upgrade -y && apt install git -y && apt install python3 -y
 RUN git clone https://github.com/Krakinz/YouTify.git
 RUN cd YouTify
 WORKDIR /YouTify
-RUN npm install -g n
-RUN n latest
 RUN PATH="$PATH"
 RUN apt update && apt upgrade -y
 RUN npm install
