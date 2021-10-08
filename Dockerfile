@@ -5,5 +5,6 @@ RUN cd YouTify
 WORKDIR /YouTify
 RUN npm install -g n
 RUN n latest
+RUN PATH="$PATH"
 RUN npm install
 CMD node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js
