@@ -7,6 +7,8 @@ module.exports.run = async (client, message, args) => {
   try {
     const Queue = client.queue.get(message.guild.id);
     if (!Queue && !args[0]) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()

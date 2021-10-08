@@ -60,7 +60,27 @@ module.exports.run = async (client, message, args) => {
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (Queue.Playing) return message.channel.send("Error: Not Paused!");
+    if (Queue.Playing) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(`\`Error:\``, `**🍏YouTify™ Queue is Not Paused!!**`)
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
+      );
+      return;
+    }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
