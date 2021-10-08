@@ -1,7 +1,6 @@
 const { ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ } = require("../🍏/ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ.js");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ");
-
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
   const Channel = message.member.voice.channel;
   if (!Channel) {
@@ -28,6 +27,7 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       .catch(console.error);
     return;
   }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Queue = client.queue.get(message.guild.id);
   if (!Queue) {
     message.channel.send("📕: error+code RED message").catch(console.error);
@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       .catch(console.error);
     return;
   }
-
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Embed = new ᴅɪꜱᴄᴏʀᴅ.MessageEmbed()
     .setColor("#8DB600")
     .setAuthor(
@@ -63,24 +63,21 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       })
     )
     .setDescription(
-      `aphaser Filter Has Been ${
-        Queue.Filters["aphaser"]
-          ? "Disabled (Song Maybe Backward)"
-          : "Enabled (Song Maybe Ahead)"
+      `aphaser Filter Has Been ${Queue.Filters["aphaser"]
+        ? "Disabled (Song Maybe Backward)"
+        : "Enabled (Song Maybe Ahead)"
       }!`
     )
     .setTimestamp();
-
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   Queue.Filters["aphaser"] = !Queue.Filters["aphaser"];
-
   await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, {
     Filter: true,
     Song: Queue.Songs[0],
   });
-
   return message.channel.send(Embed);
 };
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
   name: "aphaser",
   cooldown: 7000,

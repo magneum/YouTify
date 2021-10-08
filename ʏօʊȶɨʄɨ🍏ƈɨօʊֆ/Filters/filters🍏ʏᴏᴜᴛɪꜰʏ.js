@@ -1,5 +1,5 @@
 const { ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ, Filters } = require("../🍏/ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ.js");
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
   const Channel = message.member.voice.channel;
   if (!Channel) {
@@ -26,6 +26,7 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       .catch(console.error);
     return;
   }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Queue = client.queue.get(message.guild.id);
   if (!Queue) {
     message.channel.send("📕: error+code RED message").catch(console.error);
@@ -51,6 +52,7 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       .catch(console.error);
     return;
   }
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   let Filter = args[0],
     All = await Object.keys(await Filters());
   if (!Filter)
@@ -65,9 +67,8 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
     !Queue.Filters[Filter.toLowerCase()]
   )
     return message.channel.send("Error: Filters Limit Surpassed - 3");
-
+  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   Filter = Filter.toLowerCase();
-
   const Embed = new ᴅɪꜱᴄᴏʀᴅ.MessageEmbed()
     .setColor("#8DB600")
     .setAuthor(
@@ -83,17 +84,14 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
       }!`
     )
     .setTimestamp();
-
   Queue.Filters[Filter] = !Queue.Filters[Filter];
-
   await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, {
     Filter: true,
     Song: Queue.Songs[0],
   });
-
   return message.channel.send(Embed);
 };
-
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
   name: "filters",
   aliases: ["modifiers", "newfilter"],
