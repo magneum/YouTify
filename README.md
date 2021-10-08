@@ -5,8 +5,8 @@
 
 - [![Generic badge](https://img.shields.io/badge/🍏YouTify™_Priority_Speaker🍏-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 Discord
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify.png" /></p>
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.PNG" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/%F0%9F%8D%8F/YouTify.png" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/%F0%9F%8D%8F/YouTify_Player.PNG" /></p>
 
 
 
@@ -23,7 +23,7 @@ Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
 
 # 📂 CӨMMΛNDS
 
-<p align="centre"><img  width="50%" height="50%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Help_Menu.PNG" /></p>
+<p align="centre"><img  width="50%" height="50%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/%F0%9F%8D%8F/YouTify_Help_Menu.PNG" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
