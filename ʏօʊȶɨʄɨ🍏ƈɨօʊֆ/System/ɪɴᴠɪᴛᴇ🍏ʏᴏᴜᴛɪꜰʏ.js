@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
                 .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
                 .setTitle(`\`\`\`Invite🍏YouTify™\`\`\``)
                 .setURL(`https://github.com/Krakinz`)
-                .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+                .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .addField(
                     `**\`Link\`**`,
                     `📚[Press](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)`,
@@ -41,8 +41,8 @@ module.exports.run = (client, message, args) => {
                     .setColor(`#b66c00`)
                     .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
                     .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-                    .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
-                    .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+                    .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+                    .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                     .setFooter(
                         "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
                         message.author.avatarURL({
@@ -66,7 +66,7 @@ module.exports.run = (client, message, args) => {
                 .setColor(`#b66c00`)
                 .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
                 .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-                .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+                .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
                 .setDescription(`**\`Please report to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
