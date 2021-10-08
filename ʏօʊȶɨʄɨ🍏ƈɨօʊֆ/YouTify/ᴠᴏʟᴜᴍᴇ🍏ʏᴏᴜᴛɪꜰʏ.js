@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setURL(`https://github.com/Krakinz`)
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({
@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setURL(`https://github.com/Krakinz`)
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({
@@ -72,7 +72,7 @@ module.exports.run = async (client, message, args) => {
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setTitle(`\`\`\`🔊Volume\`\`\` `)
             .setURL(`https://github.com/Krakinz`)
-            .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+            .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
             .setFooter(
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({
@@ -205,8 +205,8 @@ module.exports.run = async (client, message, args) => {
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
-          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({
@@ -230,7 +230,7 @@ module.exports.run = async (client, message, args) => {
         .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-        .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setDescription(`**\`Please repo🍏YouTify™ - v5 - ʏօʊȶɨʄɨ🍏ƈɨօʊֆrt to either\`**
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)

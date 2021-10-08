@@ -51,8 +51,8 @@ module.exports.run = async (client, message, args) => {
                     })
                 )
                 .setTitle(`\`\`\` 🍏YouTify™ Help Menu \`\`\``)
-                .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
-                .setImage(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+                .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+                .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setDescription(
                     `**•\`Prefix\` = **${client.ʏᴏᴜꜰɪx}${ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.join("") + ""}`
                 )
@@ -72,7 +72,7 @@ module.exports.run = async (client, message, args) => {
                         dynamic: true,
                     })
                 )
-                .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+                .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setDescription(
                     `\`User\`🍏${message.author}\n\nCheck your \`direct messages\` for a list of **🍏YouTify™** Commands!`
                 )
