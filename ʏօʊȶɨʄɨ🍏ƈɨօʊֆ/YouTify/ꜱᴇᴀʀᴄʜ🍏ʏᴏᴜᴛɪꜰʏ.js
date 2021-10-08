@@ -1,4 +1,4 @@
-const { _Youtify_, YouTify_Song_Feeder } = require("../🍏/_Youtify_.js"),
+const { ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ, YouTify_Song_Feeder } = require("../🍏/ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ.js"),
   ʏᴏᴜᴛɪꜰʏʏᴛꜱʀ = require("youtube-sr").default,
   ʏᴏᴜᴛɪꜰʏʏᴛᴅʟ = require("../ʏօʊȶɨʄʏ_ʏȶɖʟ");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
@@ -39,7 +39,26 @@ module.exports.run = async (client, message, args) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!Channel.joinable || !Channel.speakable) {
-      message.channel.send("Error: Voice Channel Not Joinable Or Speakable!");
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .addField(
+            `\`Error:\``,
+            `**Voice Channel Not Joinable Or Speakable!! (Ask admins to give me proper permission!)**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          ))
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
@@ -61,11 +80,10 @@ module.exports.run = async (client, message, args) => {
           return message.channel.send("Error: No Song Found!");
         Data.length > 10 ? (Data.length = 10) : null;
         const Mapped = await Data.map(
-            (S, I) =>
-              `${I + 1} | [${
-                S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
-              }](https://youtube.com/watch?v=${S.id})`
-          ),
+          (S, I) =>
+            `${I + 1} | [${S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
+            }](https://youtube.com/watch?v=${S.id})`
+        ),
           Filter = (m) => m.author.id === message.author.id;
 
         const Embed = new MessageEmbed()
@@ -155,7 +173,7 @@ module.exports.run = async (client, message, args) => {
             // ====================================================—••÷[🍏YouTify™]÷••—====================================================
             Queue = await client.queue.get(message.guild.id);
             try {
-              await _Youtify_(client, message, {
+              await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, {
                 Song: Song,
               });
             } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {

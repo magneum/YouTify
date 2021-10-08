@@ -1,4 +1,4 @@
-const { _Youtify_, Filters } = require("../🍏/_Youtify_.js");
+const { ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ, Filters } = require("../🍏/ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ.js");
 
 module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
   const Channel = message.member.voice.channel;
@@ -86,7 +86,7 @@ module.exports.run = async (client, message, args, ᴅɪꜱᴄᴏʀᴅ) => {
 
   Queue.Filters[Filter] = !Queue.Filters[Filter];
 
-  await _Youtify_(client, message, {
+  await ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, {
     Filter: true,
     Song: Queue.Songs[0],
   });
