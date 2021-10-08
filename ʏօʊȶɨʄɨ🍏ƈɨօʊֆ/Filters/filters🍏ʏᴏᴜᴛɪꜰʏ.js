@@ -99,7 +99,7 @@ module.exports.help = {
   aliases: ["modifiers", "newfilter"],
   cooldown: 7000,
   category: "Filters",
-  description: `Add/Remove A YouTify Filter To/From Currently Playing Song! (Type ${client.ʏᴏᴜꜰɪx}bb for bassboost..)`,
-  usage: `${client.ʏᴏᴜꜰɪx}<Name>`,
-  examples: [`${client.ʏᴏᴜꜰɪx}bassboost`, `${client.ʏᴏᴜꜰɪx}subboost`, `${client.ʏᴏᴜꜰɪx}nightcore`],
+  description: `Add/Remove A YouTify Filter To/From Currently Playing Song! (Type ?bb for bassboost..)`,
+  usage: `?<Name>`,
+  examples: [`?bassboost`, `?subboost`, `?nightcore`],
 };
