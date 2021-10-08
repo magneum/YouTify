@@ -8,10 +8,11 @@ const { MessageEmbed } = require("./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/ӄʀǟӄɨռʐ�
 const ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ = require(`soundcloud-scraper`);
 const ʏᴏᴜᴛɪꜰʏserver = require(`./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/host`);
 const { ʏᴏᴜꜰɪx, ʏᴏᴜᴛᴏᴋᴇɴ } = require(`./ʏօʊȶɨʄɨ🍏ƈɨօʊֆ/ʟᴏᴀᴅᴇʀ.js`);
+// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
-(Client.commands = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
-  (Client.aliases = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
-  (Client.queue = new Map());
+Client.commands = new ᴅɪꜱᴄᴏʀᴅ.Collection();
+Client.aliases = new ᴅɪꜱᴄᴏʀᴅ.Collection();
+Client.queue = new Map();
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
   ʏᴏᴜᴛɪꜰʏserver();
