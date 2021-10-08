@@ -8,6 +8,8 @@
 <p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify.png" /></p>
 <p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.PNG" /></p>
 
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Krakinz/YouTify.git/tree/KrakinzLab) 𝘌𝘯𝘢𝘣𝘭𝘦 𝘵𝘩𝘦 𝘥𝘺𝘯𝘰 𝘪𝘯 𝘩𝘦𝘳𝘰𝘬𝘶 𝘪𝘧 𝘶 𝘥𝘦𝘱𝘭𝘰𝘺𝘦𝘥 𝘶𝘳 𝘣𝘰𝘵 𝘪𝘯 𝘏𝘦𝘳𝘰𝘬𝘶
+
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
 
 ```sh
