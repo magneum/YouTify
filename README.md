@@ -16,20 +16,19 @@ Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
 
     💻 𝗪𝗵𝗮𝘁 𝗖𝗮𝗻 𝗕𝗼𝘁 𝗗𝗼???
 ❄️ 𝘗𝘭𝘢𝘺 𝘢𝘯𝘺 𝘮𝘶𝘴𝘪𝘤 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘨𝘳𝘰𝘶𝘱 𝘷𝘤. 𝘠𝘰𝘶 𝘸𝘪𝘭𝘭
-❄️ 🍏YouTify™ Discord 𝗦𝗽𝗼𝘁𝗶𝗳𝘆+𝗬𝗼𝘂𝗧𝘂𝗯𝗲+𝗦𝗼𝘂𝗻𝗱𝗰𝗹𝗼𝘂𝗱 Music bot built with Discord.js and has 𝟮𝟵 𝗮𝘂𝗱𝗶𝗼 𝗙𝗶𝗹𝘁𝗲𝗿𝘀.
-❄️ 𝐀𝐧𝐝 𝐌𝐚𝐧𝐲 𝐌𝐨𝐫𝐞!
+❄️ 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ 𝐢𝐬 𝐃𝐈𝐬𝐜𝐨𝐫𝐝 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 𝐛𝐮𝐢𝐥𝐭 𝐰𝐢𝐭𝐡 𝐃𝐢𝐬𝐜𝐨𝐫𝐝𝐣𝐬 𝐚𝐧𝐝 𝐡𝐚𝐬 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬.
+❓❓ 𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢 ❓❓
 ```
 
 # 📂 CӨMMΛNDS
 
-<p align="centre"><img  width="50%" height="50%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/%F0%9F%8D%8F/YouTify_Help_Menu.PNG" /></p>
+<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%C9%A8%F0%9F%8D%8F%C6%88%C9%A8%D6%85%CA%8A%D6%86/%F0%9F%8D%8F/YouTify_Help_Menu.PNG" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
 - [![Generic badge](https://img.shields.io/badge/KrakinzBot-Vïå_ßð†-orange.svg)](https://t.me/KrakinzBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
 
 ```sh
-➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
                             GNU GENERAL PUBLIC LICENSE
                             Version 3, 29 June 2007
                     Copyright (C) 2007 Free Software Foundation
@@ -39,5 +38,4 @@ Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
                                 Discord Music Bot
                 has been licensed under GNU General Public License
                     𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁
-➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
 ```
