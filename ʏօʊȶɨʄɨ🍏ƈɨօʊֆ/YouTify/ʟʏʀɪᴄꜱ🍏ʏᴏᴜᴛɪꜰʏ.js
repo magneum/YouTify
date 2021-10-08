@@ -6,31 +6,49 @@ const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
 module.exports.run = async (client, message, args) => {
   try {
     const Queue = client.queue.get(message.guild.id);
-    if (!Queue && !args[0])
-      return message.channel.send(
-        "Error: No Queue, Please Add Some Songs By Using Play & Search Command!"
+    if (!Queue && !args[0]) {
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(
+            `\`Error:\``,
+            `**No Queue, Please Add Some Songs! (Play & Search Command)**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
       );
+      return;
+    }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     let Lyric,
       Thing = Queue ? Queue.Songs[0].Title : args.join(" "),
       NoSong = false;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     try {
       Lyric = await Finder(Thing, "");
       if (!Lyric && Queue && args[0]) {
         Lyric = await Finder(args.join(" "));
         NoSong = true;
       }
-      if (!Lyric)
-        return message.channel.send(
+      if (!Lyric) {
+        message.channel.send(
           `No Lyrics Found - ${NoSong ? args.join(" ") : Thing}`
         );
+        return;
+      }
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
-      return message.channel.send(`No Lyrics Found - ${Thing}`);
+      message.channel.send(`No Lyrics Found - ${Thing}`);
+      return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
@@ -38,11 +56,12 @@ module.exports.run = async (client, message, args) => {
     Lyric = await Lyric.replace(/(.{2021})/g, "\n1\n");
     message.react("✅");
     message.channel.send("📗: ok+code GREEN message").catch(console.error);
-    return message.channel.send(Lyric, {
+    message.channel.send(Lyric, {
       split: {
         char: "\n",
       },
     });
+    return;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
