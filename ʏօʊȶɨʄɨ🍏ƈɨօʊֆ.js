@@ -37,7 +37,7 @@ Client.on(`ready`, async () => {
 🔱Bot-Os:~~> ${Os.platform().toUpperCase()}
 YouTify Is Ready- ${Client.user.username}
 -----------\n🍏YouTify™ by🔱KrakinzLab™️`);
-  Client.user.setActivity(`${ʏᴏᴜꜰɪx}help🍏${ʏᴏᴜꜰɪx}play`, {
+  Client.user.setActivity(`?help🍏?play`, {
     type: `WATCHING`,
   });
   const Key = await ꜱᴄᴏᴜɴᴅᴄʟᴏᴜᴅ.keygen();
@@ -76,7 +76,7 @@ try {
 
 ---------------::---------------
 :candy:\`YouTify Basic Commands\`
-**${ʏᴏᴜꜰɪx}play | ${ʏᴏᴜꜰɪx}help to know more...**
+**?play | ?help to know more...**
 ---------------::---------------
 
 ---------------::----------------

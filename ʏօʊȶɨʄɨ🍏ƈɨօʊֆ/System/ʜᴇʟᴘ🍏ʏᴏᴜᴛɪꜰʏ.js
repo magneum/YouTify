@@ -54,7 +54,7 @@ module.exports.run = async (client, message, args) => {
                 .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setDescription(
-                    `**•\`Prefix\` = **${client.ʏᴏᴜꜰɪx}${ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.join("") + ""}`
+                    `**•\`Prefix\` = **?${ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.join("") + ""}`
                 )
         );
         // ====================================================—••÷[🍏YouTify™]÷••—====================================================

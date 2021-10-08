@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args) => {
               })
             ).setDescription(`${message.author}
 \`Error\`
-**Nothing in Queue.\nPlease Add Some Songs By Using \` ${client.ʏᴏᴜꜰɪx}play \` or \` ${client.ʏᴏᴜꜰɪx}search \` Command!**`)
+**Nothing in Queue.\nPlease Add Some Songs By Using \` ?play \` or \` ?search \` Command!**`)
         )
         .catch(console.error);
       return;
