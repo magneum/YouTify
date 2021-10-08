@@ -1,8 +1,6 @@
 const Finder = require("lyrics-finder");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.run = async (client, message, args) => {
   try {
     const Queue = client.queue.get(message.guild.id);
@@ -21,17 +19,11 @@ module.exports.run = async (client, message, args) => {
             `\`Error:\``,
             `**No Queue, Please Add Some Songs! (Play & Search Command)**`
           )
-          .setFooter(
-            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-            message.author.avatarURL({
-              dynamic: true,
-            })
+          .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
           )
       );
       return;
     }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     let Lyric,
       Thing = Queue ? Queue.Songs[0].Title : args.join(" "),
@@ -53,8 +45,6 @@ module.exports.run = async (client, message, args) => {
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     Lyric = await Lyric.replace(/(.{2021})/g, "\n1\n");
     message.react("✅");
     message.channel.send("📗: ok+code GREEN message").catch(console.error);
@@ -64,8 +54,6 @@ module.exports.run = async (client, message, args) => {
       },
     });
     return;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
     message.client.channels.cache
@@ -77,11 +65,7 @@ module.exports.run = async (client, message, args) => {
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setFooter(
-            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-            message.author.avatarURL({
-              dynamic: true,
-            })
+          .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
           ).setDescription(`
 **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
 
@@ -89,8 +73,6 @@ module.exports.run = async (client, message, args) => {
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       )
       .catch(console.error);
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     message.channel.send("📙: sorry+code ORANGE message").catch(console.error);
     message.react(`😔`);
@@ -112,8 +94,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   }
 };
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
   name: "lyrics",

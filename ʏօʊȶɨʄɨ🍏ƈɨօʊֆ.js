@@ -13,8 +13,6 @@ const Client = new ᴅɪꜱᴄᴏʀᴅ.Client({ restTimeOffset: 10 });
   (Client.aliases = new ᴅɪꜱᴄᴏʀᴅ.Collection()),
   (Client.queue = new Map());
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
   ʏᴏᴜᴛɪꜰʏserver();
   Client.login(ʏᴏᴜᴛᴏᴋᴇɴ);
@@ -23,8 +21,6 @@ try {
   console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   exit(1);
 }
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 Client.on(`ready`, async () => {
   console.log(`\n🍏YouTify™ by🔱KrakinzLab™️\n-----------`);
@@ -46,8 +42,6 @@ YouTify Is Ready- ${Client.user.username}
 Client.on(`error`, (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) => {
   console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
 });
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 try {
   Client.on(`guildCreate`, (guild) => {
@@ -134,15 +128,11 @@ Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.
   console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 Client.on(`message`, async (message) => {
   try {
     if (message.author.bot || message.webhookID) {
       return;
     }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (message.content.startsWith(ʏᴏᴜꜰɪx + "test")) {
       message.channel
@@ -168,13 +158,9 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!message.content.startsWith(ʏᴏᴜꜰɪx)) {
       return;
     }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!message.guild) {
       message.react(`❌`);
@@ -187,11 +173,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setURL(`https://github.com/Krakinz`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setFooter(
-            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-            message.author.avatarURL({
-              dynamic: true,
-            })
+          .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
           )
           .setDescription(`\`User\`🍏${message.author}\n
 ---------------::---------------
@@ -224,11 +206,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setURL(`https://github.com/Krakinz`)
             .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-            .setFooter(
-              "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-              message.author.avatarURL({
-                dynamic: true,
-              })
+            .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
             )
             .setDescription(
               `${message.author}
@@ -272,11 +250,7 @@ For any \`🍏YouTify™\` commands.`
               .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
               .setURL(`https://github.com/Krakinz`)
               .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-              .setFooter(
-                "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-                message.author.avatarURL({
-                  dynamic: true,
-                })
+              .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
               )
               .setDescription(
                 `
@@ -303,11 +277,7 @@ For any \`🍏YouTify™\` commands.`
             .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
             .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
             .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-            .setFooter(
-              "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-              message.author.avatarURL({
-                dynamic: true,
-              })
+            .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
             ).setDescription(`**Ugh!** 
 *Something Went wrong!*
 **Please try again later or check the error message.** 
@@ -329,11 +299,7 @@ For any \`🍏YouTify™\` commands.`
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setFooter(
-            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-            message.author.avatarURL({
-              dynamic: true,
-            })
+          .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
           ).setDescription(`
 **Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
 
@@ -341,8 +307,6 @@ For any \`🍏YouTify™\` commands.`
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       )
       .catch(console.error);
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     message.channel.send("📙: sorry+code ORANGE message").catch(console.error);
     message.react(`😔`);
@@ -364,8 +328,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   }
 });
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 const ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ = [`System`, `YouTify`, `Filters`];
 ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇʟᴏɢ.forEach((ʏᴏᴜᴛɪꜰʏᴄᴀᴛᴇɢᴏʀʏ) => {

@@ -5,15 +5,11 @@ module.exports.run = async (client, message, args) => {
     let Categories = ["YouTify", "System", "Filters"],
         ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ = [];
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     const Emotes = {
         YouTify: `🍏\`YouTify\``,
         Filters: `🎶\`Filters\`\n(remember to disable any applied filter just re-send that filter name)`,
         System: `🤖\`System\``,
     };
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     for (let i = 0; i < Categories.length; i++) {
         const ʏᴏᴜᴛɪꜰʏᴄᴍᴅꜱ = await client.commands
@@ -25,8 +21,6 @@ module.exports.run = async (client, message, args) => {
         ʏᴏᴜᴛɪꜰʏᴄᴏᴍᴍᴀɴᴅᴇʀꜱ.push(`\n\n**•${Emotes[Categories[i]]}**\n${ʏᴏᴜᴛɪꜰʏᴄᴍᴅꜱ}`);
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!args[0]) {
         message.react("✅");
         message.channel.send("📗: ok+code GREEN message").catch(console.error);
@@ -36,19 +30,13 @@ module.exports.run = async (client, message, args) => {
                 .setDescription(`**👍 Sent from <#${message.channel.id}>**`)
         );
         // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         message.author.send(
             new MessageEmbed()
                 .setTimestamp()
                 .setColor("#8DB600")
                 .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
                 .setURL(`https://github.com/Krakinz`)
-                .setFooter(
-                    "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-                    message.author.avatarURL({
-                        dynamic: true,
-                    })
+                .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
                 )
                 .setTitle(`\`\`\` 🍏YouTify™ Help Menu \`\`\``)
                 .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
@@ -58,19 +46,13 @@ module.exports.run = async (client, message, args) => {
                 )
         );
         // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-        `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-        // ====================================================—••÷[🍏YouTify™]÷••—====================================================
         message.channel.send(
             new MessageEmbed()
                 .setTimestamp()
                 .setColor("#8DB600")
                 .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
                 .setURL(`https://github.com/Krakinz`)
-                .setFooter(
-                    "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-                    message.author.avatarURL({
-                        dynamic: true,
-                    })
+                .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true })
                 )
                 .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .setDescription(
@@ -81,14 +63,10 @@ module.exports.run = async (client, message, args) => {
         return;
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     args[0] = args[0].toLowerCase();
     let Cmd =
         client.commands.get(args[0]) ||
         client.commands.get(client.aliases.get(args[0]));
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!Cmd) {
         message.react(`❌`);
@@ -98,8 +76,6 @@ module.exports.run = async (client, message, args) => {
     } else {
         Cmd = Cmd.help;
     }
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (args[1] && args[1] == client.token) {
         message.react(`❌`);
@@ -162,8 +138,6 @@ module.exports.run = async (client, message, args) => {
         return;
     }
 };
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports.help = {
     name: "help",

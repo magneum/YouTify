@@ -5,8 +5,6 @@ const getVideoId = require("get-video-id");
 const Discord = require("../ӄʀǟӄɨռʐʟǟɮ/src");
 const { MessageEmbed } = require("../ӄʀǟӄɨռʐʟǟɮ/src");
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 const Regex = {
   VideoID: /^[a-zA-Z0-9-_]{11}$/,
   VideoURL: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/,
@@ -16,8 +14,6 @@ const Regex = {
   SCPlaylist: /^https?:\/\/(soundcloud\.com|snd\.sc)\/([A-Za-z0-9_-]+)\/sets\/([A-Za-z0-9_-]+)\/?$/,
   Spotify: /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/,
 };
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function Type(Value) {
   if (Regex.VideoID.test(Value))
@@ -41,8 +37,6 @@ async function Type(Value) {
   return { T: "YT", L: `https://www.youtube.com/watch?v=${Data.id}` };
 }
 
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function YouTify_Find_Infos(Query, message) {
   const T = await Type(Query);
@@ -140,8 +134,6 @@ async function YouTify_Find_Infos(Query, message) {
 }
 
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function YouTify_Song_Feeder(Song, message, all, options = {}) {
   const Link = Song.video_url
     ? Song.video_url
@@ -180,8 +172,6 @@ async function YouTify_Song_Feeder(Song, message, all, options = {}) {
 }
 
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function FD(duration, type = " ") {
   if (type == "ms") duration = duration / 1000;
   let minutes = Math.floor(duration / 60);
@@ -201,8 +191,6 @@ async function FD(duration, type = " ") {
 }
 
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function AllFilters(Queue) {
   let EncodeFilters = [],
     Encoder = [];
@@ -211,8 +199,6 @@ async function AllFilters(Queue) {
       EncodeFilters.push((await Filters())[Filter]);
     }
   }
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   if (EncodeFilters.length < 1) {
     Ecoder = [];
@@ -224,16 +210,12 @@ async function AllFilters(Queue) {
 }
 
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 
 async function YouTify_Manager(message, client) {
   const Queue = await client.queue.get(message.guild.id);
   await Queue.Connection.on("disconnect", () => {
     client.queue.delete(message.guild.id);
   });
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   await Queue.Connection.dispatcher.on("finish", async () => {
     const Shift = await Queue.Songs.shift();
@@ -251,8 +233,6 @@ async function YouTify_Manager(message, client) {
 }
 
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
   const queue = await client.queue.get(message.guild.id),
     Encoder = await AllFilters(queue);
@@ -261,8 +241,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
       ? queue.Connection.dispatcher.streamTime + queue.ExtraTime
       : queue.Connection.dispatcher.streamTime
     : undefined;
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   if (queue.Steam) queue.Steam.destroy();
   if (!options.Song) {
@@ -275,8 +253,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
       .setTimestamp();
     return message.channel.send(End);
   }
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   const Bitrates =
     client.ws.ping <= 20
@@ -300,8 +276,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
       highWaterMark: 1 << 25,
     };
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   if (options.Song.Type == "SR" || options.Song.Type == "YT") {
     options.Song.Type == "SR"
       ? (options.Song.Other = await Dl.getInfo(options.Song.Link))
@@ -324,8 +298,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
     (Link = options.Song.Audio), (Type = "AR");
   }
   // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-  `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
-  // ====================================================—••÷[🍏YouTify™]÷••—====================================================
   Steam =
     Type == "SR"
       ? await Dl.downloadFromInfo(Link, option)
@@ -343,7 +315,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
   });
 
   queue.Steam = Steam;
-
   if (Seek) {
     queue.ExtraTime = 0;
   } else {
@@ -356,20 +327,15 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
         .setURL(`https://github.com/Krakinz`)
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setImage(`https://img.youtube.com/vi/${id}/hqdefault.jpg`)
-        .setFooter(
-          "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
-          message.author.avatarURL({ dynamic: true })
-        )
-        .addField(
-          `\`Title\``,
-          `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`,
-          true
-        )
+        .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️", message.author.avatarURL({ dynamic: true }))
+        .addField(`\`Title\``, `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`, true)
         .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
         .addField(`\`Requested By\``, `**💬${message.author}**`, true)
         .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
         .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
+        .addField(`\`Filter\`` `*\`${queue.filter || "Off"}\`**`, true)
         .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
+        .addField(`\`Volume\`` `\`${queue.volume}%\``, true)
     );
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
@@ -377,8 +343,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
   return YouTify_Manager(message, client);
 }
 
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 async function Filters() {
   return {
@@ -413,8 +377,6 @@ async function Filters() {
     sofalizer: "sofalizer",
   };
 }
-// ====================================================—••÷[🍏YouTify™]÷••—====================================================
-`|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
 module.exports = {
   Type,
