@@ -6,5 +6,7 @@ WORKDIR /YouTify
 RUN npm install -g n
 RUN n latest
 RUN PATH="$PATH"
+RUN apt update && apt upgrade -y
 RUN npm install
+RUN apt update && apt upgrade -y
 CMD node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js
