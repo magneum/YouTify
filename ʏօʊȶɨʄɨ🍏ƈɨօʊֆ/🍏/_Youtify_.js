@@ -291,8 +291,7 @@ async function YouTify_Manager(message, client) {
     })
     .on("error", async (error) => {
       console.log(error);
-      Queue.Text.send("Something Went Wrong, Try Again Later!");
-      return;
+      return Queue.Text.send("Something Went Wrong, Try Again Later!");
     });
 }
 // ====================================================—••÷[🍏YouTify™]÷••—====================================================
