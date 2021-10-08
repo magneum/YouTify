@@ -1,8 +1,6 @@
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)<img align="centre" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg" alt="Krakinz"/><img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
 
-# Under Construstion.
-
-## Will be stable by version v6.
+# Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
 
 # 『 Discord Music Bot: 🍏YouTify™] 』
 
