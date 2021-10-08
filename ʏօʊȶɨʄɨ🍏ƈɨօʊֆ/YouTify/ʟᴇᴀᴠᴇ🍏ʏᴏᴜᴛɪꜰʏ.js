@@ -33,20 +33,86 @@ module.exports.run = async (client, message, args) => {
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (!Bot) return message.channel.send("Error: No Bot Voice Channel!");
+    if (!Bot) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(`\`Error:\``, `**No 🍏YouTify™ Voice Channel present!**`)
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
+      );
+      return;
+    }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
-    if (Bot.id != Channel.id)
-      return message.channel.send("Error: Different Voice Channels!");
+    if (Bot.id != Channel.id) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(
+            `\`Error:\``,
+            `**You need to be in same voiceChannel as 🍏YouTify™!**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
+      );
+      return;
+    }
+
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (
       !message.member.hasPermission("MANAGE_CHANNELS") &&
       Bot.members.length > 2
-    )
-      return message.channel.send("Error: Request Cancelled Due To 2+ Members");
+    ) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(
+            `\`Error:\``,
+            `**Request Cancelled Due To Active 2+ Members in current voiceChannel**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
+      );
+      return;
+    }
+
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================

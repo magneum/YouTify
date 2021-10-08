@@ -60,6 +60,8 @@ module.exports.run = async (client, message, args) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!Channel.joinable || !Channel.speakable) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()
@@ -86,6 +88,8 @@ module.exports.run = async (client, message, args) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (message.guild.me.voice.channel) {
+      message.react(`❌`);
+      message.channel.send("📕: error+code RED message").catch(console.error);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()
