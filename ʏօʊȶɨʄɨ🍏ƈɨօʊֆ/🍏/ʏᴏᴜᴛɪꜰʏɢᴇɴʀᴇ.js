@@ -334,7 +334,6 @@ async function ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ(client, message, options = {}) {
         .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
         .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
         .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
-        .addField(`\`Volume\`` `\`${queue.volume}%\``, true)
     );
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
