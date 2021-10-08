@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
           .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
           .addField(
             `\`Error:\``,
-            `Current voiceChannel has no more space to join!\nPlease join me in a new voiceChannel`
+            `**Current voiceChannel has no more space to join! (Please join me in a new voiceChannel)**`
           )
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -60,7 +60,25 @@ module.exports.run = async (client, message, args) => {
     `|>                         GNU GENERAL PUBLIC LICENSE 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁                   |<`;
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (!Channel.joinable || !Channel.speakable) {
-      message.channel.send("Error: Not Joinable Or Speakable!");
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(
+            `\`Error:\``,
+            `**Current voiceChannel Not Joinable Or Speakable! (Need Proper Permissions..)**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
+      );
       return;
     }
 
@@ -69,9 +87,25 @@ module.exports.run = async (client, message, args) => {
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
     if (message.guild.me.voice.channel) {
       message.channel.send(
-        `Error: Already Connected To ${
-          message.guild.me.voice.channel.id == Channel.id ? "Your" : "A"
-        } Voice Channel!`
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor(`#b60000`)
+          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setURL(`https://github.com/Krakinz`)
+          .setThumbnail(`https://i.postimg.cc/zvkxwMth/YouTify.jpg`)
+          .addField(
+            `\`Error:\``,
+            `**🍏YouTify™ is already connected To ${
+              message.guild.me.voice.channel.id == Channel.id ? "Your" : "A"
+            } voiceChannel!**`
+          )
+          .setFooter(
+            "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
+            message.author.avatarURL({
+              dynamic: true,
+            })
+          )
       );
       return;
     }
@@ -86,7 +120,7 @@ module.exports.run = async (client, message, args) => {
       });
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       return message.channel
-        .send("Error: Unknown")
+        .send(`Error: ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .then(() => console.log(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ));
     }
     // ====================================================—••÷[🍏YouTify™]÷••—====================================================
