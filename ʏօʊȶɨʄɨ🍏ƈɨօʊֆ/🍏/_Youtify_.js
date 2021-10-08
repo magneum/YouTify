@@ -215,16 +215,19 @@ async function YouTify_Manager(message, client) {
     client.queue.delete(message.guild.id);
   });
 
-  await Queue.Connection.dispatcher
-    .on("finish", async () => {
-      const Shift = await Queue.Songs.shift();
-      if (Queue.Loop == true) await Queue.Songs.push(Shift);
-      await _Youtify_(client, message, { Song: Queue.Songs[0] });
-    })
-    .on("error", async (error) => {
-      console.log(error);
-      return Queue.Text.send("Something Went Wrong, Try Again Later!");
-    });
+  await Queue.Connection.dispatcher.on("finish", async () => {
+    const Shift = await Queue.Songs.shift();
+    if (Queue.Loop == true) await Queue.Songs.push(Shift);
+    await _Youtify_(client, message,
+      {
+        Song: Queue.Songs[0]
+      });
+  })
+  await Queue.Connection.dispatcher.on("error", async (error) => {
+    console.log(error);
+    Queue.Text.send("Something Went Wrong, Try Again Later!")
+    return;
+  });
 }
 
 async function _Youtify_(client, message, options = {}) {
@@ -342,22 +345,6 @@ async function _Youtify_(client, message, options = {}) {
   }
   return YouTify_Manager(message, client);
 }
-
-//     const Embed = new Discord.MessageEmbed()
-//       .setColor(client.Color)
-//       .setAuthor("Playing", message.author.avatarURL({ dynamic: true }))
-//       .setThumbnail(queue.Songs[0].Thumbnail)
-//       .setDescription(
-//         `Now Playing - [${queue.Songs[0].Title}](${queue.Songs[0].Link})`
-//       )
-//       .setFooter(`Requested By ${message.author.username}`);
-//     queue.Text.send(Embed);
-//     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
-//     queue.ExtraTime = 0;
-//   }
-
-//   return YouTify_Manager(message, client);
-// }
 
 async function Filters() {
   return {
