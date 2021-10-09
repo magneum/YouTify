@@ -1,0 +1,25 @@
+{
+  "main": "™YouTify.js",
+  "dependencies": {
+    "@discordjs/collection": "^0.1.6",
+    "@discordjs/form-data": "^3.0.1",
+    "@discordjs/opus": "*",
+    "@distube/ytdl": "^1.0.7",
+    "abort-controller": "^3.0.0",
+    "dotenv": "*",
+    "chalk": "*",
+    "ffmpeg-static": "*",
+    "lyrics-finder": "^21.7.0",
+    "node-fetch": "^2.6.1",
+    "pretty-ms": "*",
+    "prism-media": "^1.2.9",
+    "setimmediate": "^1.0.5",
+    "soundcloud-scraper": "^4.0.3",
+    "spotify-to-yt": "^1.0.5",
+    "spotify-url-info": "^2.2.0",
+    "tweetnacl": "^1.0.3",
+    "ws": "^7.4.4",
+    "youtube-sr": "^3.0.0",
+    "ytdl-core": "^4.4.5"
+  }
+}
