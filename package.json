@@ -1,10 +1,10 @@
 {
   "name": "youtify",
-  "version": "6.1.8vbw44q8z15",
+  "version": "7.9.1",
   "description": "🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓",
-  "main": "ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js",
+  "main": "™YouTify.js",
   "scripts": {
-    "start": "node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js"
+    "start": "node ™YouTify.js"
   },
   "keywords": [
     "discordjs",
