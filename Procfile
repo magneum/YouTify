@@ -1,1 +1,1 @@
-worker: node ʏօʊȶɨʄɨ🍏ƈɨօʊֆ.js
+worker: node ™YouTify.js
