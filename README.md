@@ -43,3 +43,8 @@ Discord Music Bot
 has been licensed under GNU General Public License
 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁
 ```
+
+## 💻Host is HEROKU:
+
+<p align="centre"><img  width="40%" height="40%" img src="https://i.postimg.cc/J4NW8RBc/Capture.png" /></p>
+<p align="centre"><img  width="40%" height="40%" img src="https://i.postimg.cc/rwq2F716/2.png" /></p>
