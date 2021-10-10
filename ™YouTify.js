@@ -1,56 +1,27 @@
-console.clear();
 const Fs = require("fs");
 const Os = require(`os`);
+require("dotenv").config();
 const ᴄʜᴀʟᴋ = require("chalk");
 const Ms = require("pretty-ms");
-require("dotenv").config();
-const Token = process.env.Token;
 const YouTix = process.env.YouTix;
-const Discord = require("discord.js"),
-  Client = new Discord.Client({ restTimeOffset: 10 }),
-  CoolDowns = new Discord.Collection(),
-  SC = require("soundcloud-scraper");
+const Discord = require("discord.js");
+const SC = require("soundcloud-scraper");
+const KRAKINZKEY = process.env.KRAKINZKEY;
+const CoolDowns = new Discord.Collection();
+const { MessageEmbed } = require("discord.js");
+const Categories = ["Music", "Filters", "System"];
+const Client = new Discord.Client({ restTimeOffset: 10 });
 (Client.commands = new Discord.Collection()),
   (Client.aliases = new Discord.Collection()),
   (Client.queue = new Map());
-const { MessageEmbed } = require("discord.js");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-const Categories = ["Music", "Filters", "System"];
-Categories.forEach((Category) => {
-  Fs.readdir(`./YouTify_Genres/${Category}`, (error, Files) => {
-    if (error) throw error;
-    Files.forEach((File) => {
-      if (!File.endsWith(".js")) return;
-      const Cmd = require(`./YouTify_Genres/${Category}/${File}`);
-      if (!Cmd.help.name || !Cmd.help.aliases) {
-        console.log(
-          ᴄʜᴀʟᴋ.yellow("❓ YouTify's ❓ |"),
-          ᴄʜᴀʟᴋ.cyan(`${Cmd.help.name ? Cmd.help.name : "?"}`),
-          ᴄʜᴀʟᴋ.red(` :( Failed To Load - ❌\n---------------------------`)
-        );
-        return;
-      }
-      Client.commands.set(Cmd.help.name, Cmd);
-      Cmd.help.aliases
-        ? Cmd.help.aliases.forEach((Alias) =>
-            Client.aliases.set(Alias, Cmd.help.name)
-          )
-        : (Cmd.help.aliases = null);
-      ComUp = Cmd.help.name.toUpperCase();
-      console.log(
-        ᴄʜᴀʟᴋ.yellow("⚡ YouTify's ⚡ |"),
-        ᴄʜᴀʟᴋ.cyan(`${ComUp}`),
-        ᴄʜᴀʟᴋ.green(`;) Command has been loaded!`)
-      );
-    });
-  });
-});
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
-Client.on("ready", async () => {
+Client.on("ready", async (message) => {
+  // const Key = await SC.keygen();
+  // Client.SC = new SC.Client(Key);
+  console.clear();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
   console.log(ᴄʜᴀʟᴋ.red(`📕: error+code RED message`));
   console.log(ᴄʜᴀʟᴋ.yellow(`📙: sorry+code ORANGE message`));
   console.log(ᴄʜᴀʟᴋ.green(`📗: ok+code GREEN message`));
@@ -65,8 +36,35 @@ Client.on("ready", async () => {
   );
   Client.user.setActivity(`${YouTix}help🍏${YouTix}play`, { type: `WATCHING` });
   console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  const Key = await SC.keygen();
-  Client.SC = new SC.Client(Key);
+  Categories.forEach((Category) => {
+    Fs.readdir(`./YouTify_Genres/${Category}`, (error, Files) => {
+      if (error) throw error;
+      Files.forEach((File) => {
+        if (!File.endsWith(".js")) return;
+        const Cmd = require(`./YouTify_Genres/${Category}/${File}`);
+        if (!Cmd.help.name || !Cmd.help.aliases) {
+          console.log(
+            ᴄʜᴀʟᴋ.yellow("❓ YouTify's ❓ |"),
+            ᴄʜᴀʟᴋ.cyan(`${Cmd.help.name ? Cmd.help.name : "?"}`),
+            ᴄʜᴀʟᴋ.red(` :( Failed To Load - ❌\n---------------------------`)
+          );
+          return;
+        }
+        Client.commands.set(Cmd.help.name, Cmd);
+        Cmd.help.aliases
+          ? Cmd.help.aliases.forEach((Alias) =>
+              Client.aliases.set(Alias, Cmd.help.name)
+            )
+          : (Cmd.help.aliases = null);
+        ComUp = Cmd.help.name.toUpperCase();
+        console.log(
+          ᴄʜᴀʟᴋ.yellow("⚡ YouTify's ⚡ |"),
+          ᴄʜᴀʟᴋ.cyan(`${ComUp}`),
+          ᴄʜᴀʟᴋ.green(`;) Command has been loaded!`)
+        );
+      });
+    });
+  });
 });
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
@@ -393,7 +391,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.login(Token).catch((error) => console.log(new Error(error)));
+Client.login(KRAKINZKEY).catch((error) => console.log(new Error(error)));
 Client.on("error", (error) => {
   console.log(error);
 });
