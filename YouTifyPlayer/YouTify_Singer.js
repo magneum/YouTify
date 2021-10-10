@@ -1,6 +1,6 @@
 const Dl = require("./ytdl");
 const Sr = require("youtube-sr").default;
-const Discord = require("./discord.js");
+const Discord = require("./YouTified.djs");
 const SP = require("spotify-url-info");
 const { Regex } = require("./Regex.js");
 const Fetch = require("node-fetch").default;

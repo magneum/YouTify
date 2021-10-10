@@ -3,7 +3,7 @@ const {
   YouTify_Get_Meta_Data,
 } = require("../../YouTifyPlayer/YouTify_Singer.js");
 const Sr = require("youtube-sr").default;
-const { MessageEmbed } = require("../../YouTifyPlayer/discord.js");
+const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================

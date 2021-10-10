@@ -1,5 +1,5 @@
 const Finder = require("lyrics-finder");
-const { MessageEmbed } = require("../../YouTifyPlayer/discord.js");
+const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
 
 module.exports.run = async (client, message, args, Discord) => {
   const Queue = client.queue.get(message.guild.id);

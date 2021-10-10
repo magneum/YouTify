@@ -7,8 +7,8 @@ const YouTix = process.env.YouTix;
 const SC = require("soundcloud-scraper");
 const KRAKINZKEY = process.env.KRAKINZKEY;
 const Categories = ["Music", "Filters", "System"];
-const Discord = require("./YouTifyPlayer/discord.js");
-const { MessageEmbed } = require("./YouTifyPlayer/discord.js");
+const Discord = require("./YouTifyPlayer/YouTified.djs");
+const { MessageEmbed } = require("./YouTifyPlayer/YouTified.djs");
 const CoolDowns = new Discord.Collection();
 const Client = new Discord.Client({ restTimeOffset: 10 });
 (Client.commands = new Discord.Collection()),
@@ -17,7 +17,7 @@ const Client = new Discord.Client({ restTimeOffset: 10 });
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.on("ready", async (message) => {
+Client.on("ready", async () => {
   const Key = await SC.keygen();
   Client.SC = new SC.Client(Key);
   console.clear();

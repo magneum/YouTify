@@ -1,5 +1,5 @@
 const { YouTify_Singer } = require("../../YouTifyPlayer/YouTify_Singer.js");
-const { MessageEmbed } = require("../../YouTifyPlayer/discord.js");
+const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
@@ -86,10 +86,9 @@ module.exports.run = async (client, message, args, Discord) => {
         .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
         .addField(
           `\`👄Filter Applied\``,
-          `**Sofalizer Filter Has Been ${
-            Queue.Filters["sofalizer"]
-              ? "Enabled (Song Maybe Ahead)"
-              : "Disabled (Song Maybe Backward)"
+          `**Sofalizer Filter Has Been ${Queue.Filters["sofalizer"]
+            ? "✅Enabled **(Song Maybe Ahead)**"
+            : "❌Disabled **(Song Maybe Backward)**"
           }!**`,
           true
         )
@@ -108,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "sofalizer",
   aliases: ["sfz"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Filters",
   description: "Add/Remove sofalizer Filter To/From Currently Playing Song!",
   usage: "sofalizer",
