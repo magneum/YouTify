@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "flanger",
-  aliases: ["vw"],
+  aliases: ["flg"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove flanger Filter To/From Currently Playing Song!",

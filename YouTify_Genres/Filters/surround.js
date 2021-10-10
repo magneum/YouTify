@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "surround",
-  aliases: ["vw"],
+  aliases: ["sur"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove surround Filter To/From Currently Playing Song!",

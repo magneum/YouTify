@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "speed",
-  aliases: ["vw"],
+  aliases: ["sp"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove speed Filter To/From Currently Playing Song!",

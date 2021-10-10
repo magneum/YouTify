@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "slow",
-  aliases: ["vw"],
+  aliases: ["sl"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove slow Filter To/From Currently Playing Song!",

@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "mono",
-  aliases: ["vw"],
+  aliases: ["mn"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove mono Filter To/From Currently Playing Song!",

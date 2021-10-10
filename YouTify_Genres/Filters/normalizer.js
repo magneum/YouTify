@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "normalizer",
-  aliases: ["vw"],
+  aliases: ["nmz"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove normalizer Filter To/From Currently Playing Song!",

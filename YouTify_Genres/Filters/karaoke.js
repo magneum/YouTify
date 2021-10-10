@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "karaoke",
-  aliases: ["vw"],
+  aliases: ["kk"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove karaoke Filter To/From Currently Playing Song!",

@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "vibrato",
-  aliases: ["vw"],
+  aliases: ["vb"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove vibrato Filter To/From Currently Playing Song!",

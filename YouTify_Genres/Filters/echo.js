@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "echo",
-  aliases: ["vw"],
+  aliases: ["ec"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove echo Filter To/From Currently Playing Song!",

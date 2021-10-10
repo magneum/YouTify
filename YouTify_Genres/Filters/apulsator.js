@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "apulsator",
-  aliases: ["vw"],
+  aliases: ["apls"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove apulsator Filter To/From Currently Playing Song!",

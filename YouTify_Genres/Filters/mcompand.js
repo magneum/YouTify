@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "mcompand",
-  aliases: ["vw"],
+  aliases: ["mcp"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove mcompand Filter To/From Currently Playing Song!",

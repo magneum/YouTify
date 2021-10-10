@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "pulsator",
-  aliases: ["vw"],
+  aliases: ["pls"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove pulsator Filter To/From Currently Playing Song!",

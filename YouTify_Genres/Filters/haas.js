@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "haas",
-  aliases: ["vw"],
+  aliases: ["hs"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove haas Filter To/From Currently Playing Song!",

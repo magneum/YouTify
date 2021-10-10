@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "superslow",
-  aliases: ["vw"],
+  aliases: ["ssw"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove superslow Filter To/From Currently Playing Song!",

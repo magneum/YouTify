@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "tremolo",
-  aliases: ["vw"],
+  aliases: ["trm"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove tremolo Filter To/From Currently Playing Song!",

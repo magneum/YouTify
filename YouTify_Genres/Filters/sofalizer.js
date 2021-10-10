@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "sofalizer",
-  aliases: ["vw"],
+  aliases: ["sfz"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove sofalizer Filter To/From Currently Playing Song!",

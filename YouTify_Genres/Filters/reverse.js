@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "reverse",
-  aliases: ["vw"],
+  aliases: ["rev"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove reverse Filter To/From Currently Playing Song!",

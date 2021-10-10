@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "gate",
-  aliases: ["vw"],
+  aliases: ["gt"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove gate Filter To/From Currently Playing Song!",

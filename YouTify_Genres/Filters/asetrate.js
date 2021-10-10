@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "asetrate",
-  aliases: ["vw"],
+  aliases: ["ase"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove asetrate Filter To/From Currently Playing Song!",

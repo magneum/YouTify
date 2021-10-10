@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "phaser",
-  aliases: ["vw"],
+  aliases: ["phs"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove phaser Filter To/From Currently Playing Song!",

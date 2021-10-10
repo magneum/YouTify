@@ -107,7 +107,7 @@ module.exports.run = async (client, message, args, Discord) => {
 // ===========================================================================================================================
 module.exports.help = {
   name: "subboost",
-  aliases: ["vw"],
+  aliases: ["sb"],
   cooldown: 7000,
   category: "Filters",
   description: "Add/Remove subboost Filter To/From Currently Playing Song!",
