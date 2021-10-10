@@ -303,6 +303,7 @@ async function YouTify_Singer(client, message, options = {}) {
     type: "opus",
     bitrate: Bitrates,
   });
+  let Channel = message.member.voice.channel;
   queue.Steam = Steam;
   if (Seek) {
     queue.ExtraTime = 0;
@@ -337,11 +338,9 @@ async function YouTify_Singer(client, message, options = {}) {
           `🎹Use ${client.YouTix}filter to know more about Available Audio filters`,
           true
         )
-        .addField(
-          `\`Coded by\``,
-          `👑Krakinz#7134(dc)\n@KrakinzBot(tg)👑`,
-          true
-        )
+        .addField(`\`Coded by\``, `👑Krakinz#7134(dc)\n@KrakinzBot(tg)👑`, true)
+        .addField(`\`👍 Joined\``, `❣️\`${Channel.name}`, true)
+        .addField(`\`📄 Bound to\``, `\`#${message.channel.name}\``, true)
     ).catch(console.error);
     await YouTifyMusic.react("❤️").catch(console.error);
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
