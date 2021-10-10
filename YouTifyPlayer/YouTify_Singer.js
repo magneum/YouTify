@@ -42,9 +42,7 @@ async function YouTify_Type(Value) {
     L: `https://www.youtube.com/watch?v=${Data.id}`,
   };
 }
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+
 async function YouTify_Get_Meta_Data(Query, message) {
   const T = await YouTify_Type(Query);
   let Final, Info;
@@ -147,24 +145,22 @@ async function YouTify_Get_Meta_Data(Query, message) {
     return Final;
   }
 }
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+
 async function YouTify_Generate_Audio(Song, message, all, options = {}) {
   const Link = Song.video_url
     ? Song.video_url
     : Song.id && !isNaN(Song.id)
-      ? Song.url
-      : Song.url
-        ? Song.url
-        : `https://www.youtube.com/watch?v=${Song.id}`;
+    ? Song.url
+    : Song.url
+    ? Song.url
+    : `https://www.youtube.com/watch?v=${Song.id}`;
   const Thumbnail = Song.thumbnails
     ? Song.thumbnails[0].url
     : Song.thumbnail
+    ? Song.thumbnail.url
       ? Song.thumbnail.url
-        ? Song.thumbnail.url
-        : Song.thumbnail
-      : Song.image;
+      : Song.thumbnail
+    : Song.image;
   let Duration;
   if (Song.lengthSeconds || !String(Song.duration).includes(":")) {
     Duration = await FD(
@@ -186,9 +182,7 @@ async function YouTify_Generate_Audio(Song, message, all, options = {}) {
     Link,
   };
 }
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+
 async function FD(duration, type = " ") {
   if (type == "ms") duration = duration / 1000;
 
@@ -207,9 +201,7 @@ async function FD(duration, type = " ") {
   }
   return minutes + ":" + duration;
 }
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+
 async function HandleVoice(message, client) {
   const Queue = await client.queue.get(message.guild.id);
   await Queue.Connection.on("disconnect", () => {
@@ -226,9 +218,7 @@ async function HandleVoice(message, client) {
       return Queue.Text.send("Something Went Wrong, Try Again Later!");
     });
 }
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+
 async function YouTify_Singer(client, message, options = {}) {
   const queue = await client.queue.get(message.guild.id),
     Encoder = await AllFilters(queue);
@@ -256,10 +246,10 @@ async function YouTify_Singer(client, message, options = {}) {
     client.ws.ping <= 20
       ? 513000
       : client.ws.ping <= 40
-        ? 128000
-        : client.ws.ping <= 60
-          ? 96000
-          : 64000;
+      ? 128000
+      : client.ws.ping <= 60
+      ? 96000
+      : 64000;
   let Steam,
     Dispatcher,
     Link,
@@ -301,8 +291,8 @@ async function YouTify_Singer(client, message, options = {}) {
     Type == "SR"
       ? await Dl.downloadFromInfo(Link, option)
       : Type == "AR"
-        ? await Dl.arbitraryStream(Link, option)
-        : undefined;
+      ? await Dl.arbitraryStream(Link, option)
+      : undefined;
   if (!Steam)
     return message.channel.send(
       "Error: Something Went Wrong, Try Again Later!"
