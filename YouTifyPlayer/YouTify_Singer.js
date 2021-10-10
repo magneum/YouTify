@@ -299,7 +299,7 @@ async function YouTify_Singer(client, message, options = {}) {
       "Error: Something Went Wrong, Try Again Later!"
     );
   Dispatcher = await queue.Connection.play(Steam, {
-    volume: queue.Volume / 100,
+    volume: queue.Volume - 120,
     type: "opus",
     bitrate: Bitrates,
   });
@@ -344,7 +344,7 @@ async function YouTify_Singer(client, message, options = {}) {
         )
     ).catch(console.error);
     await YouTifyMusic.react("❤️").catch(console.error);
-    Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
+    Dispatcher.setVolumeLogarithmic(queue.Volume - 120);
     queue.ExtraTime = 0;
   }
   return HandleVoice(message, client);
