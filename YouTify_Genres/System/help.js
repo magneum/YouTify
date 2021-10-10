@@ -70,29 +70,23 @@ module.exports.run = async (client, message, args, Discord) => {
           .setDescription(
             `**💡This is the Entire Command Helper Menu for YouTify™**💡
 :exclamation:*For more help type ${client.YouTix}help <command name>* 
-**\`PREFIX\`**
-**${client.YouTix}**
-================🍏================\n\n`
-          )
-          .addField(
-            `**\`🎹YOUTIFY PLAYER\`**`,
-            `**play,clean,\nclearqueue,join,\nleave,loop,\nlyrics,nowplaying,\nqueue,search,\nshuffle,skip,volume**`,
-            true
-          )
-          .addField(`**\`⚙️SYSTEM\`**`, `**help,invite,\nping,uptime**`, true)
-          .addField(
-            `**\`🎶FILTERS\`**`,
-            `*(remember to disable any applied filter just re-send that filter command)*
-**aphaser, apulsator, asetrate,
-bassboost, deesser, earwax,
-echo, filters, flanger, gate,
-haas, karaoke, mcompand, mono,
-nightcore, normalizer, phaser,
-pulsator, reverse, slow, sofalizer,
-speed, subboost, superslow,
-superspeed, surround, treble,
-tremolo, vaporwave, vibrato**`,
-            true
+**\`PREFIX\`**  ${client.YouTix}
+================🍏================\n\n
+
+**\`🎹YOUTIFY PLAYER\`**
+play,clean,clearqueue,join,leave,loop,lyrics,nowplaying,queue,search,shuffle,skip,volume
+
+**\`⚙️SYSTEM\`**
+**help,invite,\nping,uptime**
+
+**\`🎶FILTERS\`**
+**(remember to disable any applied filter just re-send that filter command)**
+aphaser, apulsator, asetrate,bassboost, deesser, earwax,
+echo, filters, flanger, gate,haas, karaoke, mcompand, mono,
+nightcore, normalizer, phaser,pulsator, reverse, slow, sofalizer,
+speed, subboost, superslow,superspeed, surround, treble,
+tremolo, vaporwave, vibrato....
+More Coming Soon!! :)`
           )
           .addField(
             `\`Brought To You by\``,
