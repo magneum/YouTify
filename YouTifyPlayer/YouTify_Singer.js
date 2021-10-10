@@ -250,7 +250,6 @@ async function YouTify_Singer(client, message, options = {}) {
   if (!options.Song) {
     (await queue.Voice.leave()) &&
       (await client.queue.delete(message.guild.id));
-    await YouTifyMusic.reactions.removeAll().catch(console.error);
     await YouTifyMusic.react("💤").catch(console.error);
     return message.channel.send(
       new Discord.MessageEmbed()
@@ -363,9 +362,7 @@ async function YouTify_Singer(client, message, options = {}) {
           `👑**Krakinz#7134(dc)\n@KrakinzBot(tg)👑**`,
           true
         )
-    ).catch(console.error);
-    await YouTifyMusic.react("❤️").catch(console.error);
-    await YouTifyMusic.react("⚡").catch(console.error);
+    ).then(() => await YouTifyMusic.react("❤️"));
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }

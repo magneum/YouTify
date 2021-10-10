@@ -89,8 +89,8 @@ module.exports.run = async (client, message, args, Discord) => {
           `\`👄Filter Applied\``,
           `**Bassboost Filter Has Been ${
             Queue.Filters["bassboost"]
-              ? "Disabled (Song Maybe Backward)"
-              : "Enabled (Song Maybe Ahead)"
+              ? "Enabled (Song Maybe Ahead)"
+              : "Disabled (Song Maybe Backward)"
           }!**`,
           true
         )
