@@ -264,43 +264,43 @@ module.exports.run = async (client, message, args, Discord) => {
   Queue = await client.queue.get(message.guild.id);
   try {
     message.react("🟢");
-    message.author
-      .send(
-        new MessageEmbed()
-          .setTimestamp()
-          .setColor("#43745a")
-          .setAuthor(
-            `🍏YouTify™`,
-            `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
-          )
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .addField(
-            `\`👍 Joined\``,
-            `❣️**\`${Channel.name}**`,
-            true
-          )
-          .addField(
-            `\`📄 Bound to\``,
-            `**\`#${message.channel.name}\`**`,
-            true
-          )
-          .addField(
-            `\`💤Auto Deleting\``,
-            `**In 15seconds!!**`,
-            true
-          )
-          .setFooter(
-            `👈🏽‍Reqstd by`,
-            message.author.avatarURL({ dynamic: true })
-          )).catch(console.error).then((message) => {
-            try {
-              message.delete({
-                timeout: 15000,
-              });
-            } catch (err) {
-              console.log(err);
-            }
-          });
+    // message.author
+    //   .send(
+    //     new MessageEmbed()
+    //       .setTimestamp()
+    //       .setColor("#43745a")
+    //       .setAuthor(
+    //         `🍏YouTify™`,
+    //         `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+    //       )
+    //       .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+    //       .addField(
+    //         `\`👍 Joined\``,
+    //         `❣️**\`${Channel.name}**`,
+    //         true
+    //       )
+    //       .addField(
+    //         `\`📄 Bound to\``,
+    //         `**\`#${message.channel.name}\`**`,
+    //         true
+    //       )
+    //       .addField(
+    //         `\`💤Auto Deleting\``,
+    //         `**In 15seconds!!**`,
+    //         true
+    //       )
+    //       .setFooter(
+    //         `👈🏽‍Reqstd by`,
+    //         message.author.avatarURL({ dynamic: true })
+    //       )).catch(console.error).then((message) => {
+    //         try {
+    //           message.delete({
+    //             timeout: 15000,
+    //           });
+    //         } catch (err) {
+    //           console.log(err);
+    //         }
+    //       });
     message.channel
       .send(
         new MessageEmbed()
