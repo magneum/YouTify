@@ -345,11 +345,11 @@ async function YouTify_Singer(client, message, options = {}) {
   if (Seek) {
     queue.ExtraTime = 0;
   } else {
-    queue.Text.send(
+    var YouTifyMusic = await queue.Text.send(
       new Discord.MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        // .setTitle(`\`💬Play\``)
+        .setTitle(`\`💬Play\``)
         .setAuthor(
           `🍏YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -374,6 +374,9 @@ async function YouTify_Singer(client, message, options = {}) {
           true
         )
     );
+    await YouTifyMusic.react("✔️");
+    await YouTifyMusic.react("❤️");
+    await YouTifyMusic.react("⚡");
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }

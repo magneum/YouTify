@@ -9,7 +9,7 @@ module.exports.run = (client, message, args, Discord) => {
       new MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        // .setTitle(`\`💬Invite\``)
+        .setTitle(`\`💬Invite\``)
         .setURL("https://github.com/Krakinz")
         .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)

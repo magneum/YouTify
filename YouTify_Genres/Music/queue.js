@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Queue\``)
+          .setTitle(`\`💬Queue\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Queue\``)
+          .setTitle(`\`💬Queue\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -78,7 +78,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Queue\``)
+          .setTitle(`\`💬Queue\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`

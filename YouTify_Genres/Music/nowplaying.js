@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Now Playing\``)
+          .setTitle(`\`💬Now Playing\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Now Playing\``)
+          .setTitle(`\`💬Now Playing\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -79,7 +79,7 @@ module.exports.run = async (client, message, args, Discord) => {
       new MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
-        // .setTitle(`\`💬Now Playing\``)
+        .setTitle(`\`💬Now Playing\``)
         .setAuthor(
           `🍏YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -90,7 +90,7 @@ module.exports.run = async (client, message, args, Discord) => {
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
         )
-        // .setTitle(`\`💬▶️Now Playing\``)
+        .setTitle(`\`💬▶️Now Playing\``)
         .setImage(Song.Thumbnail)
         .addField(`\`📜Title\``, `**[${Song.Title}](${Song.Link})**`, true)
         .addField(`\`🕰️Duration\``, `**${Song.Duration}**`, true)

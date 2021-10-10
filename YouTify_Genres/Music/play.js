@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#43745a")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -82,7 +82,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -124,7 +124,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#c4b932")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -162,12 +162,12 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#3285c4")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
-          // .setTitle((Songs ? "Playlist" : "Song"))
+          .setTitle(Songs ? "Playlist" : "Song")
           .setThumbnail(
             Songs
               ? T.Other.thumbnail
@@ -203,7 +203,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#b13d3d")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -251,7 +251,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setTimestamp()
           .setColor("#b13d3d")
-          // .setTitle(`\`💬Play\``)
+          .setTitle(`\`💬Play\``)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`

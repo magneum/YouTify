@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setTimestamp()
           .setColor("#43745a")
           .setURL("https://github.com/Krakinz")
-          // .setTitle(`💬\`YouTify™ Help Menu\``)
+          .setTitle(`💬\`YouTify™ Help Menu\``)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setAuthor(
             `🍏YouTify™`,
@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setTimestamp()
           .setColor("#43745a")
           .setURL("https://github.com/Krakinz")
-          // .setTitle(`💬\`YouTify™ Help Menu\``)
+          .setTitle(`💬\`YouTify™ Help Menu\``)
           .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setAuthor(
@@ -174,7 +174,7 @@ module.exports.run = async (client, message, args, Discord) => {
         .setTimestamp()
         .setColor("#ffffff")
         .setURL("https://github.com/Krakinz")
-        // .setTitle(`**${Cmd.description}**`)
+        .setTitle(`**${Cmd.description}**`)
         .setThumbnail(`https://YouNum.postimg.cc/9f0mS5NY/YouTify.png`)
         .setAuthor(
           `🍏YouTify™`,
