@@ -5,11 +5,11 @@
 - [![Generic badge](https://img.shields.io/badge/🍏YouTify™_Priority_Speaker🍏-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 Discord
 
-<p align="centre"><img  width="80%" height="80%" img src="https://i.postimg.cc/NGbMc7qj/YouTify.png" /></p>
+<p align="centre"><img  width="100%" height="80%" img src="https://i.postimg.cc/NGbMc7qj/YouTify.png" /></p>
 
-## 🍏Test Phase:
+## 🎶Test Phase New Filters Showcase:
 
-<p align="centre"><img  width="40%" height="40%" img src="https://i.postimg.cc/zXcGLzfm/You-Tify-Test.png" /></p>
+<p align="centre"><img  width="100%" height="80%" img src="https://i.postimg.cc/pr4j2Dhr/You-Tify-New-Filter-Showcase.png" /></p>
 
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
 
