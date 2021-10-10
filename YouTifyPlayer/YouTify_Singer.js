@@ -250,12 +250,15 @@ async function YouTify_Singer(client, message, options = {}) {
   if (!options.Song) {
     (await queue.Voice.leave()) &&
       (await client.queue.delete(message.guild.id));
-    const End = new Discord.MessageEmbed()
-      .setColor(client.Color)
-      .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
-      .setDescription("Queue Has Been Ended, Please Add More Songs")
-      .setTimestamp();
-    return message.channel.send(End);
+    await YouTifyMusic.reactions.removeAll().catch(console.error);
+    await YouTifyMusic.react("💤").catch(console.error);
+    return message.channel.send(
+      new Discord.MessageEmbed()
+        .setColor(client.Color)
+        .setAuthor("Queue Ended", message.author.avatarURL({ dynamic: true }))
+        .setDescription("Queue Has Been Ended, Please Add More Songs")
+        .setTimestamp()
+    );
   }
 
   const Bitrates =
@@ -360,10 +363,9 @@ async function YouTify_Singer(client, message, options = {}) {
           `👑**Krakinz#7134(dc)\n@KrakinzBot(tg)👑**`,
           true
         )
-    );
-    await YouTifyMusic.react("✔️");
-    await YouTifyMusic.react("❤️");
-    await YouTifyMusic.react("⚡");
+    ).catch(console.error);
+    await YouTifyMusic.react("❤️").catch(console.error);
+    await YouTifyMusic.react("⚡").catch(console.error);
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }
