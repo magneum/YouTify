@@ -17,8 +17,8 @@
 Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
 
 💻 𝗪𝗵𝗮𝘁 𝗖𝗮𝗻 𝗕𝗼𝘁 𝗗𝗼???
-❄️ 𝘗𝘭𝘢𝘺 𝘢𝘯𝘺 𝘮𝘶𝘴𝘪𝘤 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘨𝘳𝘰𝘶𝘱 𝘷𝘤. 𝘠𝘰𝘶 𝘸𝘪𝘭𝘭
-🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴
+❄️ 𝘗𝘭𝘢𝘺 𝘢𝘯𝘺 𝘮𝘶𝘴𝘪𝘤 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘨𝘳𝘰𝘶𝘱 𝘷𝘤.
+❄️ YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴
 ❄️ 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
 ❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓
 ```
