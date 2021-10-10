@@ -346,7 +346,7 @@ async function YouTify_Singer(client, message, options = {}) {
     queue.ExtraTime = 0;
   } else {
     queue.Text.send(
-      new MessageEmbed()
+      new Discord.MessageEmbed()
         .setTimestamp()
         .setColor("#43745a")
         // .setTitle(`\`💬Play\``)
