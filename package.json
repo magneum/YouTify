@@ -1,5 +1,5 @@
 {
-  "main": "YouTify.js",
+  "main": "™YouTify.js",
   "dependencies": {
     "@discordjs/opus": "^0.4.0",
     "@distube/ytdl": "^1.0.7",
