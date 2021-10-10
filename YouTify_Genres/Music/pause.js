@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("../../YouTifyPlayer/discord.js");
 
 module.exports.run = async (client, message, args, Discord) => {
   const Channel = message.member.voice.channel;

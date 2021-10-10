@@ -1,6 +1,6 @@
+const Dl = require("./ytdl");
 const Sr = require("youtube-sr").default;
-const Dl = require("@distube/ytdl");
-const Discord = require("discord.js");
+const Discord = require("./discord.js");
 const SP = require("spotify-url-info");
 const { Regex } = require("./Regex.js");
 const Fetch = require("node-fetch").default;
@@ -154,17 +154,17 @@ async function YouTify_Generate_Audio(Song, message, all, options = {}) {
   const Link = Song.video_url
     ? Song.video_url
     : Song.id && !isNaN(Song.id)
-    ? Song.url
-    : Song.url
-    ? Song.url
-    : `https://www.youtube.com/watch?v=${Song.id}`;
+      ? Song.url
+      : Song.url
+        ? Song.url
+        : `https://www.youtube.com/watch?v=${Song.id}`;
   const Thumbnail = Song.thumbnails
     ? Song.thumbnails[0].url
     : Song.thumbnail
-    ? Song.thumbnail.url
       ? Song.thumbnail.url
-      : Song.thumbnail
-    : Song.image;
+        ? Song.thumbnail.url
+        : Song.thumbnail
+      : Song.image;
   let Duration;
   if (Song.lengthSeconds || !String(Song.duration).includes(":")) {
     Duration = await FD(
@@ -256,10 +256,10 @@ async function YouTify_Singer(client, message, options = {}) {
     client.ws.ping <= 20
       ? 513000
       : client.ws.ping <= 40
-      ? 128000
-      : client.ws.ping <= 60
-      ? 96000
-      : 64000;
+        ? 128000
+        : client.ws.ping <= 60
+          ? 96000
+          : 64000;
   let Steam,
     Dispatcher,
     Link,
@@ -301,8 +301,8 @@ async function YouTify_Singer(client, message, options = {}) {
     Type == "SR"
       ? await Dl.downloadFromInfo(Link, option)
       : Type == "AR"
-      ? await Dl.arbitraryStream(Link, option)
-      : undefined;
+        ? await Dl.arbitraryStream(Link, option)
+        : undefined;
   if (!Steam)
     return message.channel.send(
       "Error: Something Went Wrong, Try Again Later!"

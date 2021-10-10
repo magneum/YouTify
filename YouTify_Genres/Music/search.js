@@ -3,9 +3,11 @@ const {
   YouTify_Generate_Audio,
 } = require("../../YouTifyPlayer/YouTify_Singer.js");
 const Sr = require("youtube-sr").default;
-const Dl = require("@distube/ytdl");
-const { MessageEmbed } = require("discord.js");
-
+const Dl = require("../../YouTifyPlayer/ytdl");
+const { MessageEmbed } = require("../../YouTifyPlayer/discord.js");
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 module.exports.run = async (client, message, args, Discord) => {
   let Value = args.join(" "),
     Channel = message.member.voice.channel,
@@ -29,11 +31,10 @@ module.exports.run = async (client, message, args, Discord) => {
 
       Data.length > 10 ? (Data.length = 10) : null;
       const Mapped = await Data.map(
-          (S, I) =>
-            `${I + 1} | [${
-              S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
-            }](https://youtube.com/watch?v=${S.id})`
-        ),
+        (S, I) =>
+          `${I + 1} | [${S.title.length > 50 ? `${S.title.slice(0, 50)}...` : S.title
+          }](https://youtube.com/watch?v=${S.id})`
+      ),
         Filter = (m) => m.author.id === message.author.id;
 
       const Embed = new MessageEmbed()
