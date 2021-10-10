@@ -71,7 +71,6 @@ module.exports.run = async (client, message, args, Discord) => {
     Filter: true,
     Song: Queue.Songs[0],
   });
-  message.react("🟢");
   message.channel
     .send(
       new MessageEmbed()

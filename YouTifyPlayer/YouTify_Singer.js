@@ -366,7 +366,6 @@ async function YouTify_Singer(client, message, options = {}) {
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }
-  await YouTifyMusic.react("💤").catch(console.error);
   return HandleVoice(message, client);
 }
 // ===========================================================================================================================
