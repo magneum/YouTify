@@ -370,7 +370,7 @@ async function YouTify_Singer(client, message, options = {}) {
         .addField(`\`Filters\``, `🎹**Type ${client.YouTix}filter**`, true)
         .addField(
           `\`Coded by\``,
-          `👑**Krakinz#7134**(dc) | @KrakinzBot(tg)👑`,
+          `👑**Krakinz#7134(dc) | @KrakinzBot(tg)👑**`,
           true
         )
     );
