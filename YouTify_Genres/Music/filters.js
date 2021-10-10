@@ -1,7 +1,5 @@
-const {
-  YouTify_Singer,
-  Filters,
-} = require("../../YouTifyPlayer/YouTify_Singer.js");
+const { YouTify_Singer } = require("../../YouTifyPlayer/YouTify_Singer.js");
+const { Filters } = require("../../YouTifyPlayer/Filters.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (client, message, args, Discord) => {
