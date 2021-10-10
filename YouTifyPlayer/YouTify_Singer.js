@@ -1,18 +1,14 @@
-const Sr = require("youtube-sr").default,
-  Dl = require("@distube/ytdl"),
-  SP = require("spotify-url-info"),
-  Discord = require("discord.js"),
-  Fetch = require("node-fetch").default;
+const Sr = require("youtube-sr").default;
+const Dl = require("@distube/ytdl");
+const Discord = require("discord.js");
+const SP = require("spotify-url-info");
 const { Regex } = require("./Regex.js");
-const { Filters, AllFilters } = require("./Filters.js");
+const Fetch = require("node-fetch").default;
+const { AllFilters } = require("./Filters.js");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function YouTify_Type(Value) {
-  /**
-   * T => Type
-   * L => Link
-   */
   if (Regex.VideoID.test(Value))
     return {
       T: "YT",
@@ -216,16 +212,13 @@ async function FD(duration, type = " ") {
 // ===========================================================================================================================
 async function HandleVoice(message, client) {
   const Queue = await client.queue.get(message.guild.id);
-
   await Queue.Connection.on("disconnect", () => {
     client.queue.delete(message.guild.id);
   });
-
   await Queue.Connection.dispatcher
     .on("finish", async () => {
       const Shift = await Queue.Songs.shift();
       if (Queue.Loop == true) await Queue.Songs.push(Shift);
-
       await YouTify_Singer(client, message, { Song: Queue.Songs[0] });
     })
     .on("error", async (error) => {
@@ -314,15 +307,12 @@ async function YouTify_Singer(client, message, options = {}) {
     return message.channel.send(
       "Error: Something Went Wrong, Try Again Later!"
     );
-
   Dispatcher = await queue.Connection.play(Steam, {
     volume: queue.Volume / 100,
     type: "opus",
     bitrate: Bitrates,
   });
-
   queue.Steam = Steam;
-
   if (Seek) {
     queue.ExtraTime = 0;
   } else {
