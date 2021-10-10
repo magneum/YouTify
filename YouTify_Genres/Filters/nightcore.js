@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Not connected to any VoiceChannel!**`,
+            `Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!**`,
+            `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!`,
             true
           )
       )
@@ -86,15 +86,15 @@ module.exports.run = async (client, message, args, Discord) => {
         .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
         .addField(
           `\`👄Filter Applied\``,
-          `**Nightcore Filter Has Been ${Queue.Filters["nightcore"]
-            ? "✅Enabled **(Song Maybe Ahead)**"
-            : "❌Disabled **(Song Maybe Backward)**"
-          }!**`,
+          `Nightcore Filter Has Been ${Queue.Filters["nightcore"]
+            ? "✅Enabled (Song Maybe Ahead)"
+            : "❌Disabled (Song Maybe Backward)"
+          }!`,
           true
         )
         .addField(
           `\`⚡Filter Warning!\``,
-          `**Note That Filter takes time to be applied to the current music as it depends on the size and lenth of audio!**`,
+          `Note That Filter takes time to be applied to the current music as it depends on the size and lenth of audio!`,
           true
         )
     )

@@ -19,12 +19,12 @@ module.exports.run = (client, message, args, Discord) => {
         )
         .addField(
           `\`Brought To You by\``,
-          "👑**Krakinz & KrakinzLab(c)**👑",
+          "👑Krakinz & KrakinzLab(c)👑",
           true
         )
         .addField(
           `\`📡Pong\``,
-          `**YouTify's Server is Smoothly Running with Max Latency being ${client.ws.ping}ms**`,
+          `YouTify's Server is Smoothly Running with Max Latency being ${client.ws.ping}ms`,
           true
         )
         .setFooter(

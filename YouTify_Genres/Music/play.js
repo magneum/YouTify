@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args, Discord) => {
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .addField(
           `\`🔍Searching\``,
-          `**❣️Adding in 3sec \`${args.join(" ")}\`**`,
+          `❣️Adding in 3sec \`${args.join(" ")}\``,
           true
         )
         .setFooter(
@@ -60,7 +60,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️BETA warning\``,
-            `**Spotify Engine is in heavy Beta Stage!**`,
+            `Spotify Engine is in heavy Beta Stage!`,
             true
           )
       )
@@ -89,7 +89,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Not connected to any VoiceChannel!**`,
+            `Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -119,7 +119,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**connected VoiceChannel seems to be not Joinable Or Speakable**`,
+            `connected VoiceChannel seems to be not Joinable Or Speakable`,
             true
           )
       )
@@ -161,7 +161,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No Song Found!\nTry different search keystrings or use URL**`,
+            `No Song Found!\nTry different search keystrings or use URL`,
             true
           )
       )
@@ -239,7 +239,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Unable To Join Voice Channel!**\n\n*${e}*`,
+            `Unable To Join Voice Channel!\n\n*${e}*`,
             true
           )
       )
@@ -276,17 +276,17 @@ module.exports.run = async (client, message, args, Discord) => {
     //       .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
     //       .addField(
     //         `\`👍 Joined\``,
-    //         `❣️**\`${Channel.name}**`,
+    //         `❣️\`${Channel.name}`,
     //         true
     //       )
     //       .addField(
     //         `\`📄 Bound to\``,
-    //         `**\`#${message.channel.name}\`**`,
+    //         `\`#${message.channel.name}\``,
     //         true
     //       )
     //       .addField(
     //         `\`💤Auto Deleting\``,
-    //         `**In 15seconds!!**`,
+    //         `In 15seconds!!`,
     //         true
     //       )
     //       .setFooter(
@@ -313,12 +313,12 @@ module.exports.run = async (client, message, args, Discord) => {
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .addField(
             `\`👍 Joined\``,
-            `❣️**\`${Channel.name}**`,
+            `❣️\`${Channel.name}`,
             true
           )
           .addField(
             `\`📄 Bound to\``,
-            `**\`#${message.channel.name}\`**`,
+            `\`#${message.channel.name}\``,
             true
           )
           .setFooter(
@@ -349,7 +349,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Something Went Wrong, Try Again Later!**\n\n*${e}*`,
+            `Something Went Wrong, Try Again Later!\n\n*${e}*`,
             true
           )
       )
@@ -366,8 +366,8 @@ module.exports.help = {
   cooldown: 10000,
   category: "Music",
   description: `Play Music From: 
-**Youtube** (Video ID, Video Link, Playlist ID, Playlist Link)
-**Soundcloud** (Song Link, Playlist Link)
+Youtube (Video ID, Video Link, Playlist ID, Playlist Link)
+Soundcloud (Song Link, Playlist Link)
 *Spotify* (Song Link, Playlist Link)`,
   usage: "Play <Song | Playlist>",
   examples: [
@@ -375,7 +375,7 @@ module.exports.help = {
 play <YouTube Link | Playlist>
 play <SoundCloud Link | Playlist>
 
-**BETA warning**
+BETA warning
 ☣️play <Spotify Link | Playlist>`,
   ],
 };

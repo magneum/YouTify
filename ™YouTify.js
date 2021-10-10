@@ -109,14 +109,14 @@ Client.on("guildCreate", (guild) => {
           `\`🎶ΉΣY ƬΉΣЯΣ MЦƧIC LӨVΣЯƧ🎶\`
 ---------------::---------------\n
 ❤️𝘐 𝘨𝘰𝘵 𝘺𝘰𝘶 𝘤𝘰𝘷𝘦𝘳𝘦𝘥 𝘸𝘪𝘵𝘩 𝘥𝘪𝘳𝘦𝘤𝘵 𝘔𝘶𝘴𝘪𝘤 𝘚𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘵𝘰 𝘥𝘪𝘴𝘤𝘰𝘳𝘥 𝘷𝘰𝘪𝘤𝘦 𝘤𝘩𝘢𝘯𝘯𝘦𝘭.🔥
-**🍏YouTify™** 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
+🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
 
 ❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓
 ---------------::--------------`
         )
         .addField(
           `:candy:\`YouTify Main Commands\``,
-          `**${Client.YouTix}play & ${Client.YouTix}help to know more...**`,
+          `${Client.YouTix}play & ${Client.YouTix}help to know more...`,
           true
         )
         .addField(
@@ -127,17 +127,17 @@ Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.`,
         )
         .addField(
           `\`Brought To You by\``,
-          "👑**Krakinz & KrakinzLab(c)**👑",
+          "👑Krakinz & KrakinzLab(c)👑",
           true
         )
         .addField(
           `\`🛸Uptime\``,
-          `🤖**YouTify™ is Smoothly Serving since ${Total}**`,
+          `🤖YouTify™ is Smoothly Serving since ${Total}`,
           true
         )
         .addField(
           `\`📡Ping\``,
-          `🤖**YouTify's Server is Smoothly Running with Max Latency being ${Client.ws.ping}ms**`,
+          `🤖YouTify's Server is Smoothly Running with Max Latency being ${Client.ws.ping}ms`,
           true
         )
     )
@@ -212,16 +212,16 @@ Client.on("message", async (message) => {
           ).setDescription(`\`User\`🍏${message.author}\n
 ---------------::---------------
 ❤️𝘐 𝘨𝘰𝘵 𝘺𝘰𝘶 𝘤𝘰𝘷𝘦𝘳𝘦𝘥 𝘸𝘪𝘵𝘩 𝘥𝘪𝘳𝘦𝘤𝘵 𝘔𝘶𝘴𝘪𝘤 𝘚𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘵𝘰 𝘥𝘪𝘴𝘤𝘰𝘳𝘥 𝘷𝘰𝘪𝘤𝘦 𝘤𝘩𝘢𝘯𝘯𝘦𝘭.🔥
-**🍏YouTify™** 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
+🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
 
 ❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓
 ---------------::-------------
 
-⚠️**\`Error\`**
+⚠️\`Error\`
 • You are currently in a \`DMChannel\` and so you have been \`restricted\` using any \`🍏YouTify™ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\`
 • Add me in your channel and then all commands will be automatically accepted.
 
-🔰**\`Invite\`**
+🔰\`Invite\`
 [🍏YouTify™](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)`)
       );
       return;
@@ -251,7 +251,7 @@ Client.on("message", async (message) => {
             )
             .addField(
               `\`☣️Error\``,
-              `**Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.**`,
+              `Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.`,
               true
             )
         )
@@ -298,10 +298,10 @@ Client.on("message", async (message) => {
                 .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
                 .addField(
                   `\`💤Calm Down\``,
-                  `Please Wait **${Ms(ExpireTime - Now, {
+                  `Please Wait ${Ms(ExpireTime - Now, {
                     verbose: true,
                     secondsDecimalDigits: 0,
-                  })}** Before Using ${
+                  })} Before Using ${
                     Command.help.name.charAt(0).toUpperCase() +
                     Command.help.name.slice(1)
                   } Command Again`
@@ -337,7 +337,7 @@ Client.on("message", async (message) => {
             )
             .addField(
               `\`☣️Error\``,
-              `**Something Went Wrong, Try Again Later!**\n\n*${error}*`,
+              `Something Went Wrong, Try Again Later!\n\n*${error}*`,
               true
             )
         )
@@ -361,8 +361,8 @@ Client.on("message", async (message) => {
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
           ).setDescription(`
-**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
-**Error report:**
+Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
+Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       )
       .catch(console.error);
@@ -377,11 +377,11 @@ Client.on("message", async (message) => {
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-        .setDescription(`**\`Please report to either\`**
+        .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
-**\`Error🔻Caught and Auto Sent to Dev Server!\`**
+\`Error🔻Caught and Auto Sent to Dev Server!\`
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     );
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);

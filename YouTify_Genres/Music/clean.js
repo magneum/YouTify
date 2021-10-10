@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, Discord) => {
             )
             .addField(
               `\`☣️Error\``,
-              `**Not connected to any VoiceChannel!**`,
+              `Not connected to any VoiceChannel!`,
               true
             )
         )
@@ -44,8 +44,8 @@ module.exports.run = async (client, message, args, Discord) => {
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({ dynamic: true })
             ).setDescription(`
-**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
-**Error report:**
+Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
+Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
         )
         .catch(console.error);
@@ -60,11 +60,11 @@ module.exports.run = async (client, message, args, Discord) => {
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setDescription(`**\`Please report to either\`**
+          .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
-**\`Error🔻Caught and Auto Sent to Dev Server!\`**
+\`Error🔻Caught and Auto Sent to Dev Server!\`
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
@@ -97,7 +97,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             )
             .addField(
               `\`☣️Error\``,
-              `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!**`,
+              `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!`,
               true
             )
         )
@@ -115,8 +115,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({ dynamic: true })
             ).setDescription(`
-**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
-**Error report:**
+Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
+Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
         )
         .catch(console.error);
@@ -131,11 +131,11 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setDescription(`**\`Please report to either\`**
+          .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
-**\`Error🔻Caught and Auto Sent to Dev Server!\`**
+\`Error🔻Caught and Auto Sent to Dev Server!\`
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
@@ -166,7 +166,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             )
             .addField(
               `\`☣️Error\``,
-              `**You Need To Join the Same Voice Channel where YouTify™ is playing Music!**`,
+              `You Need To Join the Same Voice Channel where YouTify™ is playing Music!`,
               true
             )
         )
@@ -184,8 +184,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
               "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
               message.author.avatarURL({ dynamic: true })
             ).setDescription(`
-**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
-**Error report:**
+Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
+Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
         )
         .catch(console.error);
@@ -200,11 +200,11 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setDescription(`**\`Please report to either\`**
+          .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
-**\`Error🔻Caught and Auto Sent to Dev Server!\`**
+\`Error🔻Caught and Auto Sent to Dev Server!\`
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
@@ -215,7 +215,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
   // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   try {
-    const Wait = await message.channel.send("**Cleaning...**");
+    const Wait = await message.channel.send("Cleaning...");
     await message.guild.voice.kick(), await client.queue.delete(message.guild.id);
     await Wait.edit("Configuring...");
     Wait.edit("Re-Configuring...");
@@ -227,11 +227,11 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       } catch (e) {
         console.log(e);
         return Wait.edit(
-          "**Re-Configuration Process Failed - Unable To Join Voice Channel!**"
+          "Re-Configuration Process Failed - Unable To Join Voice Channel!"
         );
       }
       await Wait.edit(
-        "**Re-Configuration Process Success - Joined The Voice Channel**"
+        "Re-Configuration Process Success - Joined The Voice Channel"
       );
       await client.queue.set(message.guild.id, Queue);
       try {
@@ -239,11 +239,11 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       } catch (e) {
         console.log(e);
         return Wait.edit(
-          `**Re-Configuration Process Failed - YouTify Error** *${e}*`
+          `Re-Configuration Process Failed - YouTify Error *${e}*`
         );
       }
       await Wait.edit(
-        "**Re-Configuration Process Success - YouTify Playing!**"
+        "Re-Configuration Process Success - YouTify Playing!"
       ).then((M) => M.delete({ timeout: 3000 }));
       return message.react("✅");
     }, 3000);
@@ -261,8 +261,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
           ).setDescription(`
-**Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.**
-**Error report:**
+Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
+Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       )
       .catch(console.error);
@@ -277,11 +277,11 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-        .setDescription(`**\`Please report to either\`**
+        .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
-**\`Error🔻Caught and Auto Sent to Dev Server!\`**
+\`Error🔻Caught and Auto Sent to Dev Server!\`
 ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     );
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);

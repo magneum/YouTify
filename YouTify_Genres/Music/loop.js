@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**You are Not connected to any VoiceChannel!**`,
+            `You are Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!**`,
+            `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!`,
             true
           )
       )
@@ -85,7 +85,7 @@ module.exports.run = async (client, message, args, Discord) => {
         )
         .addField(
           `\`🔁Loop\``,
-          `**Loop Has Been ${Queue.Loop ? "Enabled" : "Disabled"}!**`,
+          `Loop Has Been ${Queue.Loop ? "Enabled" : "Disabled"}!`,
           true
         )
     )

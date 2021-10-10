@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**You are Not connected to any VoiceChannel!**`,
+            `You are Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or ${client.YouTix}search Command!**`,
+            `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or ${client.YouTix}search Command!`,
             true
           )
       )
@@ -92,9 +92,9 @@ module.exports.run = async (client, message, args, Discord) => {
         )
         .setTitle(`\`💬▶️Now Playing\``)
         .setImage(Song.Thumbnail)
-        .addField(`\`📜Title\``, `**[${Song.Title}](${Song.Link})**`, true)
-        .addField(`\`🕰️Duration\``, `**${Song.Duration}**`, true)
-        .addField(`\`🔥Source\``, `**${Type}**`, true)
+        .addField(`\`📜Title\``, `[${Song.Title}](${Song.Link})`, true)
+        .addField(`\`🕰️Duration\``, `${Song.Duration}`, true)
+        .addField(`\`🔥Source\``, `${Type}`, true)
     )
     .catch(console.error);
   return;

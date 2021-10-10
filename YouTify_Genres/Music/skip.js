@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Not connected to any VoiceChannel!**`,
+            `Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!**`,
+            `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!`,
             true
           )
       )
@@ -87,7 +87,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`⏭️Skipped\``,
-            `**YouTify™ last Music has been Skipped!**`,
+            `YouTify™ last Music has been Skipped!`,
             true
           )
       )
@@ -111,7 +111,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `**${e}**`, true)
+          .addField(`\`☣️Error\``, `${e}`, true)
       )
       .catch(console.error);
     return;

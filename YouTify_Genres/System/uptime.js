@@ -38,12 +38,12 @@ module.exports.run = async (client, message, args, Discord) => {
         )
         .addField(
           `\`Brought To You by\``,
-          "👑**Krakinz & KrakinzLab(c)**👑",
+          "👑Krakinz & KrakinzLab(c)👑",
           true
         )
         .addField(
           `\`🛸Uptime\``,
-          `🤖**YouTify™ is Smoothly Serving since ${Total}**`,
+          `🤖YouTify™ is Smoothly Serving since ${Total}`,
           true
         )
         .setFooter(

@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**You are Not connected to any VoiceChannel!**`,
+            `You are Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**YouTify™ is not connected to any Voice Channel! Use ${client.YouTix}join or ${client.YouTix}play command first**`,
+            `YouTify™ is not connected to any Voice Channel! Use ${client.YouTix}join or ${client.YouTix}play command first`,
             true
           )
       )
@@ -85,7 +85,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**You Need To Join the Same Voice Channel where YouTify™ is playing Music!**`,
+            `You Need To Join the Same Voice Channel where YouTify™ is playing Music!`,
             true
           )
       )
@@ -117,7 +117,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Request Cancelled Due To 2+ Members connected in current Voice Channel**`,
+            `Request Cancelled Due To 2+ Members connected in current Voice Channel`,
             true
           )
       )
@@ -146,7 +146,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`🍏Left\``, `**YouTify™ Voice Channel**`, true)
+          .addField(`\`🍏Left\``, `YouTify™ Voice Channel`, true)
       )
       .catch(console.error);
   } catch (e) {
@@ -167,7 +167,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `**${e}**`, true)
+          .addField(`\`☣️Error\``, `${e}`, true)
       )
       .catch(console.error);
     return;

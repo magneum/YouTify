@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Not connected to any VoiceChannel!**`,
+            `Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!**`,
+            `No song in Queue, Please Add Some Songs By Using  ${client.YouTix}play or  ${client.YouTix}search Command!`,
             true
           )
       )
@@ -86,7 +86,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`🔊Volume\``,
-            `**Current Queue Volume is set to ${Queue.Volume}!**`,
+            `Current Queue Volume is set to ${Queue.Volume}!`,
             true
           )
       )
@@ -116,7 +116,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Invalid Volume Provided! Use ${client.YouTix}help to learn more..**`,
+            `Invalid Volume Provided! Use ${client.YouTix}help to learn more..`,
             true
           )
       )
@@ -144,7 +144,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Max Queue Volume Limit is Set >=150**`,
+            `Max Queue Volume Limit is Set >=150`,
             true
           )
       )
@@ -174,7 +174,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**YouTify™ Current Queue Volume Already set to ${NewVolume}!**`,
+            `YouTify™ Current Queue Volume Already set to ${NewVolume}!`,
             true
           )
       )
@@ -201,7 +201,7 @@ module.exports.run = async (client, message, args, Discord) => {
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .addField(
           `\`🔊Volume\``,
-          `**YouTify™ Current Queue Volume Already set to ${NewVolume}!**`,
+          `YouTify™ Current Queue Volume Already set to ${NewVolume}!`,
           true
         )
     )

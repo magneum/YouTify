@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`💡Sent\``,
-            `**Please Check Your \`Direct Message\` For An Entire Command Helper Menu Of YouTify™**`,
+            `Please Check Your \`Direct Message\` For An Entire Command Helper Menu Of YouTify™`,
             true
           )
       )
@@ -68,19 +68,19 @@ module.exports.run = async (client, message, args, Discord) => {
             message.author.avatarURL({ dynamic: true })
           )
           .setDescription(
-            `**💡This is the Entire Command Helper Menu for YouTify™**💡
+            `💡This is the Entire Command Helper Menu for YouTify™💡
 :exclamation:*For more help type ${client.YouTix}help <command name>* 
-**\`PREFIX\`**  ${client.YouTix}
+\`PREFIX\`  ${client.YouTix}
 ================🍏================\n\n
 
-**\`🎹YOUTIFY PLAYER\`**
+\`🎹YOUTIFY PLAYER\`
 play,clean,clearqueue,join,leave,loop,lyrics,nowplaying,queue,search,shuffle,skip,volume
 
-**\`⚙️SYSTEM\`**
-**help,invite,\nping,uptime**
+\`⚙️SYSTEM\`
+help,invite,\nping,uptime
 
-**\`🎶FILTERS\`**
-**(remember to disable any applied filter just re-send that filter command)**
+\`🎶FILTERS\`
+(remember to disable any applied filter just re-send that filter command)
 aphaser, apulsator, asetrate,bassboost, deesser, earwax,
 echo, filters, flanger, gate,haas, karaoke, mcompand, mono,
 nightcore, normalizer, phaser,pulsator, reverse, slow, sofalizer,
@@ -90,17 +90,17 @@ More Coming Soon!! :)`
           )
           .addField(
             `\`Brought To You by\``,
-            "👑**Krakinz & KrakinzLab(c)**👑",
+            "👑Krakinz & KrakinzLab(c)👑",
             true
           )
           .addField(
             `\`🛸Uptime\``,
-            `🤖**YouTify™ is Smoothly Serving since ${Total}**`,
+            `🤖YouTify™ is Smoothly Serving since ${Total}`,
             true
           )
           .addField(
             `\`📡Pong\``,
-            `**YouTify's Server is Smoothly Running with Max Latency being ${client.ws.ping}ms**`,
+            `YouTify's Server is Smoothly Running with Max Latency being ${client.ws.ping}ms`,
             true
           )
       )
@@ -131,7 +131,7 @@ More Coming Soon!! :)`
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `**No Such Command found!**`, true)
+          .addField(`\`☣️Error\``, `No Such Command found!`, true)
       )
       .catch(console.error);
     return;
@@ -180,7 +180,7 @@ More Coming Soon!! :)`
         .setTimestamp()
         .setColor("#ffffff")
         .setURL("https://github.com/Krakinz")
-        .setTitle(`**${Cmd.description}**`)
+        .setTitle(`${Cmd.description}`)
         .setThumbnail(`https://YouNum.postimg.cc/9f0mS5NY/YouTify.png`)
         .setAuthor(
           `🍏YouTify™`,
@@ -190,11 +190,11 @@ More Coming Soon!! :)`
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
         )
-        .addField(`**\`📜Title\`**`, Cmd.name, true)
-        .addField(`**\`⚙️Usage\`**`, `${client.YouTix}${Cmd.usage}`, true)
-        .addField(`**\`📂Genre\`**`, Cmd.category, true)
+        .addField(`\`📜Title\``, Cmd.name, true)
+        .addField(`\`⚙️Usage\``, `${client.YouTix}${Cmd.usage}`, true)
+        .addField(`\`📂Genre\``, Cmd.category, true)
         .addField(
-          `**\`⚡Aliases\`**`,
+          `\`⚡Aliases\``,
           Cmd.aliases
             ? Cmd.aliases.join(", ").length === 0
               ? "None"
@@ -202,7 +202,7 @@ More Coming Soon!! :)`
             : "None"
         )
         .addField(
-          `**\`🔎Example\`**`,
+          `\`🔎Example\``,
           Cmd.examples
             ? Cmd.examples.join("\n").length === 0
               ? "None"

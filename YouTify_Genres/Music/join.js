@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Not connected to any VoiceChannel!**`,
+            `Not connected to any VoiceChannel!`,
             true
           )
       )
@@ -54,7 +54,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Current Voice Channel is Full! Please try in another Voice Channel**`,
+            `Current Voice Channel is Full! Please try in another Voice Channel`,
             true
           )
       )
@@ -84,7 +84,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Current Voice Channel is Not Joinable Or Speakable!! Please try in another Voice Channel**`,
+            `Current Voice Channel is Not Joinable Or Speakable!! Please try in another Voice Channel`,
             true
           )
       )
@@ -114,9 +114,9 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `**Already Connected To ${
+            `Already Connected To ${
               message.guild.me.voice.channel.id == Channel.id ? "Your" : "A"
-            } Voice Channel!**`,
+            } Voice Channel!`,
             true
           )
       )
@@ -147,7 +147,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `**${e}**`, true)
+          .addField(`\`☣️Error\``, `${e}`, true)
       )
       .catch(console.error);
     return;

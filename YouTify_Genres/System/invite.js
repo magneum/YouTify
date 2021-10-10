@@ -19,7 +19,7 @@ module.exports.run = (client, message, args, Discord) => {
         )
         .addField(
           `\`Brought To You by\``,
-          "👑**Krakinz & KrakinzLab(c)**👑",
+          "👑Krakinz & KrakinzLab(c)👑",
           true
         )
         .addField(

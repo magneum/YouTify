@@ -299,7 +299,7 @@ async function YouTify_Singer(client, message, options = {}) {
       "Error: Something Went Wrong, Try Again Later!"
     );
   Dispatcher = await queue.Connection.play(Steam, {
-    volume: queue.Volume - 120,
+    volume: queue.Volume / 100,
     type: "opus",
     bitrate: Bitrates,
   });
@@ -322,29 +322,29 @@ async function YouTify_Singer(client, message, options = {}) {
         .setImage(queue.Songs[0].Thumbnail)
         .addField(
           `\`Title\``,
-          `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`,
+          `🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})`,
           true
         )
-        .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
-        .addField(`\`Requested By\``, `**💬${message.author}**`, true)
+        .addField(`\`Duration\``, `🕰️${queue.Songs[0].Duration}`, true)
+        .addField(`\`Requested By\``, `💬${message.author}`, true)
         .addField(
           `\`YouTify\``,
-          `🍏**Use ${client.YouTix}help** to know more about YouTify™`,
+          `🍏Use ${client.YouTix}help to know more about YouTify™`,
           true
         )
         .addField(
           `\`Filters\``,
-          `🎹**Use ${client.YouTix}filter to know more about Available Audio filters**`,
+          `🎹Use ${client.YouTix}filter to know more about Available Audio filters`,
           true
         )
         .addField(
           `\`Coded by\``,
-          `👑**Krakinz#7134(dc)\n@KrakinzBot(tg)👑**`,
+          `👑Krakinz#7134(dc)\n@KrakinzBot(tg)👑`,
           true
         )
     ).catch(console.error);
     await YouTifyMusic.react("❤️").catch(console.error);
-    Dispatcher.setVolumeLogarithmic(queue.Volume - 120);
+    Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }
   return HandleVoice(message, client);
