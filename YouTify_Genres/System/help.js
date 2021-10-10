@@ -79,7 +79,16 @@ module.exports.run = async (client, message, args, Discord) => {
           .addField(`**\`⚙️SYSTEM\`**`, `**help,invite,\nping,uptime**`, true)
           .addField(
             `**\`🎶FILTERS\`**`,
-            `**filters,bassboost,nightcore**`,
+            `*(remember to disable any applied filter just re-send that filter command)*
+**aphaser, apulsator, asetrate,
+bassboost, deesser, earwax,
+echo, filters, flanger, gate,
+haas, karaoke, mcompand, mono,
+nightcore, normalizer, phaser,
+pulsator, reverse, slow, sofalizer,
+speed, subboost, superslow,
+superspeed, surround, treble,
+tremolo, vaporwave, vibrato**`,
             true
           )
           .addField(
