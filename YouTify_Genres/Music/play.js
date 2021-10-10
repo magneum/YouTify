@@ -4,15 +4,39 @@ const {
 } = require("../../YouTifyPlayer/YouTify_Singer.js");
 const Sr = require("youtube-sr").default;
 const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
+const SpotifyBetaCheck = /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/;
+const SBC = SpotifyBetaCheck.test(args[0]);
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.run = async (client, message, args, Discord) => {
-  let Value = args.join(" "),
-    Channel = message.member.voice.channel,
-    Queue = await client.queue.get(message.guild.id);
-  const SpotifyBetaCheck = /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/;
-  const SBC = SpotifyBetaCheck.test(args[0]);
+  let Value = args.join(" ");
+  let Channel = message.member.voice.channel;
+  let Queue = await client.queue.get(message.guild.id);
+  // ===========================================================================================================================
+  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // ===========================================================================================================================
+  message.channel
+    .send(
+      new MessageEmbed()
+        .setTimestamp()
+        .setColor("#43745a")
+        .setAuthor(
+          `🍏YouTify™`,
+          `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+        )
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .addField(
+          `\`🔍Searching\``,
+          `**❣️Adding in 3sec \`${args.join(" ")}\`**`,
+          true
+        )
+        .setFooter(
+          `👈🏽‍Reqstd by`,
+          message.author.avatarURL({ dynamic: true })
+        )
+    )
+    .catch(console.error);
   // ===========================================================================================================================
   // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
@@ -177,8 +201,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`Title\``,
-            `${
-              Songs ? `[${T.Name}](${T.Link})` : `[${Song.Title}](${Song.Link})`
+            `${Songs ? `[${T.Name}](${T.Link})` : `[${Song.Title}](${Song.Link})`
             } has been added to Queue!`
           )
           .setFooter(
@@ -240,6 +263,68 @@ module.exports.run = async (client, message, args, Discord) => {
   });
   Queue = await client.queue.get(message.guild.id);
   try {
+    message.react("🟢");
+    message.author
+      .send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor("#43745a")
+          .setAuthor(
+            `🍏YouTify™`,
+            `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+          )
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .addField(
+            `\`👍 Joined\``,
+            `❣️**\`${Channel.name}**`,
+            true
+          )
+          .addField(
+            `\`📄 Bound to\``,
+            `**\`#${message.channel.name}\`**`,
+            true
+          )
+          .addField(
+            `\`💤Auto Deleting\``,
+            `**In 15seconds!!**`,
+            true
+          )
+          .setFooter(
+            `👈🏽‍Reqstd by`,
+            message.author.avatarURL({ dynamic: true })
+          )).catch(console.error).then((message) => {
+            try {
+              message.delete({
+                timeout: 15000,
+              });
+            } catch (err) {
+              console.log(err);
+            }
+          });
+    message.channel
+      .send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor("#43745a")
+          .setAuthor(
+            `🍏YouTify™`,
+            `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+          )
+          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .addField(
+            `\`👍 Joined\``,
+            `❣️**\`${Channel.name}**`,
+            true
+          )
+          .addField(
+            `\`📄 Bound to\``,
+            `**\`#${message.channel.name}\`**`,
+            true
+          )
+          .setFooter(
+            `👈🏽‍Reqstd by`,
+            message.author.avatarURL({ dynamic: true })
+          )).catch(console.error);
     await YouTify_Singer(client, message, { Song: Song });
   } catch (e) {
     await Channel.leave(),
