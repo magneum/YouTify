@@ -68,9 +68,12 @@ module.exports.run = async (client, message, args, Discord) => {
             message.author.avatarURL({ dynamic: true })
           )
           .setDescription(
-            `**💡This is the Entire Command Helper Menu for YouTify™**💡\n:exclamation:*For more help type ${client.YouTix}help <command name>*\n================🍏================\n\n`
+            `**💡This is the Entire Command Helper Menu for YouTify™**💡
+:exclamation:*For more help type ${client.YouTix}help <command name>* 
+**\`PREFIX\`**
+**${client.YouTix}**
+================🍏================\n\n`
           )
-          .addField(`**\`PREFIX\`**`, `**${client.YouTix}**`, true)
           .addField(
             `**\`🎹YOUTIFY PLAYER\`**`,
             `**play,clean,\nclearqueue,join,\nleave,loop,\nlyrics,nowplaying,\nqueue,search,\nshuffle,skip,volume**`,
