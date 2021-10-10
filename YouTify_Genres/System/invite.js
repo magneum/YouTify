@@ -41,7 +41,7 @@ module.exports.run = (client, message, args, Discord) => {
 module.exports.help = {
   name: "invite",
   aliases: ["iv", "info"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "System",
   description: "Get Bot Invite Link & Other Info!",
   usage: "Invite",

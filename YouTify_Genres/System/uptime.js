@@ -60,7 +60,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "uptime",
   aliases: ["ut"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "System",
   description: "Get Bot Uptime!",
   usage: "Uptime",

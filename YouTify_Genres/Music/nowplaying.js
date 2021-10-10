@@ -105,7 +105,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "nowplaying",
   aliases: ["np"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Get Currently Playing Song Information!",
   usage: "Nowplaying",

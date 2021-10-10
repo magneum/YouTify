@@ -38,7 +38,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "lyrics",
   aliases: ["lyric", "ly"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Show Song Lyrics",
   usage: "Lyrics | <Title>",

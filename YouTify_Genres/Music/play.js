@@ -363,7 +363,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "play",
   aliases: ["p", "pl"],
-  cooldown: 5000,
+  cooldown: 10000,
   category: "Music",
   description: `Play Music From: 
 **Youtube** (Video ID, Video Link, Playlist ID, Playlist Link)

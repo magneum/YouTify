@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "resume",
   aliases: ["r", "rs"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Resume Currently Paused Song!",
   usage: "Resume",

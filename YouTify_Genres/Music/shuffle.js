@@ -125,7 +125,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "shuffle",
   aliases: ["sfl"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Shuffle Music Queue!",
   usage: "Shuffle",

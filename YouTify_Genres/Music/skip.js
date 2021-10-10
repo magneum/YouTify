@@ -123,7 +123,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "skip",
   aliases: ["sk", "s"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Skip A Song!",
   usage: "Skip",

@@ -179,7 +179,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "leave",
   aliases: ["leavevc", "lv"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Leave Voice Channel!",
   usage: "Leave",

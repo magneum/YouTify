@@ -159,7 +159,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "join",
   aliases: ["joinvc", "jn"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Join Voice Channel!",
   usage: "Join",

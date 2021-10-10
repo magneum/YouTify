@@ -61,7 +61,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "filters",
   aliases: ["modifiers", "newfilter"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Add/Remove A Music Filter To/From Currently Playing Song!",
   usage: "Filters <Name>",

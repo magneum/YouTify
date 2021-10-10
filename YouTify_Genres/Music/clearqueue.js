@@ -134,7 +134,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "clearqueue",
   aliases: ["deletequeue", "cq", "dq"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "Clear Music Queue!",
   usage: "Clearqueue",

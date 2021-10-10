@@ -219,7 +219,7 @@ More Coming Soon!! :)`
 module.exports.help = {
   name: "help",
   aliases: ["h"],
-  cooldown: 5000,
+  cooldown: 10000,
   category: "System",
   description: "Get Bot Commands!",
   usage: "Help | <Command Name>",

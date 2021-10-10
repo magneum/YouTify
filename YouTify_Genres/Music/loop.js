@@ -97,7 +97,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "loop",
   aliases: ["lp", "l"],
-  cooldown: 5000,
+  cooldown: 10000,
   category: "Music",
   description: "On Loop Or Off Loop!",
   usage: "Loop",

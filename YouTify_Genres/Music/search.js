@@ -143,7 +143,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "search",
   aliases: ["sh"],
-  cooldown: 5000,
+  cooldown: 10000,
   category: "Music",
   description: "Search For Song In Youtube!",
   usage: "Search <Title>",

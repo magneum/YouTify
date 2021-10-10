@@ -214,7 +214,7 @@ module.exports.run = async (client, message, args, Discord) => {
 module.exports.help = {
   name: "volume",
   aliases: ["v", "vl", "vol"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "Music",
   description: "View Or Change Currently Playing Song Volume!",
   usage: "Volume | <New Volume>",

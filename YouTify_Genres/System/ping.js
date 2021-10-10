@@ -41,7 +41,7 @@ module.exports.run = (client, message, args, Discord) => {
 module.exports.help = {
   name: "ping",
   aliases: ["p"],
-  cooldown: 7000,
+  cooldown: 10000,
   category: "System",
   description: "Get Bot Ping!",
   usage: "Ping",
