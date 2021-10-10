@@ -207,24 +207,17 @@ async function HandleVoice(message, client) {
   await Queue.Connection.on("disconnect", () => {
     client.queue.delete(message.guild.id);
   });
-  // await Queue.Connection.dispatcher
-  //   .on("finish", async () => {
-  //     const Shift = await Queue.Songs.shift();
-  //     if (Queue.Loop == true) await Queue.Songs.push(Shift);
-  //     await YouTify_Singer(client, message, { Song: Queue.Songs[0] });
-  //   })
-  //   .on("error", async (error) => {
-  //     console.log(error);
-  //     return Queue.Text.send("Something Went Wrong, Try Again Later!");
-  //   });
-  await Queue.Connection.on("finish", async () => {
-    const Shift = await Queue.Songs.shift();
-    if (Queue.Loop == true) await Queue.Songs.push(Shift);
-    await YouTify_Singer(client, message, { Song: Queue.Songs[0] });
-  }).on("error", async (error) => {
-    console.log(error);
-    return Queue.Text.send("Something Went Wrong, Try Again Later!");
-  });
+  await Queue.Connection.dispatcher
+    .on("finish", async () => {
+      const Shift = await Queue.Songs.shift();
+      if (Queue.Loop == true) await Queue.Songs.push(Shift);
+      await YouTify_Singer(client, message, { Song: Queue.Songs[0] });
+    })
+    .on("error", async (error) => {
+      console.log(error);
+      Queue.Text.send("Something Went Wrong, Try Again Later!");
+      return;
+    });
 }
 
 async function YouTify_Singer(client, message, options = {}) {
