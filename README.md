@@ -22,7 +22,7 @@ Stable Since Version 🍏YouTify™_ʏօʊȶɨʄɨ🍏ƈɨօʊֆ_v6.
 
 # 📂 CӨMMΛNDS
 
-<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Help_Menu.PNG" /></p>
+<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Help.PNG" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
