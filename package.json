@@ -15,7 +15,6 @@
   "engines": {
     "node": "14.18.0"
   },
-  "main": "™YouTify.js",
   "dependencies": {
     "@discordjs/collection": "^0.1.6",
     "@discordjs/form-data": "^3.0.1",
