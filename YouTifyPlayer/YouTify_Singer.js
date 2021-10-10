@@ -366,9 +366,13 @@ async function YouTify_Singer(client, message, options = {}) {
         )
         .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
         .addField(`\`Requested By\``, `**💬${message.author}**`, true)
-        .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
-        .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
-        .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
+        .addField(`\`YouTify\``, `🍏**Type ${client.YouTix}help**`, true)
+        .addField(`\`Filters\``, `🎹**Type ${client.YouTix}filter**`, true)
+        .addField(
+          `\`Coded by\``,
+          `👑**Krakinz#7134**(dc) | @KrakinzBot(tg)👑`,
+          true
+        )
     );
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
