@@ -4,7 +4,9 @@ const Sr = require("youtube-sr").default,
   Discord = require("discord.js"),
   Fetch = require("node-fetch").default;
 const { Regex } = require("./Regex.js");
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function YouTify_Type(Value) {
   /**
    * T => Type
@@ -43,7 +45,9 @@ async function YouTify_Type(Value) {
     L: `https://www.youtube.com/watch?v=${Data.id}`,
   };
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function YouTify_Get_Meta_Data(Query, message) {
   const T = await YouTify_Type(Query);
   let Final, Info;
@@ -146,7 +150,9 @@ async function YouTify_Get_Meta_Data(Query, message) {
     return Final;
   }
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function YouTify_Generate_Audio(Song, message, all, options = {}) {
   const Link = Song.video_url
     ? Song.video_url
@@ -183,7 +189,9 @@ async function YouTify_Generate_Audio(Song, message, all, options = {}) {
     Link,
   };
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function FD(duration, type = " ") {
   if (type == "ms") duration = duration / 1000;
 
@@ -202,7 +210,9 @@ async function FD(duration, type = " ") {
   }
   return minutes + ":" + duration;
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function AllFilters(Queue) {
   let EncodeFilters = [],
     Encoder = [];
@@ -221,7 +231,9 @@ async function AllFilters(Queue) {
 
   return Encoder;
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function HandleVoice(message, client) {
   const Queue = await client.queue.get(message.guild.id);
 
@@ -241,7 +253,9 @@ async function HandleVoice(message, client) {
       return Queue.Text.send("Something Went Wrong, Try Again Later!");
     });
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function YouTify_Singer(client, message, options = {}) {
   const queue = await client.queue.get(message.guild.id),
     Encoder = await AllFilters(queue);
@@ -331,22 +345,39 @@ async function YouTify_Singer(client, message, options = {}) {
   if (Seek) {
     queue.ExtraTime = 0;
   } else {
-    const Embed = new Discord.MessageEmbed()
-      .setColor(client.Color)
-      .setAuthor("Playing", message.author.avatarURL({ dynamic: true }))
-      .setThumbnail(queue.Songs[0].Thumbnail)
-      .setDescription(
-        `Now Playing - [${queue.Songs[0].Title}](${queue.Songs[0].Link})`
-      )
-      .setFooter(`Requested By ${message.author.username}`);
-    queue.Text.send(Embed);
+    queue.Text.send(
+      new MessageEmbed()
+        .setTimestamp()
+        .setColor("#43745a")
+        // .setTitle(`\`💬Play\``)
+        .setAuthor(
+          `🍏YouTify™`,
+          `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+        )
+        .setURL("https://github.com/Krakinz")
+        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
+        .setTitle(`\`\`\`₦ðw🍏þlå¥ïñg\`\`\``)
+        .setImage(queue.Songs[0].Thumbnail)
+        .addField(
+          `\`Title\``,
+          `**🏷[${queue.Songs[0].Title}](${queue.Songs[0].Link})**`,
+          true
+        )
+        .addField(`\`Duration\``, `**🕰️${queue.Songs[0].Duration}**`, true)
+        .addField(`\`Requested By\``, `**💬${message.author}**`, true)
+        .addField(`\`YouTify\``, `🍏**Type ${client.ʏᴏᴜꜰɪx}help**`, true)
+        .addField(`\`Filters\``, `🎹**Type ${client.ʏᴏᴜꜰɪx}filter**`, true)
+        .addField(`\`Coded by\``, `👑**Krakinz#7134**`, true)
+    );
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }
-
   return HandleVoice(message, client);
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 async function Filters() {
   return {
     bassboost: "bass=g=10,dynaudnorm=f=150",
@@ -382,7 +413,9 @@ async function Filters() {
     "3D": "apulsator=hz=0.125",
   };
 }
-
+// ===========================================================================================================================
+// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// ===========================================================================================================================
 module.exports = {
   YouTify_Type,
   YouTify_Get_Meta_Data,
