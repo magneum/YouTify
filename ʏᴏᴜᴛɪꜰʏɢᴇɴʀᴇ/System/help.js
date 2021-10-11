@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setColor("#43745a")
           .setURL("https://github.com/Krakinz")
           .setTitle(`💬\`YouTify™ Help Menu\``)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -56,8 +56,8 @@ module.exports.run = async (client, message, args, Discord) => {
           .setColor("#43745a")
           .setURL("https://github.com/Krakinz")
           .setTitle(`💬\`YouTify™ Help Menu\``)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -79,10 +79,8 @@ play,clean,clearqueue,join,leave,loop,lyrics,nowplaying,queue,search,shuffle,ski
 help,invite,\nping,uptime
 
 \`🎶FILTERS\`
-filters
-(remember to disable any applied filter just re-send that filter command)
-asetrate,bassboost,echo, flanger, nightcore, phaser,slow,speed, subboost, superslow,superspeed, 
-surround,3D,8D,vibrato....
+**FILTERS: Remember to disable any applied filter just re-send that filter command)**
+bassboost, echo, flanger, nightcore, phaser, slow, speed, subboost, superslow, superspeed, surround, 8D, vibrato....
 More Coming Soon!! :)`
           )
           .addField(
@@ -109,7 +107,7 @@ More Coming Soon!! :)`
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
@@ -129,7 +127,7 @@ Error report:
           .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
@@ -155,7 +153,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setTimestamp()
           .setColor("#c4b932")
           .setURL("https://github.com/Krakinz")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
             `🍏YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
@@ -174,7 +172,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
@@ -194,7 +192,7 @@ Error report:
           .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
@@ -244,7 +242,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
@@ -264,7 +262,7 @@ Error report:
           .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
@@ -323,7 +321,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .setColor(`#b66c00`)
         .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({ dynamic: true })
@@ -343,7 +341,7 @@ Error report:
         .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)

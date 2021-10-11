@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
@@ -78,7 +78,7 @@ module.exports.run = async (client, message, args, Discord) => {
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
         )
         .setURL("https://github.com/Krakinz")
-        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
         .addField(
           `\`👄Filter Applied\``,

@@ -60,8 +60,8 @@ YouTIFY.on("guildCreate", (guild) => {
       .setColor(`#43745a`)
       .setTitle(`\`\`\`🍏YouTify™\`\`\``)
       .setURL("https://github.com/Krakinz")
-      .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-      .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+      .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+      .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
       .setAuthor(`🍏YouTify™`, `https://i.postimg.cc/gcX8075z/guitar-sing.gif`)
       .setDescription(
         `\`🎶ΉΣY ƬΉΣЯΣ MЦƧIC LӨVΣЯƧ🎶\`
@@ -157,8 +157,8 @@ YouTIFY.on("message", async (message) => {
           .setColor("#b13d3d")
           .setTitle(`\`\`\`🍏YouTify™\`\`\``)
           .setURL("https://github.com/Krakinz")
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             `👈🏽‍Reqstd by`,
             message.author.avatarURL({ dynamic: true })
@@ -196,7 +196,7 @@ YouTIFY.on("message", async (message) => {
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             `👈🏽‍Reqstd by`,
             message.author.avatarURL({ dynamic: true })
@@ -246,7 +246,7 @@ YouTIFY.on("message", async (message) => {
                 `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
               )
               .setURL("https://github.com/Krakinz")
-              .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+              .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
               .addField(
                 `\`💤Calm Down\``,
                 `Please Wait ${Ms(ExpireTime - Now, {
@@ -275,8 +275,8 @@ YouTIFY.on("message", async (message) => {
           .setColor(`#b66c00`)
           // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
             message.author.avatarURL({ dynamic: true })
@@ -295,7 +295,7 @@ Error report:
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-          .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
@@ -315,8 +315,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .setColor(`#b66c00`)
         .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
-        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+        .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
           message.author.avatarURL({ dynamic: true })
@@ -336,7 +336,7 @@ Error report:
         .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
-        .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
+        .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setDescription(`\`Please report to either\`
 🔰[In ᴅɪꜱᴄᴏʀᴅ channel](https://discord.gg/y2PtYAJgpy)
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
