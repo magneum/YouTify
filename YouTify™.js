@@ -273,9 +273,8 @@ YouTIFY.on("message", async (message) => {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -315,7 +314,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .setColor(`#b66c00`)
         .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
         .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
-        .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
