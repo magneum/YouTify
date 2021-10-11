@@ -1,39 +1,53 @@
-const Dl = require("./ytdl");
-const Sr = require("youtube-sr").default;
-const Discord = require("./YouTified.djs");
-const SP = require("spotify-url-info");
-const { Regex } = require("./Regex.js");
-const Fetch = require("node-fetch").default;
+const YouTifyied_YtSr = require("youtube-sr").default;
+const Spotify_Find = require("spotify-url-info");
 const { AllFilters } = require("./Filters.js");
+const Discord = require("./YouTified.djs");
+const YouTifyied_Yt = require("./ytdl");
+const { YouTiRegex } = require("./YouTiRegex.js");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function YouTify_Type(Value) {
-  if (Regex.VideoID.test(Value))
+  if (YouTiRegex.YouTifyiedVID.test(Value)) {
     return {
       T: "YT",
-      L: `https://www.youtube.com/watch?v=${Regex.VideoID.exec(Value)[0]}`,
+      L: `https://www.youtube.com/watch?v=${
+        YouTiRegex.YouTifyiedVID.exec(Value)[0]
+      }`,
     };
-
-  if (Regex.VideoURL.test(Value) && !Value.toLowerCase().includes("list"))
+  }
+  if (
+    YouTiRegex.YouTifyiedVURL.test(Value) &&
+    !Value.toLowerCase().includes("list")
+  ) {
     return { T: "YT", L: Value };
-
-  if (Regex.PlaylistID.test(Value) && !Value.startsWith("http"))
+  }
+  if (YouTiRegex.YouTifyiedPVID.test(Value) && !Value.startsWith("http")) {
     return { T: "YTPL", L: `https://www.youtube.com/playlist?list=${Value}` };
-
-  if (Regex.PlaylistURL.test(Value)) return { T: "YTPL", L: Value };
-
-  if (Regex.SCTrack.test(Value)) return { T: "SC", L: Value };
-
-  if (Regex.SCPlaylist.test(Value)) return { T: "SCPL", L: Value };
-
-  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("track"))
+  }
+  if (YouTiRegex.YouTifyiedPURL.test(Value)) {
+    return { T: "YTPL", L: Value };
+  }
+  if (YouTiRegex.YouTifyiedSCURL.test(Value)) {
+    return { T: "SC", L: Value };
+  }
+  if (YouTiRegex.YouTifyiedSCPL.test(Value)) {
+    return { T: "SCPL", L: Value };
+  }
+  if (
+    YouTiRegex.YouTifyiedSP.test(Value) &&
+    Value.toLowerCase().includes("track")
+  ) {
     return { T: "SP", L: Value };
-
-  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("playlist"))
+  }
+  if (
+    YouTiRegex.YouTifyiedSP.test(Value) &&
+    Value.toLowerCase().includes("playlist")
+  ) {
     return { T: "SPPL", L: Value };
+  }
 
-  const Data = await Sr.searchOne(Value);
+  const Data = await YouTifyied_YtSr.searchOne(Value);
 
   if (!Data) return undefined;
 
@@ -49,7 +63,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
   if (!T) return undefined;
 
   if (T.T == "YT") {
-    Info = await Dl.getInfo(T.L);
+    Info = await YouTifyied_Yt.getInfo(T.L);
     if (!Info) return undefined;
 
     (Info = await YouTify_Generate_Audio(Info.videoDetails, message, Info)),
@@ -63,7 +77,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
       (Info.P = false);
     return Info;
   } else if (T.T == "SP") {
-    Info = await SP.getData(T.L);
+    Info = await Spotify_Find.getData(T.L);
     if (!Info) return undefined;
 
     Info = {
@@ -82,7 +96,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
   } else if (["YTPL", "SCPL"].includes(T.T)) {
     Info =
       T.T == "YTPL"
-        ? await Sr.getPlaylist(T.L)
+        ? await YouTifyied_YtSr.getPlaylist(T.L)
         : await message.client.SC.getPlaylist(T.L);
     if (!Info) return undefined;
 
@@ -111,7 +125,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
     return Final;
   } else if (T.T == "SPPL") {
     try {
-      Info = await SP.getData(T.L);
+      Info = await Spotify_Find.getData(T.L);
     } catch (e) {
       return undefined;
     }
@@ -267,7 +281,7 @@ async function YouTify_Singer(client, message, options = {}) {
 
   if (options.Song.Type == "SR" || options.Song.Type == "YT") {
     options.Song.Type == "SR"
-      ? (options.Song.Other = await Dl.getInfo(options.Song.Link))
+      ? (options.Song.Other = await YouTifyied_Yt.getInfo(options.Song.Link))
       : null;
     (Link = options.Song.Other),
       (Type = "SR"),
@@ -279,7 +293,7 @@ async function YouTify_Singer(client, message, options = {}) {
   } else if (options.Song.Type == "SP") {
     (Link = options.Song.Audio), (Type = "AR");
   } else if (options.Song.Type == "SPPL") {
-    const Data = await SP.getPreview(options.Song.Link);
+    const Data = await Spotify_Find.getPreview(options.Song.Link);
     if (!Data) return message.channel.send("Error: No Playlist Found!");
 
     options.Song = await YouTify_Generate_Audio(Data, message, Data, {
@@ -290,9 +304,9 @@ async function YouTify_Singer(client, message, options = {}) {
 
   Steam =
     Type == "SR"
-      ? await Dl.downloadFromInfo(Link, option)
+      ? await YouTifyied_Yt.downloadFromInfo(Link, option)
       : Type == "AR"
-      ? await Dl.arbitraryStream(Link, option)
+      ? await YouTifyied_Yt.arbitraryStream(Link, option)
       : undefined;
   if (!Steam)
     return message.channel.send(

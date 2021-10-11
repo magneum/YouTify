@@ -2,9 +2,8 @@ const {
   YouTify_Singer,
   YouTify_Get_Meta_Data,
 } = require("../../YouTifyPlayer/YouTify_Singer.js");
-const Sr = require("youtube-sr").default;
+const { YouTiRegex } = require("../../YouTifyPlayer/YouTiRegex.js");
 const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
-const SpotifyBetaCheck = /^(spotify:|https:\/\/[a-z]+\.spotify\.com\/)/;
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
@@ -32,8 +31,7 @@ module.exports.run = async (client, message, args, Discord) => {
   // ===========================================================================================================================
   // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
-  const SBC = SpotifyBetaCheck.test(args[0]);
-  if (SBC) {
+  if (YouTiRegex.YouTifyiedSP.test(args[0])) {
     try {
       message.react("🟢");
       message.channel.send(
@@ -61,9 +59,8 @@ module.exports.run = async (client, message, args, Discord) => {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -77,8 +74,8 @@ Error report:
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -93,7 +90,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
-    return;
   }
   // ===========================================================================================================================
   // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
@@ -118,15 +114,13 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           )
           .addField(`\`☣️Error\``, `Not connected to any VoiceChannel!`, true)
       );
-
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -140,8 +134,8 @@ Error report:
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -185,15 +179,13 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             true
           )
       );
-
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -207,8 +199,8 @@ Error report:
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -264,15 +256,13 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             true
           )
       );
-
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -286,8 +276,8 @@ Error report:
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -342,7 +332,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         )
         .setFooter(`👈🏽‍Reqstd by`, message.author.avatarURL({ dynamic: true }))
     );
-
     return;
   }
   // ===========================================================================================================================
@@ -372,7 +361,6 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           true
         )
     );
-
     return;
   }
   // ===========================================================================================================================
@@ -426,9 +414,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     message.client.channels.cache.get(`896660877091164180`).send(
       new MessageEmbed()
         .setColor(`#b66c00`)
-        // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+        .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -442,8 +429,8 @@ Error report:
     message.channel.send("📙: sorry+code ORANGE message");
     message.react(`😔`);
     message.channel.send(
-      // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
       new MessageEmbed()
+        .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setTimestamp()
         .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)

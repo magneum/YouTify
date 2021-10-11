@@ -36,11 +36,7 @@ module.exports.run = async (client, message, args, Discord) => {
           `🍏YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
         )
-        .addField(
-          `\`Brought To You by\``,
-          "👑Krakinz & KrakinzLab(c)👑",
-          true
-        )
+        .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)👑", true)
         .addField(
           `\`🛸Uptime\``,
           `🤖YouTify™ is Smoothly Serving since ${Total}`,

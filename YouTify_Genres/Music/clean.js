@@ -29,9 +29,8 @@ module.exports.run = async (client, message, args, Discord) => {
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -47,8 +46,8 @@ Error report:
 
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -98,9 +97,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -116,8 +114,8 @@ Error report:
 
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -165,9 +163,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       message.client.channels.cache.get(`896660877091164180`).send(
         new MessageEmbed()
           .setColor(`#b66c00`)
-          // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+          .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-          .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -183,8 +180,8 @@ Error report:
 
       message.react(`😔`);
       message.channel.send(
-        // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         new MessageEmbed()
+          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
           .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
@@ -242,9 +239,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     message.client.channels.cache.get(`896660877091164180`).send(
       new MessageEmbed()
         .setColor(`#b66c00`)
-        // .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
+        .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
-        .setImage(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setThumbnail(`https://i.postimg.cc/9f0mS5NY/YouTify.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -259,8 +255,8 @@ Error report:
     message.channel.send("📙: sorry+code ORANGE message");
     message.react(`😔`);
     message.channel.send(
-      // .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
       new MessageEmbed()
+        .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
         .setTimestamp()
         .setColor(`#b66c00`)
         .setAuthor(`🍏YouTify™ by KrakinzLab™️`)

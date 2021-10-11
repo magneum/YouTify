@@ -17,11 +17,7 @@ module.exports.run = (client, message, args, Discord) => {
           `🍏YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
         )
-        .addField(
-          `\`Brought To You by\``,
-          "👑Krakinz & KrakinzLab(c)👑",
-          true
-        )
+        .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)👑", true)
         .addField(
           `\`YouTify™\``,
           `[🍏INVITE🍏](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`,

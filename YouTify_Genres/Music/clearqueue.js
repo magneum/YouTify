@@ -24,7 +24,6 @@ module.exports.run = async (client, message, args, Discord) => {
         )
         .addField(`\`☣️Error\``, `Not connected to any VoiceChannel!`, true)
     );
-
     return;
   }
   // ===========================================================================================================================
@@ -54,7 +53,6 @@ module.exports.run = async (client, message, args, Discord) => {
           true
         )
     );
-
     return;
   }
   // ===========================================================================================================================
@@ -86,7 +84,6 @@ module.exports.run = async (client, message, args, Discord) => {
           true
         )
     );
-
     return;
   }
   // ===========================================================================================================================
@@ -116,7 +113,6 @@ module.exports.run = async (client, message, args, Discord) => {
         )
         .addField(`\`☣️Error\``, `${e}`, true)
     );
-
     return;
   }
 };
