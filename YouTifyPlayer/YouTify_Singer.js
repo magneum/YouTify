@@ -1,9 +1,9 @@
 const YouTifyied_YtSr = require("youtube-sr").default;
+const { YouTiRegex } = require("./YouTiRegex.js");
 const Spotify_Find = require("spotify-url-info");
 const { AllFilters } = require("./Filters.js");
 const Discord = require("./YouTified.djs");
 const YouTifyied_Yt = require("./ytdl");
-const { YouTiRegex } = require("./YouTiRegex.js");
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
@@ -352,7 +352,7 @@ async function YouTify_Singer(client, message, options = {}) {
           `🎹Use ${client.YouTix}filter to know more about Available Audio filters`,
           true
         )
-        .addField(`\`Coded by\``, `👑Krakinz#7134(dc)\n@KrakinzBot(tg)👑`, true)
+        .addField(`\`Coded by\``, `👑Krakinz#7134`, true)
         .addField(`\`👍 Joined\``, `❣️\`${Channel.name}`, true)
         .addField(`\`📄 Bound to\``, `\`#${message.channel.name}\``, true)
     ).catch(console.error);

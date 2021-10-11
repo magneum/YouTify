@@ -4,35 +4,38 @@ require("dotenv").config();
 const ᴄʜᴀʟᴋ = require("chalk");
 const Ms = require("pretty-ms");
 const YouTix = process.env.YouTix;
-const SoundCloudZen = require("soundcloud-scraper");
 const KRAKINZKEY = process.env.KRAKINZKEY;
 const Categories = ["Music", "Filters", "System"];
+const SoundCloudZen = require("soundcloud-scraper");
 const Discord = require("./YouTifyPlayer/YouTified.djs");
 const { MessageEmbed } = require("./YouTifyPlayer/YouTified.djs");
 const CoolDowns = new Discord.Collection();
-const Client = new Discord.Client({ restTimeOffset: 10 });
-(Client.commands = new Discord.Collection()),
-  (Client.aliases = new Discord.Collection()),
-  (Client.queue = new Map());
+const YouTIFY = new Discord.Client({ restTimeOffset: 10 });
+(YouTIFY.commands = new Discord.Collection()),
+  (YouTIFY.aliases = new Discord.Collection()),
+  (YouTIFY.queue = new Map());
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.on("ready", async () => {
+YouTIFY.on("ready", async () => {
   console.clear();
-  await YouTifiedFilesSoundMake();
   await YouTifiedFilesCheck();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
+  await YouTifiedFilesSoundMake();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
   await CodeErrorDes();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
   await YouTifyReadyLoger();
-  await YouTifyDiffer();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
 });
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.on("guildCreate", (guild) => {
-  let Days = Math.floor(Client.uptime / 86400000),
-    Hours = Math.floor(Client.uptime / 3600000) % 24,
-    Minutes = Math.floor(Client.uptime / 60000) % 60,
-    Seconds = Math.floor(Client.uptime / 1000) % 60;
+YouTIFY.on("guildCreate", (guild) => {
+  let Days = Math.floor(YouTIFY.uptime / 86400000),
+    Hours = Math.floor(YouTIFY.uptime / 3600000) % 24,
+    Minutes = Math.floor(YouTIFY.uptime / 60000) % 60,
+    Seconds = Math.floor(YouTIFY.uptime / 1000) % 60;
   const RemoveUseless = (Duration) => {
     return Duration.replace("0 Day\n", "")
       .replace("0 Hour\n", "")
@@ -71,7 +74,7 @@ Client.on("guildCreate", (guild) => {
       )
       .addField(
         `:candy:\`YouTify Main Commands\``,
-        `${Client.YouTix}play & ${Client.YouTix}help to know more...`,
+        `${YouTIFY.YouTix}play & ${YouTIFY.YouTix}help to know more...`,
         true
       )
       .addField(
@@ -88,7 +91,7 @@ Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.`,
       )
       .addField(
         `\`📡Ping\``,
-        `🤖YouTify's Server is Smoothly Running with Max Latency being ${Client.ws.ping}ms`,
+        `🤖YouTify's Server is Smoothly Running with Max Latency being ${YouTIFY.ws.ping}ms`,
         true
       )
   );
@@ -135,7 +138,7 @@ Please use \` Channel: 🍏YouTify™ \` For any \`🍏YouTify™\` commands.`,
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.on("message", async (message) => {
+YouTIFY.on("message", async (message) => {
   try {
     if (message.author.bot) {
       return;
@@ -217,8 +220,8 @@ Client.on("message", async (message) => {
     let Arguments = message.content.slice(YouTix.length).trim().split(/ +/g);
     let Command = Arguments.shift().toLowerCase();
     Command =
-      (await Client.commands.get(Command)) ||
-      (await Client.commands.get(Client.aliases.get(Command)));
+      (await YouTIFY.commands.get(Command)) ||
+      (await YouTIFY.commands.get(YouTIFY.aliases.get(Command)));
     // ===========================================================================================================================
     // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
     // ===========================================================================================================================
@@ -260,8 +263,8 @@ Client.on("message", async (message) => {
         }
       }
       Timestamps.set(message.author.id, Now);
-      Client.YouTix = YouTix;
-      await Command.run(Client, message, Arguments, Discord);
+      YouTIFY.YouTix = YouTix;
+      await Command.run(YouTIFY, message, Arguments, Discord);
       setTimeout(() => Timestamps.delete(message.author.id), CoolDown);
       // ===========================================================================================================================
       // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
@@ -347,47 +350,40 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-Client.login(KRAKINZKEY).catch((error) => console.log(new Error(error)));
-Client.on("error", (error) => {
+YouTIFY.login(KRAKINZKEY).catch((error) => console.log(new Error(error)));
+YouTIFY.on("error", (error) => {
   console.log(error);
 });
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function CodeErrorDes() {
-  console.clear();
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
   console.log(ᴄʜᴀʟᴋ.red(`📕: error+code RED message`));
   console.log(ᴄʜᴀʟᴋ.yellow(`📙: sorry+code ORANGE message`));
   console.log(ᴄʜᴀʟᴋ.green(`📗: ok+code GREEN message`));
   console.log(ᴄʜᴀʟᴋ.blue(`📘: canceled status message`));
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
 }
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function YouTifiedFilesSoundMake() {
   const Key = await SoundCloudZen.keygen();
-  Client.SoundCloudZen = new SoundCloudZen.Client(Key);
+  YouTIFY.SoundCloudZen = new SoundCloudZen.Client(Key);
 }
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function YouTifyReadyLoger() {
+  YouTIFY.user.setActivity(`${YouTix}help🍏${YouTix}play`, {
+    type: `WATCHING`,
+  });
   console.log(
     `🔱 | Bot-Name=> ${
-      Client.user.username
+      YouTIFY.user.username
     }!\n🔱 | Bot-Os=> ${Os.platform().toUpperCase()}!\n🔱 | Ready on=> ${
-      Client.guilds.cache.size
-    } servers!\n🔱 | Total Users=> ${Client.users.cache.size} users!`
+      YouTIFY.guilds.cache.size
+    } servers!\n🔱 | Total Users=> ${YouTIFY.users.cache.size} users!`
   );
-}
-// ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
-async function YouTifyDiffer() {
-  Client.user.setActivity(`${YouTix}help🍏${YouTix}play`, { type: `WATCHING` });
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
 }
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
@@ -407,10 +403,10 @@ async function YouTifiedFilesCheck() {
           );
           return;
         }
-        Client.commands.set(Cmd.help.name, Cmd);
+        YouTIFY.commands.set(Cmd.help.name, Cmd);
         Cmd.help.aliases
           ? Cmd.help.aliases.forEach((Alias) =>
-              Client.aliases.set(Alias, Cmd.help.name)
+              YouTIFY.aliases.set(Alias, Cmd.help.name)
             )
           : (Cmd.help.aliases = null);
         ComUp = Cmd.help.name.toUpperCase();
