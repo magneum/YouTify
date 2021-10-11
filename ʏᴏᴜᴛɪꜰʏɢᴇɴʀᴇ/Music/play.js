@@ -391,8 +391,8 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
-          .addField(`\`👍 Joined\``, `❣️\`${Channel.name}`, true)
-          .addField(`\`📄 Bound to\``, `\`#${message.channel.name}\``, true)
+          .addField(`\`👍 Joined\``, `\`${Channel.name}`, true)
+          .addField(`\`📄 Bound to\``, `#${message.channel.name}`, true)
           .addField(`\`💤Auto Deleting\``, `In 15seconds!!`, true)
           .setFooter(
             `👈🏽‍Reqstd by`,

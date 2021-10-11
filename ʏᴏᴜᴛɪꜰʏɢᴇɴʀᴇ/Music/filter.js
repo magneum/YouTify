@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args, Discord) => {
 };
 
 module.exports.help = {
-  name: "filters",
+  name: "filter",
   yougen: "Sebeta-v9.6.79ie0",
   aliases: ["modifiers", "newfilter"],
   cooldown: 10000,
