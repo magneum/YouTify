@@ -1,33 +1,17 @@
-const Fs = require("fs");
 const Os = require("os");
 require("dotenv").config();
 const ᴄʜᴀʟᴋ = require("chalk");
 const Ms = require("pretty-ms");
 const YouTix = process.env.YouTix;
 const KRAKINZKEY = process.env.KRAKINZKEY;
-const Categories = ["Music", "Filters", "System"];
+const Discord = require("./YouTified.djs");
 const SoundCloudZen = require("soundcloud-scraper");
-const Discord = require("./YouTifyPlayer/YouTified.djs");
-const { MessageEmbed } = require("./YouTifyPlayer/YouTified.djs");
+const { MessageEmbed } = require("./YouTified.djs");
 const CoolDowns = new Discord.Collection();
 const YouTIFY = new Discord.Client({ restTimeOffset: 10 });
 (YouTIFY.commands = new Discord.Collection()),
   (YouTIFY.aliases = new Discord.Collection()),
   (YouTIFY.queue = new Map());
-// ===========================================================================================================================
-// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
-YouTIFY.on("ready", async () => {
-  console.clear();
-  await YouTifiedFilesCheck();
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  await YouTifiedFilesSoundMake();
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  await CodeErrorDes();
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  await YouTifyReadyLoger();
-  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-});
 // ===========================================================================================================================
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
@@ -386,43 +370,9 @@ async function YouTifyReadyLoger() {
 // ===========================================================================================================================
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
-async function YouTifiedFilesCheck() {
-  Categories.forEach((Category) => {
-    Fs.readdir(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${Category}`, (error, Files) => {
-      if (error) throw error;
-      Files.forEach((File) => {
-        if (!File.endsWith(".js")) {
-          return;
-        }
-        const YouGenenis = require(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${Category}/${File}`);
-        if (
-          !YouGenenis.help.name ||
-          !YouGenenis.help.aliases ||
-          !YouGenenis.help.yougen
-        ) {
-          console.log(
-            ᴄʜᴀʟᴋ.yellow("❓ YouTify's ❓ |"),
-            ᴄʜᴀʟᴋ.cyan(`${YouGenenis.help.name ? YouGenenis.help.name : "?"}`),
-            ᴄʜᴀʟᴋ.red(` :( Failed To Load - ❌`)
-          );
-          return;
-        }
-        YouTIFY.commands.set(YouGenenis.help.name, YouGenenis);
-        YouGenenis.help.aliases
-          ? YouGenenis.help.aliases.forEach((Alias) =>
-              YouTIFY.aliases.set(Alias, YouGenenis.help.name)
-            )
-          : (YouGenenis.help.aliases = null);
-        ComUp = YouGenenis.help.name.toUpperCase();
-        console.log(
-          ᴄʜᴀʟᴋ.yellow("⚡ YouTify's ⚡ |"),
-          ᴄʜᴀʟᴋ.cyan(`${ComUp}`),
-          ᴄʜᴀʟᴋ.green(`;) Command has been loaded!`)
-        );
-      });
-    });
-  });
-}
-// ===========================================================================================================================
-// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
-// ===========================================================================================================================
+module.exports = {
+  YouTIFY,
+  YouTifiedFilesSoundMake,
+  CodeErrorDes,
+  YouTifyReadyLoger,
+};

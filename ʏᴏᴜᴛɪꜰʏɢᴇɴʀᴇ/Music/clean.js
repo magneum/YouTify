@@ -43,7 +43,6 @@ Error report:
 
       // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
-
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
@@ -108,10 +107,8 @@ Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
 Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
-
       // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
-
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
