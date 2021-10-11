@@ -9,7 +9,7 @@
 
 # 🎧YouTify™ Features Showcase:
 
-<p float="left">
+<p float="centre">
   <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.png" width="40%" height="40%" />
   <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_New_Filter_Showcase.png" width="40%" height="40%" /> 
   <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Fix_Error.png" width="40%" height="40%" />
