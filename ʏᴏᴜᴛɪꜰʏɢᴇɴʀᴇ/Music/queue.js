@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
 // ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.run = async (client, message, args, Discord) => {
   const Channel = message.member.voice.channel;
@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setColor("#c4b932")
           .setTitle(`\`💬Queue\``)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args, Discord) => {
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -40,15 +40,15 @@ Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
 Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -63,7 +63,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     return;
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   const Queue = client.queue.get(message.guild.id);
   if (!Queue || !Queue.Songs) {
@@ -75,7 +75,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setColor("#c4b932")
           .setTitle(`\`💬Queue\``)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
@@ -96,7 +96,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -106,15 +106,15 @@ Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
 Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -129,7 +129,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     return;
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   const Songs = await Queue.Songs.map((S, I) => {
     const Position = I + 1 == 1 ? "Now Playing" : I - 1 == 0 ? 1 : I + 1;
@@ -146,7 +146,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setColor("#c4b932")
           .setTitle(`\`💬Queue\``)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setURL("https://github.com/Krakinz")
@@ -167,7 +167,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -177,15 +177,15 @@ Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
 Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -200,7 +200,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     return;
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   try {
     return message.channel.send(Songs, {
@@ -213,7 +213,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       new MessageEmbed()
         .setColor(`#b66c00`)
         .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -223,15 +223,15 @@ Dear 🔱KRAKINZ🔱 There has been an Error in a GUILD.
 Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
     );
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    // ====================================================—••÷[🎧YouTify™]÷••—====================================================
     message.channel.send("📙: sorry+code ORANGE message");
     message.react(`😔`);
     message.channel.send(
       new MessageEmbed()
-        .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
+        .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
         .setTimestamp()
         .setColor(`#b66c00`)
-        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setDescription(`\`Please report to either\`
@@ -246,7 +246,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
   return;
 };
 // ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.help = {
   name: "queue",

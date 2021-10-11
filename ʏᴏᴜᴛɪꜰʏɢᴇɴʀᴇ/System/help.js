@@ -1,10 +1,10 @@
 const { MessageEmbed } = require("../../YouTifyPlayer/YouTified.djs");
 // ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.run = async (client, message, args, Discord) => {
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   if (!args[0]) {
     try {
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setTitle(`💬\`YouTify™ Help Menu\``)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setFooter(
@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args, Discord) => {
       );
 
       // ===========================================================================================================================
-      // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+      // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
       // ===========================================================================================================================
       let Days = Math.floor(client.uptime / 86400000),
         Hours = Math.floor(client.uptime / 3600000) % 24,
@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args, Discord) => {
           .setImage(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setFooter(
@@ -68,21 +68,20 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .setDescription(
             `💡This is the Entire Command Helper Menu for YouTify™💡
-:exclamation:*For more help type ${client.YouTix}help <command name>* 
-\`PREFIX\`  ${client.YouTix}
-================🍏================\n\n
+:exclamation:*For more help type ${client.YouTix}help <command name>*\n================🎧================
 
-\`🎹YOUTIFY PLAYER\`
-play,clean,clearqueue,join,leave,loop,lyrics,nowplaying,queue,search,shuffle,skip,volume
+**\`PREFIX\`**  ${client.YouTix}
 
-\`⚙️SYSTEM\`
-help,invite,\nping,uptime
-
-\`🎶FILTERS\`
-**FILTERS: Remember to disable any applied filter just re-send that filter command)**
+**\`🎶FILTERS\`**
 bassboost, echo, flanger, nightcore, phaser, slow, speed, subboost, superslow, superspeed, surround, 8D, vibrato....
-More Coming Soon!! :)`
+**To disable any applied filter just re-send that filter command.**Example: ${client.YouTix}bb (on)/${client.YouTix}bb(off)`
           )
+          .addField(
+            `\`🎹YOUTIFY\``,
+            "play,clean,clearqueue,join,leave,loop,lyrics,nowplaying,queue,search,shuffle,skip,volume",
+            true
+          )
+          .addField(`\`⚙️SYSTEM\``, "help,invite,ping,uptime", true)
           .addField(
             `\`Brought To You by\``,
             "👑Krakinz & KrakinzLab(c)👑",
@@ -106,7 +105,7 @@ More Coming Soon!! :)`
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -117,15 +116,15 @@ Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
 
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -139,7 +138,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     }
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   args[0] = args[0].toLowerCase();
   let Cmd =
@@ -155,7 +154,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
           .setURL("https://github.com/Krakinz")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setAuthor(
-            `🍏YouTify™`,
+            `🎧YouTify™`,
             `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
           )
           .setFooter(
@@ -171,7 +170,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -182,15 +181,15 @@ Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
 
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -204,7 +203,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     }
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   Cmd = Cmd.help;
   if (args[1] && args[1] == client.token) {
@@ -241,7 +240,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         new MessageEmbed()
           .setColor(`#b66c00`)
           .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setFooter(
             "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -252,15 +251,15 @@ Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
       );
 
-      // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+      // ====================================================—••÷[🎧YouTify™]÷••—====================================================
       message.channel.send("📙: sorry+code ORANGE message");
       message.react(`😔`);
       message.channel.send(
         new MessageEmbed()
           .setTimestamp()
           .setColor(`#b66c00`)
-          .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-          .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+          .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
+          .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
           .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
           .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
           .setDescription(`\`Please report to either\`
@@ -274,7 +273,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     }
   }
   // ===========================================================================================================================
-  // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+  // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   try {
     await message.react("⚪");
@@ -286,7 +285,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
         .setTitle(`${Cmd.description}`)
         .setThumbnail(`https://YouNum.postimg.cc/9f0mS5NY/YouTify.png`)
         .setAuthor(
-          `🍏YouTify™`,
+          `🎧YouTify™`,
           `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
         )
         .setFooter(
@@ -320,7 +319,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
       new MessageEmbed()
         .setColor(`#b66c00`)
         .setTitle(`⚠️\`\`\` ᴡᴀʀɴɪɴɢ! \`\`\` `)
-        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setFooter(
           "🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️",
@@ -331,15 +330,15 @@ Error report:
 *${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}*`)
     );
 
-    // ====================================================—••÷[🍏YouTify™]÷••—====================================================
+    // ====================================================—••÷[🎧YouTify™]÷••—====================================================
     message.channel.send("📙: sorry+code ORANGE message");
     message.react(`😔`);
     message.channel.send(
       new MessageEmbed()
         .setTimestamp()
         .setColor(`#b66c00`)
-        .setTitle(`\`\`\`🍏YouTify™ encountered an error.\`\`\``)
-        .setAuthor(`🍏YouTify™ by KrakinzLab™️`)
+        .setTitle(`\`\`\`🎧YouTify™ encountered an error.\`\`\``)
+        .setAuthor(`🎧YouTify™ by KrakinzLab™️`)
         .setFooter("🔰𝗟𝗶𝗰𝗲𝗻𝘀𝗲: GNU(c)KrakinzLab™️")
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .setDescription(`\`Please report to either\`
@@ -353,7 +352,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
   }
 };
 // ===========================================================================================================================
-// 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
+// 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 module.exports.help = {
   name: "help",
