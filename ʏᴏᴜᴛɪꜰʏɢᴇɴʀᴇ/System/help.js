@@ -84,7 +84,7 @@ bassboost, echo, flanger, nightcore, phaser, slow, speed, subboost, superslow, s
           .addField(`\`⚙️SYSTEM\``, "help,invite,ping,uptime", true)
           .addField(
             `\`Brought To You by\``,
-            "👑Krakinz & KrakinzLab(c)👑",
+            "👑Krakinz & KrakinzLab(c)",
             true
           )
           .addField(
