@@ -4,7 +4,7 @@ const {
   YouTifiedFilesSoundMake,
   CodeErrorDes,
   YouTifyReadyLoger,
-} = require("./YouTifyPlayer/YouTify™.js");
+} = require("./ʏօʊȶɨʄʏքʟǟʏɛʀ/YouTify™.js");
 const ᴄʜᴀʟᴋ = require("chalk");
 const Jdk = ["Music", "Filters", "System"];
 // ===========================================================================================================================
@@ -12,13 +12,13 @@ const Jdk = ["Music", "Filters", "System"];
 // ===========================================================================================================================
 async function JdkYFCheck() {
   Jdk.forEach((JdkCtg) => {
-    Fs.readdir(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${JdkCtg}`, (error, Files) => {
+    Fs.readdir(`./ʏօʊȶɨʄʏʐɛռɛֆɨֆ/${JdkCtg}`, (error, Files) => {
       if (error) throw error;
       Files.forEach((Jdkfl) => {
         if (!Jdkfl.endsWith(".js")) {
           return;
         }
-        const YouGenenis = require(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${JdkCtg}/${Jdkfl}`);
+        const YouGenenis = require(`./ʏօʊȶɨʄʏʐɛռɛֆɨֆ/${JdkCtg}/${Jdkfl}`);
         if (
           !YouGenenis.help.name ||
           !YouGenenis.help.aliases ||
