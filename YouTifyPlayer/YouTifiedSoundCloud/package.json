@@ -1,0 +1,21 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
+    "docs:test": "docgen --source src --custom docs/index.yml",
+    "test": "cd test && node index.js"
+  },
+  "keywords": [
+    "soundcloud",
+    "scraper",
+    "api",
+    "data",
+    "soundcloud-api",
+    "download",
+    "key",
+    "soundcloud-api-key",
+    "soundcloud-downloader",
+    "soundcloud-download",
+    "music"
+  ]
+}
