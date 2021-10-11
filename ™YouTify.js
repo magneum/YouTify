@@ -67,7 +67,7 @@ YouTIFY.on("guildCreate", (guild) => {
         `\`🎶ΉΣY ƬΉΣЯΣ MЦƧIC LӨVΣЯƧ🎶\`
 ---------------::---------------\n
 ❤️𝘐 𝘨𝘰𝘵 𝘺𝘰𝘶 𝘤𝘰𝘷𝘦𝘳𝘦𝘥 𝘸𝘪𝘵𝘩 𝘥𝘪𝘳𝘦𝘤𝘵 𝘔𝘶𝘴𝘪𝘤 𝘚𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘵𝘰 𝘥𝘪𝘴𝘤𝘰𝘳𝘥 𝘷𝘰𝘪𝘤𝘦 𝘤𝘩𝘢𝘯𝘯𝘦𝘭.🔥
-🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
+🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 Cool Audio Filters Pre-Built.
 
 ❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓
 ---------------::--------------`
@@ -165,7 +165,7 @@ YouTIFY.on("message", async (message) => {
           ).setDescription(`\`User\`🍏${message.author}\n
 ---------------::---------------
 ❤️𝘐 𝘨𝘰𝘵 𝘺𝘰𝘶 𝘤𝘰𝘷𝘦𝘳𝘦𝘥 𝘸𝘪𝘵𝘩 𝘥𝘪𝘳𝘦𝘤𝘵 𝘔𝘶𝘴𝘪𝘤 𝘚𝘳𝘦𝘢𝘮𝘪𝘯𝘨 𝘵𝘰 𝘥𝘪𝘴𝘤𝘰𝘳𝘥 𝘷𝘰𝘪𝘤𝘦 𝘤𝘩𝘢𝘯𝘯𝘦𝘭.🔥
-🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 20+ Audio Filters Pre-Built.
+🍏YouTify™ 𝘪𝘴 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 YouTube+SoundCloud+Spotify 𝘔𝘶𝘴𝘪𝘤 𝘉𝘰𝘵 𝘣𝘶𝘪𝘭𝘵 𝘸𝘪𝘵𝘩 𝘋𝘪𝘴𝘤𝘰𝘳𝘥.𝘫𝘴 𝘢𝘯𝘥 𝘩𝘢𝘴 Cool Audio Filters Pre-Built.
 
 ❓❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘪𝘴 𝘪𝘯 𝘩𝘦𝘢𝘷𝘺 𝘣𝘦𝘵𝘢 𝘴𝘵𝘢𝘨𝘦❓❓
 ---------------::-------------
@@ -390,26 +390,32 @@ async function YouTifyReadyLoger() {
 // ===========================================================================================================================
 async function YouTifiedFilesCheck() {
   Categories.forEach((Category) => {
-    Fs.readdir(`./YouTify_Genres/${Category}`, (error, Files) => {
+    Fs.readdir(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${Category}`, (error, Files) => {
       if (error) throw error;
       Files.forEach((File) => {
-        if (!File.endsWith(".js")) return;
-        const Cmd = require(`./YouTify_Genres/${Category}/${File}`);
-        if (!Cmd.help.name || !Cmd.help.aliases) {
+        if (!File.endsWith(".js")) {
+          return;
+        }
+        const YouGenenis = require(`./ʏᴏᴜᴛɪꜰʏɢᴇɴʀᴇ/${Category}/${File}`);
+        if (
+          !YouGenenis.help.name ||
+          !YouGenenis.help.aliases ||
+          !YouGenenis.help.yougen
+        ) {
           console.log(
             ᴄʜᴀʟᴋ.yellow("❓ YouTify's ❓ |"),
-            ᴄʜᴀʟᴋ.cyan(`${Cmd.help.name ? Cmd.help.name : "?"}`),
-            ᴄʜᴀʟᴋ.red(` :( Failed To Load - ❌\n---------------------------`)
+            ᴄʜᴀʟᴋ.cyan(`${YouGenenis.help.name ? YouGenenis.help.name : "?"}`),
+            ᴄʜᴀʟᴋ.red(` :( Failed To Load - ❌`)
           );
           return;
         }
-        YouTIFY.commands.set(Cmd.help.name, Cmd);
-        Cmd.help.aliases
-          ? Cmd.help.aliases.forEach((Alias) =>
-              YouTIFY.aliases.set(Alias, Cmd.help.name)
+        YouTIFY.commands.set(YouGenenis.help.name, YouGenenis);
+        YouGenenis.help.aliases
+          ? YouGenenis.help.aliases.forEach((Alias) =>
+              YouTIFY.aliases.set(Alias, YouGenenis.help.name)
             )
-          : (Cmd.help.aliases = null);
-        ComUp = Cmd.help.name.toUpperCase();
+          : (YouGenenis.help.aliases = null);
+        ComUp = YouGenenis.help.name.toUpperCase();
         console.log(
           ᴄʜᴀʟᴋ.yellow("⚡ YouTify's ⚡ |"),
           ᴄʜᴀʟᴋ.cyan(`${ComUp}`),
