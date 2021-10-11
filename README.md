@@ -5,14 +5,14 @@
 - [![Generic badge](https://img.shields.io/badge/🎧YouTify™_Priority_Speaker🎧-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 Discord
 
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify.png" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%CA%8F%D6%84%CA%9F%C7%9F%CA%8F%C9%9B%CA%80/YouTify.png" /></p>
 
 # 🎧YouTify™ Features Showcase:
 
 <p align="centre">
-  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.png" width="40%" height="40%" />
-  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_New_Filter_Showcase.png" width="40%" height="40%" /> 
-  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Fix_Error.png" width="40%" height="40%" />
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%CA%8F%D6%84%CA%9F%C7%9F%CA%8F%C9%9B%CA%80/YouTify_Player.png" width="40%" height="40%" />
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%CA%8F%D6%84%CA%9F%C7%9F%CA%8F%C9%9B%CA%80/YouTify_New_Filter_Showcase.png" width="40%" height="40%" /> 
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%CA%8F%D6%84%CA%9F%C7%9F%CA%8F%C9%9B%CA%80/YouTify_Fix_Error.png" width="40%" height="40%" />
 </p>
 
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
@@ -29,7 +29,7 @@ SeBeta Since Version 🎧YouTify™_ʏօʊȶɨʄɨ🎧ƈɨօʊֆ_v6.
 
 # 📂 CӨMMΛNDS
 
-<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Help.png" /></p>
+<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/%CA%8F%D6%85%CA%8A%C8%B6%C9%A8%CA%84%CA%8F%D6%84%CA%9F%C7%9F%CA%8F%C9%9B%CA%80/YouTify_Help.png" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
