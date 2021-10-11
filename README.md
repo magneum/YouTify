@@ -36,15 +36,14 @@ SeBeta Since Version 🎧YouTify™_ʏօʊȶɨʄɨ🎧ƈɨօʊֆ_v6.
 - [![Generic badge](https://img.shields.io/badge/KrakinzBot-Vïå_ßð†-orange.svg)](https://t.me/KrakinzBot) 𝘛𝘶𝘳𝘯 𝘰𝘯 𝘣𝘰𝘵 𝘪𝘯 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘢𝘯𝘥 𝘵𝘺𝘱𝘦 /us
 -
 
+# [License](LICENSE)
 ```sh
-GNU GENERAL PUBLIC LICENSE
-Version 3, 29 June 2007
-Copyright (C) 2007 Free Software Foundation
-Everyone is permitted to 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲 verbatim copies
-of this license document, 𝗯𝘂𝘁 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗶𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱.
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses
 —••÷[🎧YouTify™]÷••—
 Discord Music Bot
-has been licensed under GNU General Public License
+has been licensed under Apache License
 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 (𝐂) 𝟐𝟎𝟐𝟏 𝗞𝗿𝗮𝗸𝗶𝗻𝘇 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗟𝗮𝗯 | 𝗞𝗿𝗮𝗸𝗶𝗻𝘇𝗕𝗼𝘁
 ```
 
