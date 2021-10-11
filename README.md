@@ -18,7 +18,7 @@
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
 
 ```sh
-Stable Since Version 🎧YouTify™_ʏօʊȶɨʄɨ🎧ƈɨօʊֆ_v6.
+SeBeta Since Version 🎧YouTify™_ʏօʊȶɨʄɨ🎧ƈɨօʊֆ_v6.
 
 💻 𝗪𝗵𝗮𝘁 𝗖𝗮𝗻 𝗕𝗼𝘁 𝗗𝗼???
 ❄️ 𝘗𝘭𝘢𝘺 𝘢𝘯𝘺 𝘮𝘶𝘴𝘪𝘤 𝘪𝘯 𝘺𝘰𝘶𝘳 𝘨𝘳𝘰𝘶𝘱 𝘷𝘤.
