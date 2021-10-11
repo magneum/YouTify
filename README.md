@@ -5,13 +5,13 @@
 - [![Generic badge](https://img.shields.io/badge/🎧YouTify™_Priority_Speaker🎧-darkgreen.svg)](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)
 - 𝙳𝚒𝚛𝚎𝚌𝚝𝚕𝚢 𝚞𝚜𝚎 𝚃𝚑𝚎 𝙱𝚘𝚝 𝚒𝚗 Discord
 
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify.PNG" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify.png" /></p>
 
 # 🎧YouTify™ Features Showcase:
 
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Player.PNG" /></p>
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_New_Filter_Showcase.PNG" /></p>
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Fix_Error.PNG" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Player.png" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_New_Filter_Showcase.png" /></p>
+<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Fix_Error.png" /></p>
 
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
 
@@ -27,7 +27,7 @@ Stable Since Version 🎧YouTify™_ʏօʊȶɨʄɨ🎧ƈɨօʊֆ_v6.
 
 # 📂 CӨMMΛNDS
 
-<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Help.PNG" /></p>
+<p align="centre"><img  width="40%" height="40%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTifyPlayer/YouTify_Help.png" /></p>
 
 # 〽️ MΣΣƬ US ӨЯ CΉΣCK ӨƬΉΣЯ BӨƬS
 
