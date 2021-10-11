@@ -365,8 +365,8 @@ async function YouTifiedFilesSoundMake() {
 // ===========================================================================================================================
 async function YouTifyReadyLoger() {
   var activities = [
-      `${bot.guilds.cache.size} servers`,
-      `${bot.users.cache.size} users!`,
+      `${YouTIFY.guilds.cache.size} servers`,
+      `${YouTIFY.users.cache.size} users!`,
     ],
     i = 0;
   setInterval(
