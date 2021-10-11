@@ -20,7 +20,7 @@ module.exports.run = (client, message, args, Discord) => {
         .addField(`\`Brought To You by\``, "👑Krakinz & KrakinzLab(c)👑", true)
         .addField(
           `\`YouTify™\``,
-          `[🍏INVITE🍏](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`,
+          `[🍏INVITE🍏](https://discord.com/api/oauth2/authorize?client_id=895346909785489429&permissions=8&scope=bot%20applications.commands)`,
           true
         )
         .setFooter(
