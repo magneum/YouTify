@@ -9,9 +9,11 @@
 
 # 🎧YouTify™ Features Showcase:
 
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.png" /></p>
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_New_Filter_Showcase.png" /></p>
-<p align="centre"><img  width="80%" height="80%" img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Fix_Error.png" /></p>
+<p float="left">
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Player.png" width="40%" height="40%" />
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_New_Filter_Showcase.png" width="40%" height="40%" /> 
+  <img src="https://github.com/Krakinz/YouTify/blob/KrakinzLab/YouTify_Fix_Error.png" width="40%" height="40%" />
+</p>
 
 # ❓ WΉY MΛDΣ ƬΉIS BӨƬ?
 
