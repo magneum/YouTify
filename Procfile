@@ -1,1 +1,0 @@
-worker: nodemon YouTify™.js
