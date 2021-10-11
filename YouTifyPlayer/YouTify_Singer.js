@@ -70,7 +70,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
       (Info.P = false);
     return Info;
   } else if (T.T == "SC") {
-    Info = await message.client.SC.getSongInfo(T.L);
+    Info = await message.client.SoundCloudZen.getSongInfo(T.L);
     if (!Info) return undefined;
 
     (Info = await YouTify_Generate_Audio(Info, message, Info, { Type: "SC" })),
@@ -97,7 +97,7 @@ async function YouTify_Get_Meta_Data(Query, message) {
     Info =
       T.T == "YTPL"
         ? await YouTifyied_YtSr.getPlaylist(T.L)
-        : await message.client.SC.getPlaylist(T.L);
+        : await message.client.SoundCloudZen.getPlaylist(T.L);
     if (!Info) return undefined;
 
     const Songs = [],
