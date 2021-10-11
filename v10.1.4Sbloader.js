@@ -68,10 +68,10 @@ YouTIFY.on("ready", async () => {
   console.clear();
   await JdkYFCheck();
   console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  // await YouTifiedFilesSoundMake();
-  // console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  // await CodeErrorDes();
-  // console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
-  // await YouTifyReadyLoger();
-  // console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
+  await YouTifiedFilesSoundMake();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
+  await CodeErrorDes();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
+  await YouTifyReadyLoger();
+  console.log(ᴄʜᴀʟᴋ.yellow("==========================="));
 });
