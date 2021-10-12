@@ -135,7 +135,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
     Queue.Playing = true;
   }
   try {
-    await Queue.Connection.dispatcher.destroy();
+    // await Queue.Connection.dispatcher.destroy();
     await message.react("🟢");
     await message.channel.send(
       new MessageEmbed()
