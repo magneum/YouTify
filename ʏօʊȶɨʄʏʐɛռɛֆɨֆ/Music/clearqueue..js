@@ -90,9 +90,8 @@ module.exports.run = async (client, message, args, Discord) => {
   // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
   Queue.Songs = [];
-  await Queue.Connection.dispatcher.end();
-
   try {
+    await Queue.Connection.dispatcher.destroy();
     await message.react("🎧");
   } catch (e) {
     await message.react("🔴");

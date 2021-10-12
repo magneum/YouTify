@@ -46,11 +46,10 @@ async function YouTify_Type(Value) {
   ) {
     return { T: "SPPL", L: Value };
   }
-
   const Data = await YouTifyied_YtSr.searchOne(Value);
-
-  if (!Data) return undefined;
-
+  if (!Data) {
+    return undefined;
+  }
   return {
     T: "YT",
     L: `https://www.youtube.com/watch?v=${Data.id}`,
