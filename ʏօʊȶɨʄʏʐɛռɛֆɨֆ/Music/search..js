@@ -2,8 +2,8 @@ const {
   YouTify_Singer,
   YouTify_Generate_Audio,
 } = require("../../ʏօʊȶɨʄʏքʟǟʏɛʀ/YouTify_Singer..js");
-const YouTifyied_YtSr = require("youtube-sr").default;
-const YouTifyied_Yt = require("../../ʏօʊȶɨʄʏքʟǟʏɛʀ/ytdl");
+const Sr = require("youtube-sr").default;
+const Dl = require("../../ʏօʊȶɨʄʏքʟǟʏɛʀ/ytdl");
 const { MessageEmbed } = require("../../ʏօʊȶɨʄʏքʟǟʏɛʀ/YouTified.djs");
 // ===========================================================================================================================
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
@@ -149,7 +149,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
   // ===========================================================================================================================
   // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
   // ===========================================================================================================================
-  await YouTifyied_YtSr.search(Value, { limit: 10 })
+  await Sr.search(Value, { limit: 10 })
     .then(async (Data) => {
       if (!Data || !Data[0].id)
         return message.channel.send("Error: No Song Found!");
@@ -196,7 +196,7 @@ ${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
             return message.channel.send("Error: Unknown Index!");
 
           try {
-            Song = await YouTifyied_Yt.getInfo(
+            Song = await Dl.getInfo(
               `https://youtube.com/watch?v=${Data[Content - 1].id}`
             );
             Song = await YouTify_Generate_Audio(
