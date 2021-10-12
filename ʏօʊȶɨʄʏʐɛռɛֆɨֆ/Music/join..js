@@ -57,7 +57,10 @@ Error report:
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 \`Error🔻Caught and Auto Sent to Dev Server!\`
-${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+
+\`Fix?\`
+Try use ${client.YouTix}leave and play again!
+Try use ${client.YouTix}clean and play again!`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
@@ -124,7 +127,10 @@ Error report:
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 \`Error🔻Caught and Auto Sent to Dev Server!\`
-${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+
+\`Fix?\`
+Try use ${client.YouTix}leave and play again!
+Try use ${client.YouTix}clean and play again!`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
@@ -193,7 +199,10 @@ Error report:
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 \`Error🔻Caught and Auto Sent to Dev Server!\`
-${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+
+\`Fix?\`
+Try use ${client.YouTix}leave and play again!
+Try use ${client.YouTix}clean and play again!`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
@@ -260,7 +269,10 @@ Error report:
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 \`Error🔻Caught and Auto Sent to Dev Server!\`
-${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+
+\`Fix?\`
+Try use ${client.YouTix}leave and play again!
+Try use ${client.YouTix}clean and play again!`)
       );
       console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
     }
@@ -303,7 +315,10 @@ Error report:
 🔰[In ᴛᴇʟᴇɢʀᴀᴍ group](https://t.me/Krakns)
 
 \`Error🔻Caught and Auto Sent to Dev Server!\`
-${ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ}`)
+
+\`Fix?\`
+Try use ${client.YouTix}leave and play again!
+Try use ${client.YouTix}clean and play again!`)
     );
     console.error(ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ);
   }
