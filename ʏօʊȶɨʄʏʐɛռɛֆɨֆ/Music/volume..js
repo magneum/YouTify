@@ -421,7 +421,7 @@ Try use ${client.YouTix}clean and play again!`)
         .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
         .addField(
           `\`🔊Volume\``,
-          `YouTify™ Current Queue Volume Already set to ${NewVolume}!`,
+          `YouTify™ Current Queue Volume set to ${NewVolume}!`,
           true
         )
     );

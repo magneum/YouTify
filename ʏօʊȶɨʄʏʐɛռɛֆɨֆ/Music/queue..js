@@ -263,7 +263,7 @@ Try use ${client.YouTix}clean and play again!`)
 module.exports.help = {
   name: "queue",
   yougen: "Sebeta-v9.6.79ie0",
-  aliases: ["q", "qu"],
+  aliases: ["q", "qu", "cue"],
   cooldown: 10000,
   category: "Music",
   description: "Get Music Queue!",
