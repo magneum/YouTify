@@ -115,7 +115,7 @@ Try use ${client.YouTix}clean and play again!`)
             `👈🏽‍Reqstd by`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `Not connected to any VoiceChannel!`, true)
+          .addField(`\`☣️Error\``, `You Are Not Connected To Any VoiceChannel !`, true)
       );
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {

@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args, Discord) => {
           )
           .addField(
             `\`☣️Error\``,
-            `You are Not connected to any VoiceChannel!`,
+            `You are You Are Not Connected To Any VoiceChannel !`,
             true
           )
       );

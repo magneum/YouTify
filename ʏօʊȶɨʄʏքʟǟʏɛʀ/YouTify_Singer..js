@@ -12,15 +12,10 @@ async function YouTify_Type(Value) {
   if (Regex.VideoID.test(Value)) {
     return {
       T: "YT",
-      L: `https://www.youtube.com/watch?v=${
-        Regex.VideoID.exec(Value)[0]
-      }`,
+      L: `https://www.youtube.com/watch?v=${Regex.VideoID.exec(Value)[0]}`,
     };
   }
-  if (
-    Regex.VideoURL.test(Value) &&
-    !Value.toLowerCase().includes("list")
-  ) {
+  if (Regex.VideoURL.test(Value) && !Value.toLowerCase().includes("list")) {
     return { T: "YT", L: Value };
   }
   if (Regex.PlaylistID.test(Value) && !Value.startsWith("http")) {
@@ -35,16 +30,10 @@ async function YouTify_Type(Value) {
   if (Regex.SCPlaylist.test(Value)) {
     return { T: "SCPL", L: Value };
   }
-  if (
-    Regex.Spotify.test(Value) &&
-    Value.toLowerCase().includes("track")
-  ) {
+  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("track")) {
     return { T: "SP", L: Value };
   }
-  if (
-    Regex.Spotify.test(Value) &&
-    Value.toLowerCase().includes("playlist")
-  ) {
+  if (Regex.Spotify.test(Value) && Value.toLowerCase().includes("playlist")) {
     return { T: "SPPL", L: Value };
   }
   const Data = await Sr.searchOne(Value);
@@ -294,7 +283,26 @@ async function YouTify_Singer(client, message, options = {}) {
     (Link = options.Song.Audio), (Type = "AR");
   } else if (options.Song.Type == "SPPL") {
     const Data = await SP.getPreview(options.Song.Link);
-    if (!Data) return message.channel.send("Error: No Playlist Found!");
+    if (!Data) {
+      message.channel.send(
+        new MessageEmbed()
+          .setTimestamp()
+          .setColor("#c4b932")
+          .setTitle(`\`💬Clean\``)
+          .setAuthor(
+            `🎧YouTify™`,
+            `https://i.postimg.cc/gcX8075z/guitar-sing.gif`
+          )
+          .setURL("https://github.com/Krakinz")
+          .setThumbnail(`https://i.postimg.cc/QttWpFss/You-Tify-1.png`)
+          .setFooter(
+            `👈🏽‍Reqstd by ${message.author.username}`,
+            message.author.avatarURL({ dynamic: true })
+          )
+          .addField(`\`☣️Error\``, `No Playlist Found!`, true)
+      );
+      return;
+    }
 
     options.Song = await YouTify_Generate_Audio(Data, message, Data, {
       Type: "SP",
@@ -304,9 +312,9 @@ async function YouTify_Singer(client, message, options = {}) {
 
   Steam =
     Type == "SR"
-      ? await Dl.downloadFromInfo(Link, option)
+      ? Dl.downloadFromInfo(Link, option)
       : Type == "AR"
-      ? await Dl.arbitraryStream(Link, option)
+      ? Dl.arbitraryStream(Link, option)
       : undefined;
   if (!Steam)
     return message.channel.send(
@@ -360,7 +368,8 @@ async function YouTify_Singer(client, message, options = {}) {
     Dispatcher.setVolumeLogarithmic(queue.Volume / 100);
     queue.ExtraTime = 0;
   }
-  return HandleVoice(message, client);
+  HandleVoice(message, client);
+  return;
 }
 // ===========================================================================================================================
 // 🍏𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord..js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓

@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args, Discord) => {
             `👈🏽‍Reqstd by ${message.author.username}`,
             message.author.avatarURL({ dynamic: true })
           )
-          .addField(`\`☣️Error\``, `Not connected to any VoiceChannel!`, true)
+          .addField(`\`☣️Error\``, `You Are Not Connected To Any VoiceChannel !`, true)
       );
       return;
     } catch (ʏᴏᴜᴛɪꜰʏᴇʀʀᴏʀ) {
