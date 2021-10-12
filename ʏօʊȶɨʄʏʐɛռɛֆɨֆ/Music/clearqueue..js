@@ -22,7 +22,11 @@ module.exports.run = async (client, message, args, Discord) => {
           `👈🏽‍Reqstd by ${message.author.username}`,
           message.author.avatarURL({ dynamic: true })
         )
-        .addField(`\`☣️Error\``, `You Are Not Connected To Any VoiceChannel !`, true)
+        .addField(
+          `\`☣️Error\``,
+          `You Are Not Connected To Any VoiceChannel !`,
+          true
+        )
     );
     return;
   }
@@ -91,7 +95,11 @@ module.exports.run = async (client, message, args, Discord) => {
   // ===========================================================================================================================
   Queue.Songs = [];
   try {
-    await Queue.Connection.dispatcher.destroy();
+    try {
+      await Queue.Connection.dispatcher.destroy();
+    } catch (e) {
+      await Bot.leave();
+    }
     await message.react("🎧");
   } catch (e) {
     await message.react("🔴");

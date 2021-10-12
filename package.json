@@ -18,21 +18,22 @@
     "dependencies": {
         "@discordjs/collection": "^0.1.6",
         "@discordjs/form-data": "^3.0.1",
-        "soundcloud-scraper": "^4.0.3",
-        "abort-controller": "^3.0.0",
-        "spotify-url-info": "^2.2.0",
         "@discordjs/opus": "*",
-        "lyrics-finder": "^21.7.0",
-        "dotenv": "^10.0.0",
+        "abort-controller": "^3.0.0",
         "chalk": "*",
-        "ws": "^7.4.4",
+        "dotenv": "^10.0.0",
         "ffmpeg-static": "*",
-        "pretty-ms": "^7.0.1",
-        "tweetnacl": "^1.0.3",
-        "ytdl-core": "^4.4.5",
-        "youtube-sr": "^3.0.0",
+        "lyrics-finder": "^21.7.0",
         "node-fetch": "^2.6.1",
+        "nodemon": "^2.0.13",
+        "pretty-ms": "^7.0.1",
         "prism-media": "^1.2.9",
-        "setimmediate": "^1.0.5"
+        "setimmediate": "^1.0.5",
+        "soundcloud-scraper": "^4.0.3",
+        "spotify-url-info": "^2.2.0",
+        "tweetnacl": "^1.0.3",
+        "ws": "^7.4.4",
+        "youtube-sr": "^3.0.0",
+        "ytdl-core": "^4.4.5"
     }
 }

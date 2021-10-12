@@ -370,15 +370,26 @@ async function YouTifiedFilesSoundMake() {
 // 🎧𝐘𝐨𝐮𝐓𝐢𝐟𝐲™ is Discord 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 Music Bot built with Discord.js and has 𝟐𝟎+ 𝐀𝐮𝐝𝐢𝐨 𝐅𝐢𝐥𝐭𝐞𝐫𝐬. ❓𝘚𝘱𝘰𝘵𝘪𝘧𝘺 𝘢𝘯𝘥 𝘚𝘰𝘶𝘯𝘥𝘤𝘭𝘰𝘶𝘥 𝘢𝘳𝘦 𝘪𝘯 𝘣𝘦𝘵𝘢❓
 // ===========================================================================================================================
 async function YouTifyReadyLoger() {
-  var activities = [
-      `${YouTIFY.guilds.cache.size} servers`,
-      `${YouTIFY.users.cache.size} users!`,
+  var YOuTiFyACTiViTy = [
+      `${YouTix}PLAY`,
+      `${YouTix}CLEAN`,
+      `${YouTix}CQ`,
+      `${YouTix}FILTER`,
+      `${YouTix}JOIN`,
+      `${YouTix}LEAVE`,
+      `${YouTix}LOOP`,
+      `${YouTix}LYRICS`,
+      `${YouTix}NP`,
+      `${YouTix}SEARCH`,
+      `${YouTix}SKIP`,
+      `${YouTix}SHUFFLE`,
+      `${YouTix}VOLUME`, // `${YouTIFY.guilds.cache.size} servers`,      // `${YouTIFY.users.cache.size} users!`,
     ],
     i = 0;
   setInterval(
     () =>
       YouTIFY.user.setActivity(
-        `🎧${YouTix}help | ${activities[i++ % activities.length]}`,
+        `${YouTix}HELP 🎧 ${YOuTiFyACTiViTy[i++ % YOuTiFyACTiViTy.length]}`,
         { type: "WATCHING" }
       ),
     5000
